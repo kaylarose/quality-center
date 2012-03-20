@@ -11,6 +11,7 @@ class QualityCenter
   PREFIX  = '/qcbin/rest'
   DEFECTS = '/domains/TEST/projects/AssessmentQualityGroup/defects'
   DATE_FIELDS = %w[closing-date creation-time last-modified]
+  USER_FIELDS = %w[detected-by]
 
   def initialize(u,p)
     @login = {:j_username => u, :j_password => p}
@@ -81,10 +82,6 @@ def users
   usernames
 end
 
-def user(shortname)
-  users[shortname.lowercase] || shortname
-end
-
 # get the value of the field, converting things like dates and user names
 def value(field)
   if DATE_FIELDS.include? (name=name(field))
@@ -96,7 +93,7 @@ def value(field)
   end
 end
 
-
+# convert a single defect xml fragement into a hash
 def defect_to_hash(xml)
   defect={}
   xml.css('Field').each do |field|
