@@ -11,7 +11,7 @@ class QualityCenter
   PREFIX  = '/qcbin/rest'
   DEFECTS = '/domains/TEST/projects/AssessmentQualityGroup/defects'
   DATE_FIELDS = %w[closing-date creation-time last-modified]
-  USER_FIELDS = %w[detected-by]
+  USER_FIELDS = %w[detected-by owner]
 
   def initialize(u,p)
     @login = {:j_username => u, :j_password => p}
