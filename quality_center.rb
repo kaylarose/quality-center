@@ -85,7 +85,7 @@ end
 # get the value of the field, converting things like dates and user names
 def value(field)
   if DATE_FIELDS.include? (name=name(field))
-    Time.parse(field.text)
+    Time.parse(field.text) rescue field.text
   elsif USER_FIELDS.include? name
     users[field.text.lowercase]
   else
