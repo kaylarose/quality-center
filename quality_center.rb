@@ -80,7 +80,7 @@ module QualityCenter
     def users
       return @users if @users
       usernames={}
-      doc = Nokogiri::XML.parse(File.read '/home/brasca/git/qc_rest/users.xml.ignore')
+      doc = Nokogiri::XML.parse(File.read '/home/brasca/git/qc_rest/users.xml')
       doc.css('User').each do |user|
         short = name(user)
         full  = user.attributes['FullName'].value
@@ -92,7 +92,7 @@ module QualityCenter
     def defect_fields
       return @defect_fields if @defect_fields
       fields={}
-      doc = Nokogiri::XML.parse(File.read '/home/brasca/git/qc_rest/defect_fields.xml.ignore')
+      doc = Nokogiri::XML.parse(File.read '/home/brasca/git/qc_rest/defect_fields.xml')
       doc.css('Field').each do |field|
         fields[ name(field) ] = field.attributes['Label'].value
       end
@@ -122,7 +122,7 @@ module QualityCenter
     end
 
     def defects
-      dxml = Nokogiri::XML.parse(File.read '/home/brasca/git/qc_rest/defects.xml.ignore')
+      dxml = Nokogiri::XML.parse(File.read '/home/brasca/git/qc_rest/defects.xml')
       dxml.css('Entity').map{|defect| defect_to_hash(defect)}
     end
 
