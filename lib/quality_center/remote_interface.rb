@@ -60,6 +60,10 @@ module QualityCenter
       "http://qualitycenter.ic.ncs.com:8080/qcbin/rest/domains/{domain}/projects/{project}/event-logs"
     end
 
+    def paging
+      'page-size=10&start-index=30'
+    end
+
   end
 
 end
