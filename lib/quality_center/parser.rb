@@ -2,7 +2,7 @@ require 'nokogiri'
 
 module QualityCenter
 
-  class Data
+  class Parser
     DATE_FIELDS = %w[closing-date creation-time last-modified]
     USER_FIELDS = %w[detected-by owner]
 
