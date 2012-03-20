@@ -67,6 +67,11 @@ class QualityCenter
     field.attributes['Name'].value
   end
 
+  def nice_name(field)
+    name = name(field)
+    defect_fields[name] || name
+  end
+
   def users
     return @users if @users
     usernames={}
@@ -77,6 +82,16 @@ class QualityCenter
       usernames[ name(user).downcase ] = full.empty? ? short : full
     end
     usernames
+  end
+
+  def defect_fields
+    return @defect_fields if @defect_fields
+    fields={}
+    doc = Nokogiri::XML.parse(File.read '/home/brasca/git/qc_rest/defect_fields.xml.ignore')
+    doc.css('Field').each do |field|
+      fields[ name(field) ] = field.attributes['Label'].value
+    end
+    fields
   end
 
   # get the value of the field, converting things like dates and user names
@@ -95,7 +110,7 @@ class QualityCenter
     defect={}
     xml.css('Field').each do |field|
       unless (text=field.text).empty?
-        defect[ name(field) ] = value(field)
+        defect[ nice_name(field) ] = value(field)
       end
     end
     defect
