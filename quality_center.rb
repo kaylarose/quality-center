@@ -44,13 +44,17 @@ class QualityCenter
 
   # WIP
   def root
-    workspaces = {}
+    ret = {}
     xml = auth_get('')
     parsed = Nokogiri::XML.parse(xml)
-    parsed.xpath('//ns2:workspace').each do |workspace|
+    parsed.css('ns2|workspace').each do |workspace|
+      ret[workspace.css('title').first.text] = 
+        Hash[
+          workspace.css('ns2|collection').map{|x| [x.text,x.attributes['href'].value] }
+        ]
     end
+    ret
   end
 
 
 end
-
