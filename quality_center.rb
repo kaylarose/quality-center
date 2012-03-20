@@ -10,6 +10,7 @@ class QualityCenter
   }
   PREFIX  = '/qcbin/rest'
   DEFECTS = '/domains/TEST/projects/AssessmentQualityGroup/defects'
+  DATE_FIELDS = %w[closing-date creation-time last-modified]
 
   def initialize(u,p)
     @login = {:j_username => u, :j_password => p}
@@ -56,5 +57,53 @@ class QualityCenter
     ret
   end
 
+  def recent_events
+    "http://qualitycenter.ic.ncs.com:8080/qcbin/rest/domains/{domain}/projects/{project}/event-logs"
+  end
+
 
 end
+
+# get the value of the Name attribute for a field
+def name(field)
+  field.attributes['Name'].value
+end
+
+def users
+  return @users if @users
+  usernames={}
+  doc = Nokogiri::XML.parse(File.read '/home/brasca/git/qc_rest/users.xml.ignore')
+  doc.css('User').each do |user|
+    short = name(user)
+    full  = user.attributes['FullName'].value
+    usernames[ name(user).lowercase ] = full.empty? ? short : full
+  end
+  usernames
+end
+
+def user(shortname)
+  users[shortname.lowercase] || shortname
+end
+
+# get the value of the field, converting things like dates and user names
+def value(field)
+  if DATE_FIELDS.include? (name=name(field))
+    Time.parse(field.text)
+  elsif USER_FIELDS.include? name
+    users[field.text.lowercase]
+  else
+    field.text
+  end
+end
+
+
+def defect_to_hash(xml)
+  defect={}
+  xml.css('Field').each do |field|
+    unless (text=field.text).empty?
+      defect[ name(field) ] = value(field)
+    end
+  end
+  defect
+end
+
