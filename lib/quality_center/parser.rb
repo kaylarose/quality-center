@@ -17,25 +17,29 @@ module QualityCenter
     end
 
     def users
-      return @users if @users
-      usernames={}
-      doc = Nokogiri::XML.parse(File.read '/home/brasca/git/qc_rest/fixtures/users.xml')
-      doc.css('User').each do |user|
-        short = name(user)
-        full  = user.attributes['FullName'].value
-        usernames[ name(user).downcase ] = full.empty? ? short : full
+      @users ||= begin
+        puts 'loading users'
+        usernames={}
+        doc = Nokogiri::XML.parse(File.read '/home/brasca/git/qc_rest/fixtures/users.xml')
+        doc.css('User').each do |user|
+          short = name(user)
+          full  = user.attributes['FullName'].value
+          usernames[ name(user).downcase ] = full.empty? ? short : full
+        end
+        usernames
       end
-      usernames
     end
 
     def defect_fields
-      return @defect_fields if @defect_fields
-      fields={}
-      doc = Nokogiri::XML.parse(File.read '/home/brasca/git/qc_rest/fixtures/defect_fields.xml')
-      doc.css('Field').each do |field|
-        fields[ name(field) ] = field.attributes['Label'].value
+      @defect_fields ||= begin
+        puts 'loading defect fields'
+        fields={}
+        doc = Nokogiri::XML.parse(File.read '/home/brasca/git/qc_rest/fixtures/defect_fields.xml')
+        doc.css('Field').each do |field|
+          fields[ name(field) ] = field.attributes['Label'].value
+        end
+        fields
       end
-      fields
     end
 
     # get the value of the field, converting things like dates and user names
@@ -53,7 +57,7 @@ module QualityCenter
     def defect_to_hash(xml)
       defect={}
       xml.css('Field').each do |field|
-        unless (text=field.text).empty?
+        unless (text=field.text).empty? or text == 'None'
           defect[ nice_name(field) ] = value(field)
         end
       end
