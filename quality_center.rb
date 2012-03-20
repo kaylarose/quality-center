@@ -4,21 +4,21 @@ require 'nokogiri'
 class QualityCenter
   include HTTParty
   base_uri 'qualitycenter.ic.ncs.com:8080'
-  AuthUri  = {
+  AUTHURI  = {
     get:  '/qcbin/authentication-point/login.jsp',
     post: '/qcbin/authentication-point/j_spring_security_check'
   }
-  Prefix = '/qcbin/rest'
-
+  PREFIX  = '/qcbin/rest'
+  DEFECTS = '/domains/TEST/projects/AssessmentQualityGroup/defects'
 
   def initialize(u,p)
     @login = {:j_username => u, :j_password => p}
   end
 
   def login
-    response = self.class.get AuthUri[:get]
+    response = self.class.get AUTHURI[:get]
     response = self.class.post(
-      AuthUri[:post],
+      AUTHURI[:post],
       body:    @login,
       headers: {'Cookie' => response.headers['Set-Cookie']}
     )
@@ -28,7 +28,7 @@ class QualityCenter
     response
   end
 
-  def auth_get(url,prefix = Prefix)
+  def auth_get(url,prefix = PREFIX)
     login unless authenticated?
     self.class.get( prefix+url, headers: {'Cookie' => @cookie} )
   end
