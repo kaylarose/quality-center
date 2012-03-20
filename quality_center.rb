@@ -46,7 +46,7 @@ class QualityCenter
   def root
     workspaces = {}
     xml = auth_get('')
-    parsed = NokoGiri::XML.parse(xml)
+    parsed = Nokogiri::XML.parse(xml)
     parsed.xpath('//ns2:workspace').each do |workspace|
     end
   end
