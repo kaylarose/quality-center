@@ -1,4 +1,6 @@
 require 'httparty'
+require_relative 'exceptions'
+require_relative 'constants'
 
 module QualityCenter
   module RemoteInterface
@@ -6,14 +8,9 @@ module QualityCenter
 
       include HTTParty
       base_uri 'qualitycenter.ic.ncs.com:8080'
-      AUTHURI  = {
-        get:  '/qcbin/authentication-point/login.jsp',
-        post: '/qcbin/authentication-point/j_spring_security_check'
-      }
-      PREFIX  = '/qcbin/rest'
-      DEFECTS = '/domains/TEST/projects/AssessmentQualityGroup/defects'
       def initialize(u,p)
         @login = {:j_username => u, :j_password => p}
+        @cookie = ''
       end
 
       def login
@@ -23,19 +20,21 @@ module QualityCenter
           body:    @login,
           headers: {'Cookie' => response.headers['Set-Cookie']}
         )
-        raise "Login Error" if response.request.uri.to_s =~ /error/
+        raise LoginError, "Bad credentials" if response.request.uri.to_s =~ /error/
 
         @cookie = response.request.options[:headers]['Cookie']
+        puts @cookie.inspect
         response
       end
 
       def auth_get(url,prefix = PREFIX)
-        login unless authenticated?
-        self.class.get( prefix+url, headers: {'Cookie' => @cookie} )
+        res = self.class.get( prefix+url, headers: {'Cookie' => @cookie} )
+        raise LoginError if res.response.code == '401'
+        res
       end
 
       def authenticated?
-        return false unless @cookie
+        return false if @cookie.empty?
         return case self.class.get('/qcbin/rest/is-authenticated',
                                    headers: {'Cookie' => @cookie}).response.code
           when '200' then true
