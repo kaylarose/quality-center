@@ -2,7 +2,14 @@ require 'active_support/core_ext/hash'
 
 module QualityCenter
   module RemoteInterface
+
+    # The query segment of a QC REST call, including parameters to filter and sort results.
+    # See the docs at qualitycenter:8080/qcbin/Help/doc_library/api_refs/REST/webframe.html
+    # Example:
+    # q = Query.new.filter(id:'<9',product:'SORM*').paginate(limit:20)
     class Query
+
+      attr_accessor :query
 
       DEFAULT = {
         paging: { limit: 10,   offset: 0 },
@@ -24,9 +31,21 @@ module QualityCenter
       end
 
       # Produce a string of the form frequently used in QC queries:
-      #  {subject[predicate]}
+      # {subject[predicate]}
       def wrap(subject,predicate)
-        "{#{subject}[#{predicate}]}"
+        bracket( clause(subject,predicate) )
+      end
+      
+      # Produce a bracketed expression for use in a QC query:
+      # {input}
+      def bracket(s)
+        "{#{s}}"
+      end
+
+      # The basic syntax of a QC parameter:
+      # subject[predicate]
+      def clause(subject,predicate)
+        "#{subject}[#{predicate}]"
       end
 
 
@@ -36,6 +55,7 @@ module QualityCenter
         opts.reverse_merge! DEFAULT[:paging]
         add( page_size:   opts[:limit],
              start_index: opts[:offset] + 1 )
+        self
       end
 
       # Order by a field, descending by default.
@@ -44,6 +64,7 @@ module QualityCenter
       def order_by(opts = {})
         opts = assert_legal_order(opts)
         add order_by: wrap( opts[:field], opts[:direction] )
+        self
       end
 
       # Limit returned entries by their values.
@@ -51,10 +72,12 @@ module QualityCenter
       # http://qualitycenter:8080/qcbin/Help/doc_library/api_refs/REST/Content/General/Filtering.html
       def filter(opts = {})
         assert_legal_filter(opts)
-        add(:query => opts.
-                        map{ |field,value| wrap(field,value) }.
-                        join(';') 
+        add(:query => bracket(opts.
+                                map{ |field,value| clause(field,value) }.
+                                join(';')
+                             )
            )
+        self
       end
 
       # Ensure the order opts make sense
