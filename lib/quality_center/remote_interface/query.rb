@@ -1,4 +1,5 @@
 require 'active_support/core_ext/hash'
+require_relative 'constants'
 
 module QualityCenter
   module RemoteInterface
@@ -11,13 +12,6 @@ module QualityCenter
 
       attr_accessor :query
       alias :to_hash :query
-
-      DEFAULT = {
-        paging: { limit: 10,   offset: 0 },
-        order:  { field: 'id', direction: 'DESC' }
-      }
-
-      DIRECTIONS = %w[ASC DESC]
 
       # start a blank query accumulator
       def initialize
@@ -72,8 +66,8 @@ module QualityCenter
       
       # Produce a bracketed expression for use in a QC query:
       # {input}
-      def bracket(s)
-        "{#{s}}"
+      def bracket(input)
+        "{#{input}}"
       end
 
       # The basic syntax of a QC parameter:
