@@ -33,6 +33,11 @@ module QualityCenter
         res
       end
 
+      # get a path scoped to a predefined domain and project
+      def scoped_get(path)
+        auth_get(SCOPE + path)
+      end
+
       def authenticated?
         return false if @cookie.empty?
         return case self.class.get('/qcbin/rest/is-authenticated',

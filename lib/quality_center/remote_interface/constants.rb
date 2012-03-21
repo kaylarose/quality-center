@@ -8,6 +8,10 @@ module QualityCenter
       }
       PREFIX  = '/qcbin/rest'
       DEFECTS = '/domains/TEST/projects/AssessmentQualityGroup/defects'
+      DOMAIN  = 'TEST'
+      PROJECT = 'AssessmentQualityGroup'
+      SCOPE   = "domains/#{DOMAIN}/projects/#{PROJECT}"
+
     end
 
     class Query
