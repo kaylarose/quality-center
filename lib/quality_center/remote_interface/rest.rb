@@ -33,6 +33,18 @@ module QualityCenter
         res
       end
 
+      def users(path)
+        scoped_get('/users')
+      end
+
+      def defects(path)
+        scoped_get('/defects')
+      end
+
+      def defect_fields
+        scoped_get('/customization/entities/defect/fields')
+      end
+
       # get a path scoped to a predefined domain and project
       def scoped_get(path)
         auth_get(SCOPE + path)
