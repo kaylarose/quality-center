@@ -10,6 +10,7 @@ module QualityCenter
     class Query
 
       attr_accessor :query
+      alias :to_hash :query
 
       DEFAULT = {
         paging: { limit: 10,   offset: 0 },
@@ -22,32 +23,6 @@ module QualityCenter
       def initialize
         @query = {}
       end
-
-      # Add a parameter to the query accumulator.
-      def add(new_attribute = {})
-        new_attribute.stringify_keys!
-        new_attribute.dashify_keys!
-        @query.merge! new_attribute
-      end
-
-      # Produce a string of the form frequently used in QC queries:
-      # {subject[predicate]}
-      def wrap(subject,predicate)
-        bracket( clause(subject,predicate) )
-      end
-      
-      # Produce a bracketed expression for use in a QC query:
-      # {input}
-      def bracket(s)
-        "{#{s}}"
-      end
-
-      # The basic syntax of a QC parameter:
-      # subject[predicate]
-      def clause(subject,predicate)
-        "#{subject}[#{predicate}]"
-      end
-
 
       # Add a page limit.  QC defaults to 100, we default to 10.
       # http://qualitycenter:8080/qcbin/Help/doc_library/api_refs/REST/Content/General/Data_Paging.html
@@ -78,6 +53,33 @@ module QualityCenter
                              )
            )
         self
+      end
+
+      private
+
+      # Add a parameter to the query accumulator.
+      def add(new_attribute = {})
+        new_attribute.stringify_keys!
+        new_attribute.dashify_keys!
+        @query.merge! new_attribute
+      end
+
+      # Produce a string of the form frequently used in QC queries:
+      # {subject[predicate]}
+      def wrap(subject,predicate)
+        bracket( clause(subject,predicate) )
+      end
+      
+      # Produce a bracketed expression for use in a QC query:
+      # {input}
+      def bracket(s)
+        "{#{s}}"
+      end
+
+      # The basic syntax of a QC parameter:
+      # subject[predicate]
+      def clause(subject,predicate)
+        "#{subject}[#{predicate}]"
       end
 
       # Ensure the order opts make sense
