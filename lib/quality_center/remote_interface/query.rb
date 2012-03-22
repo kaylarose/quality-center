@@ -30,7 +30,6 @@ module QualityCenter
         opts.reverse_merge! DEFAULT[:paging]
         add( page_size:   opts[:limit],
              start_index: opts[:offset] + 1 )
-        self
       end
 
       # Order by a field, descending by default.
@@ -39,7 +38,6 @@ module QualityCenter
       def order_by(field,opts = {})
         opts = assert_legal_order(opts)
         add order_by: wrap( field, opts[:direction] )
-        self
       end
 
       # Limit returned entries by their values.
@@ -52,7 +50,10 @@ module QualityCenter
                                 join(';')
                              )
            )
-        self
+      end
+
+      def empty?
+        @query.empty?
       end
 
       private
@@ -62,6 +63,7 @@ module QualityCenter
         new_attribute.stringify_keys!
         new_attribute.dashify_keys!
         @query.merge! new_attribute
+        self
       end
 
       # Produce a string of the form frequently used in QC queries:
