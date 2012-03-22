@@ -18,20 +18,19 @@ module QualityCenter
     # A list of defects.
     # TODO support query params
     def defects
-      @defects ||= Nokogiri::XML.parse(@connection.defects).
+      @defects ||= Nokogiri::XML.parse( @connection.defects(raw:true) ).
                      css('Entity').
                      map{|defect| defect_to_hash(defect)}
     end
 
     # A map from machine-readable field names to human-readable labels.
     def defect_fields
-      @defect_fields ||= entities_to_hash( Nokogiri::XML.parse @connection.defect_fields )
+      @defect_fields ||= response_to_hash( @connection.defect_fields )
     end
 
     # A map from user logins to full names.
-    # TODO embed extra data.
     def users
-      @users ||= entities_to_hash( Nokogiri::XML.parse(@connection.users), 
+      @users ||= response_to_hash( @connection.users,
                                    entity_name: 'User',
                                    value_field: 'FullName',
                                    key_process: :downcase )
@@ -143,7 +142,28 @@ module QualityCenter
       entities
     end
 
+    def collection(in_hash,entity_name)
+      puts in_hash.inspect
+      in_hash[entity_name+'s'][entity_name]
+    end
 
+    def response_to_hash(response,opts={})
+      opts.reverse_merge!(entity_name: 'Field',
+                          key_field:   'Name',
+                          value_field: 'Label',
+                          key_process: :to_s,
+                          val_process: :to_s)
+
+      root = collection(response,opts[:entity_name])
+
+      Hash[ root.map{ |entity|
+                      [
+                        entity[opts[:key_field]].  send(opts[:key_process]),
+                        entity[opts[:value_field]].send(opts[:val_process])
+                      ]
+                    } 
+          ]
+    end
 
   end
 end

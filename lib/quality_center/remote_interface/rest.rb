@@ -26,27 +26,29 @@ module QualityCenter
         response
       end
 
-      def auth_get(url,prefix = PREFIX)
-        res = self.class.get( prefix+url, headers: {'Cookie' => @cookie} )
+      def auth_get(url,opts={})
+        opts.reverse_merge!(prefix:PREFIX, raw:false)
+        puts opts[:prefix]+url
+        res = self.class.get( opts[:prefix]+url, headers: {'Cookie' => @cookie} )
         assert_valid(res)
-        res.body
+        opts[:raw] ? res.response.body : res.parsed_response
       end
 
-      def users
-        scoped_get('/users')
+      def users(opts={})
+        scoped_get('/customization/users',opts)
       end
 
-      def defects
-        scoped_get('/defects')
+      def defects(opts={})
+        scoped_get('/defects',opts)
       end
 
-      def defect_fields
-        scoped_get('/customization/entities/defect/fields')
+      def defect_fields(opts={})
+        scoped_get('/customization/entities/defect/fields',opts)
       end
 
       # get a path scoped to a predefined domain and project
-      def scoped_get(path)
-        auth_get(SCOPE + path)
+      def scoped_get(path,opts={})
+        auth_get(SCOPE+path,opts)
       end
 
       def authenticated?
@@ -62,8 +64,8 @@ module QualityCenter
 
     # Check that a HTTP response is OK.
     def assert_valid(res)
-      raise LoginError                         if res.response.code == '401'
-      raise UnrecognizedResponse,response.code if res.response.code != '200'
+      raise LoginError, res.response.code          if res.response.code == '401'
+      raise UnrecognizedResponse,res.response.code if res.response.code != '200'
     end
 
     end
