@@ -123,7 +123,7 @@ module QualityCenter
 
         # Only pass in the query option if a query was given
         get_opts         = {headers: {'Cookie' => @cookie}}
-        get_opts[:query] = opts[:query] if opts[:query]
+        get_opts[:query] = opts[:query].to_hash if opts[:query]
 
         self.class.get(url, get_opts).log(@logger)
       end
