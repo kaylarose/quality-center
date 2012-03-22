@@ -7,7 +7,9 @@ module QualityCenter
     class Rest
 
       include HTTParty
+
       base_uri 'qualitycenter.ic.ncs.com:8080'
+      
       def initialize(u,p)
         @login = {:j_username => u, :j_password => p}
         @cookie = ''
