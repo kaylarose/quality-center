@@ -32,11 +32,11 @@ module QualityCenter
         res.body
       end
 
-      def users(path)
+      def users
         scoped_get('/users')
       end
 
-      def defects(path)
+      def defects
         scoped_get('/defects')
       end
 
