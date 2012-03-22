@@ -1,4 +1,5 @@
 require 'httparty'
+require 'logger'
 require_relative 'exceptions'
 require_relative '../constants'
 
@@ -10,8 +11,12 @@ module QualityCenter
 
       base_uri 'qualitycenter.ic.ncs.com:8080'
       
-      def initialize(u,p)
-        @login = {:j_username => u, :j_password => p}
+      def initialize(opts={})
+        raise ArgumentError 'No User/Pass' unless opts[:user] && opts[:password]
+
+        @logger = opts[:logger] || Logger.new(STDOUT)
+        @login  = { :j_username => opts[:user], 
+                    :j_password => opts[:password] }
         @cookie = ''
       end
 
@@ -43,17 +48,17 @@ module QualityCenter
       #                  default: false
       # Examples
       #
-      #   auth_get('/entities')
+      #   auth_get '/entities'
       #   # => (array of Entity hashes)
       #
-      #   auth_get('/somethings', raw:true)
+      #   auth_get '/somethings', raw:true
       #   # => "<xml><somethings></somethings></xml>"
       #
       # Returns a hash or string representing the requested resource.
       def auth_get(path,opts={})
         opts.reverse_merge!(prefix:PREFIX, raw:false)
         url = opts[:prefix] + path
-        assert_valid(res = stateful_get(url) )
+        assert_valid(res = stateful_get(url,opts) )
 
         # return raw xml if caller wants it,    otherwise a hash.
         return opts[:raw] ? res.response.body : res.parsed_response
@@ -94,9 +99,14 @@ module QualityCenter
       end
 
       # Get somethig using the cookie
-      def stateful_get(url)
+      def stateful_get(url,opts)
         raise NotAuthenticated if @cookie.empty?
-        self.class.get( url, headers: {'Cookie' => @cookie} )
+
+        # Only pass in the query option if a query was given
+        get_opts         = {headers: {'Cookie' => @cookie}}
+        get_opts[:query] = opts[:query] if opts[:query]
+
+        self.class.get(url, get_opts).log(@logger)
       end
 
       # Get a path scoped to a predefined domain and project
@@ -104,6 +114,16 @@ module QualityCenter
         auth_get(SCOPE+path,opts)
       end
 
+    end
+  end
+end
+
+# Patch the Response class to make logging cleaner.
+module HTTParty
+  class Response
+    def log(logger)
+      logger.debug "#{response.code} #{response.message} #{request.uri}"
+      self
     end
   end
 end
