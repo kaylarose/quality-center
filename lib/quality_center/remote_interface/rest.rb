@@ -76,6 +76,7 @@ module QualityCenter
         assert_valid(res = stateful_get(url,opts) )
 
         # return raw xml if caller wants it,    otherwise a hash.
+        puts "",opts.inspect,""
         return opts[:raw] ? res.response.body : res.parsed_response
       end
 
@@ -88,6 +89,7 @@ module QualityCenter
       # The list of defects
       # TODO make fancier, searchable, etc
       def defects(opts={})
+        puts opts.inspect
         scoped_get('/defects',opts)
       end
 
@@ -123,7 +125,7 @@ module QualityCenter
 
         # Only pass in the query option if a query was given
         get_opts         = {headers: {'Cookie' => @cookie}}
-        get_opts[:query] = opts[:query].to_hash if opts[:query]
+        get_opts[:query] = opts[:query].to_hash unless opts[:query].empty?
 
         self.class.get(url, get_opts).log(@logger)
       end
@@ -146,3 +148,11 @@ module HTTParty
     end
   end
 end
+
+# Nil is empty.  Don't let anyone tell you different.
+class NilClass
+  def empty?
+    true
+  end
+end
+
