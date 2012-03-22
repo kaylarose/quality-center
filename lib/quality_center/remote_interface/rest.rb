@@ -26,12 +26,29 @@ module QualityCenter
         response
       end
 
-      def auth_get(url,opts={})
+      # Retrieve the contents of a path, respecting authentication cookies.
+      # 
+      # path - The url fragment to fetch.  Will be concatenated with PREFIX
+      # opts - :prefix - The string to prepend to the path
+      #                  default: PATH
+      #        :raw    - Whether to return unprocessed raw XML, or a parsed hash
+      #                  default: false
+      # Examples
+      #
+      #   auth_get('/entities')
+      #   # => (array of Entity hashes)
+      #
+      #   auth_get('/somethings', raw:true)
+      #   # => "<xml><somethings></somethings></xml>"
+      #
+      # Returns a hash or string representing the requested resource
+      def auth_get(path,opts={})
         opts.reverse_merge!(prefix:PREFIX, raw:false)
-        puts opts[:prefix]+url
-        res = self.class.get( opts[:prefix]+url, headers: {'Cookie' => @cookie} )
-        assert_valid(res)
-        opts[:raw] ? res.response.body : res.parsed_response
+        url = opts[:prefix] + path
+        assert_valid(res = stateful_get(url) )
+
+        # return raw xml if caller wants it,    otherwise a hash.
+        return opts[:raw] ? res.response.body : res.parsed_response
       end
 
       def users(opts={})
@@ -62,11 +79,18 @@ module QualityCenter
 
     private
 
-    # Check that a HTTP response is OK.
-    def assert_valid(res)
-      raise LoginError, res.response.code          if res.response.code == '401'
-      raise UnrecognizedResponse,res.response.code if res.response.code != '200'
-    end
+      # Check that a HTTP response is OK.
+      def assert_valid(res)
+        raise LoginError, res.response.code          if res.response.code == '401'
+        raise UnrecognizedResponse,res.response.code if res.response.code != '200'
+      end
+
+      # Get somethig using the cookie
+      def stateful_get(url)
+        raise NotAuthenticated if @cookie.empty?
+        self.class.get( url, headers: {'Cookie' => @cookie} )
+      end
+
 
     end
   end
