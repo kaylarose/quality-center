@@ -5,6 +5,19 @@ require_relative '../constants'
 
 module QualityCenter
   module RemoteInterface
+
+    # Wraps the QC Restful API.
+    # qualitycenter:8080/qcbin/Help/doc_library/api_refs/REST/webframe.html
+    # 
+    # user     - Login username
+    # password - Login password
+    # logger   - A Logger to write HTTP calls to (optional)
+    #
+    # Example
+    #
+    #   connection = Rest.new(user:'user', password:'secret')
+    #   connection.login
+    #   defects = connection.defects
     class Rest
 
       include HTTParty
