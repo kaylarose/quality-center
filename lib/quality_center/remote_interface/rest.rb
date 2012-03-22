@@ -34,7 +34,7 @@ module QualityCenter
       # 
       # path - The url fragment to fetch.  Will be concatenated with PREFIX
       # opts - :prefix - The string to prepend to the path
-      #                  default: PATH
+      #                  default: PREFIX
       #        :raw    - Whether to return unprocessed raw XML, or a parsed hash
       #                  default: false
       # Examples
@@ -81,7 +81,7 @@ module QualityCenter
         end
       end
 
-    private
+      private
 
       # Check that a HTTP response is OK.
       def assert_valid(res)
