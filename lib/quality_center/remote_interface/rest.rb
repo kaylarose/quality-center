@@ -14,6 +14,8 @@ module QualityCenter
       end
 
       # Log in to the QC server using the credentials set at initialization.
+      # This uses the 'user-facing' login page, due to problems with the method at
+      # qualitycenter:8080/qcbin/Help/doc_library/api_refs/REST/Content/General/Authenticate.html
       #
       # Returns the server response if the login is successful.
       # Raises LoginError if the credentials were not accepted.
