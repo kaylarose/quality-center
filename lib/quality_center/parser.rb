@@ -2,44 +2,71 @@ require 'nokogiri'
 require 'active_support/core_ext/hash'
 require_relative 'constants'
 
+# A class to make QC's responses a little more usable.  
+# The primary method is #defects, which returns an array of defect hashes.
+# TODO split Defect into another class.
 module QualityCenter
   class Parser
 
-    # Create the object with mock => true to enable fake API calls
-    def initialize(connection,opts={})
-      @connection = if opts[:mock]
+    # Create the object with mock => true to enable fake API calls.
+    #
+    # connection - ::RemoteInterface::Rest object to handle requests.
+    # mock       - Boolean, indicates whether to use a fake connection object
+    #              for testing or development purposes.
+    # Example
+    #
+    #   Parser.new(connection: ::RemoteInterface::Rest.new)
+    #   Parser.new(mock: true)
+    def initialize(opts={})
+      @conn = if opts[:mock]
         require_relative 'remote_interface/mocks'
         RemoteInterface::Mocks::Rest.new
       else
-        connection
+        opts[:connection]
       end
+      raise ArgumentError 'invalid connection' unless @conn.respond_to? :login
     end
 
-    # A list of defects.
+    # A list of defects.  You can pass in Query objects or
+    # anything else that the @conn object understands.
+    #
+    # query - A ::RemoteInterface::Query or a Hash to filter the results.
+    #
+    # Example
+    #
+    #   defects(:query => ::RemoteInterface::Query.new.filter(id:'<9') )
+    #
+    # Returns an Array of Hashes representing individual defects.
     def defects(opts={})
       opts.merge!(raw:true)
-      @defects ||= Nokogiri::XML.parse( @connection.defects(opts) ).
+      @defects ||= Nokogiri::XML.parse( @conn.defects(opts) ).
                      css('Entity').
                      map{|defect| defect_to_hash(defect)}
     end
 
     # A map from machine-readable field names to human-readable labels.
+    #
+    # Returns a Hash like {'user-06'=>'Environment", 'user-01'=> 'External ID'}
     def defect_fields
-      @defect_fields ||= response_to_hash( @connection.defect_fields )
+      @defect_fields ||= response_to_hash( @conn.defect_fields )
     end
 
     # A map from user logins to full names.
+    #
+    # Returns a Hash like  {bob: "Bob Smith",john: "John Doe"}
     def users
-      @users ||= response_to_hash( @connection.users,
+      @users ||= response_to_hash( @conn.users,
                                    entity_name: 'User',
                                    value_field: 'FullName',
                                    key_process: :downcase )
     end
 
-    # Hash of the root object
+    # Hash of the root object.  Not that useful, possibly not working.
+    #
+    # Returns a hash of something or other.
     def root
       ret = {}
-      xml = Nokogiri::XML.parse(@connection.auth_get(''))
+      xml = Nokogiri::XML.parse(@conn.auth_get(''))
       xml.css('ns2|workspace').each do |workspace|
         ret[workspace.css('title').first.text] = 
           Hash[
@@ -51,14 +78,23 @@ module QualityCenter
 
     private 
 
-    # get the value of the Name attribute for a field
-    def attr(field,attr='Name')
-      field.attributes[attr].value
+    # Get the value of the Name attribute for a field
+    # 
+    # node           - the XML Node to grab the attribute from.
+    # name_attribute - the XML attribute representing the node's name.  
+    #                  Defaults to 'Name'.
+    #
+    # Returns a String representing the "Name" of the XML node.
+    def attr(node,name_attribute='Name')
+      node.attributes[name_attribute].value
     end
 
     # Get the display-friendly name of a field.
-    def nice_name(field)
-      name = attr(field)
+    # Relies on the #defect_fields method to provide nice names.
+    #
+    # field - the XML Node to grab the name from.
+    def nice_name(node)
+      name = attr(node)
       defect_fields[name] || name
     end
 
@@ -75,8 +111,10 @@ module QualityCenter
 
     # Convert a single defect entity into a hash.
     # Ignores fields with empty values.
-    # Example:
-    #   Input  <Entity Type="defect">
+    #
+    # Example
+    #
+    #   xml =  <Entity Type="defect">
     #            <Fields>
     #              <Field Name="a">
     #                <Value>1</Value>
@@ -84,10 +122,16 @@ module QualityCenter
     #              <Field Name="b">
     #                <Value>2</Value>
     #              </Field>
+    #              <Field Name="c">
+    #                <Value></Value>
+    #              </Field>
     #            </Fields>
     #          </Entity>
     #
-    #  Output {a:1,b:2}
+    #   defect_to_hash(xml)
+    #   # => {a:1, b:2}
+    # 
+    # Returns a Hash representing a defect.
     def defect_to_hash(xml)
       defect={}
       xml.css('Field').each do |field|
@@ -99,22 +143,32 @@ module QualityCenter
     end
 
     # Generic function to turn a QC entity list into a simple hash.
-    # Accepts a Nokogiri::XML::Document and the following options:
-    #   entity_name: The XML tag name of each entity in the list.
-    #                In the below example, 'User'
-    #   value_field: The XML attribute that constitutes the "value" of an entity.
-    #                For example, 'FullName'
-    #   key_process: The name of a transform method to apply to keys.
-    #                In the below example, using :downcase would yield
-    #                  {bob: "Bob Smith",john: "John Doe"}
-    #   val_process: Like key_process for values.
-    #                In the below example, using :upcase would yield
-    #                  {BoB: "BOB SMITH",john: "JOHN DOE"}
-    # Example document:       
-    #  <Users>
-    #    <User Name="BoB"  FullName="Bob Smith"/>
-    #    <User Name="john" FullName="John Doe"/>
-    #  </Users>
+    #
+    #   doc         - A Nokogiri::XML::Document from QC.
+    #   entity_name - The XML tag name of each entity in the list.
+    #   value_field - The XML attribute that constitutes the "value" of an entity.
+    #   key_process - The name of a transform method to apply to keys.
+    #   val_process - Like key_process for values.
+    #
+    # Examples
+    # 
+    #   doc = <Users>
+    #           <User Name="BoB"  FullName="Bob Smith"/>
+    #           <User Name="john" FullName="John Doe"/>
+    #         </Users>
+    #
+    #   opts = {entity_name: 'User', value_field: 'FullName'}
+    #
+    #   entities_to_hash(doc, opts)
+    #   # => {BoB: "Bob Smith", john: "John Doe"}
+    #
+    #   entities_to_hash(doc, opts.merge(key_process: :downcase)
+    #   # => {bob: "Bob Smith", john: "John Doe"}
+    #
+    #   entities_to_hash(doc, opts.merge(val_process: :upcase)
+    #   # => {BoB: "BOB SMITH",john: "JOHN DOE"}
+    #
+    # Returns a Hash extracted from the entity list mapping one attribute to another.
     def entities_to_hash(doc,opts={})
       # apply defaults over missing options
       opts.reverse_merge!(entity_name: 'Field',
@@ -142,6 +196,15 @@ module QualityCenter
       entities
     end
 
+    # Simple function to get from the root of a QC entity list to the meat.
+    # TODO use a better pluralizer.
+    # 
+    # in_hash     - Hash of form:
+    #                 {Somethings:{Something:[MEAT]}}.
+    #               This is likely produced by HTTParty's built in parser.
+    # entity_name - String, "Something" in the above example.
+    #
+    # Returns an array of entities if called on the expected kind of hash.
     def collection(in_hash,entity_name)
       puts in_hash.inspect
       in_hash[entity_name+'s'][entity_name]
