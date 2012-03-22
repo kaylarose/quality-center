@@ -23,14 +23,13 @@ module QualityCenter
         raise LoginError, "Bad credentials" if response.request.uri.to_s =~ /error/
 
         @cookie = response.request.options[:headers]['Cookie']
-        puts @cookie.inspect
         response
       end
 
       def auth_get(url,prefix = PREFIX)
         res = self.class.get( prefix+url, headers: {'Cookie' => @cookie} )
-        raise LoginError if res.response.code == '401'
-        res
+        assert_valid(res)
+        res.body
       end
 
       def users(path)
@@ -58,6 +57,14 @@ module QualityCenter
           else false
         end
       end
+
+    private
+
+    # Check that a HTTP response is OK.
+    def assert_valid(res)
+      raise LoginError                         if res.response.code == '401'
+      raise UnrecognizedResponse,response.code if res.response.code != '200'
+    end
 
     end
   end
