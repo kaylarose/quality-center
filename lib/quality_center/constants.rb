@@ -28,5 +28,11 @@ module QualityCenter
       }
     end
 
+    module Mocks
+      class Rest
+        FIXTURES = '/home/brasca/git/qc_rest/fixtures/'
+      end
+    end
+
   end
 end
