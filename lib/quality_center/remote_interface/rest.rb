@@ -1,6 +1,6 @@
 require 'httparty'
 require_relative 'exceptions'
-require_relative 'constants'
+require_relative '../constants'
 
 module QualityCenter
   module RemoteInterface

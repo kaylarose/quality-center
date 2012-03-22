@@ -1,5 +1,5 @@
 require 'active_support/core_ext/hash'
-require_relative 'constants'
+require_relative '../constants'
 
 module QualityCenter
   module RemoteInterface
