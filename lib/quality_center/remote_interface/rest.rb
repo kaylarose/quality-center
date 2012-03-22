@@ -22,7 +22,7 @@ module QualityCenter
 
       include HTTParty
 
-      base_uri 'qualitycenter.ic.ncs.com:8080'
+      base_uri BASE_URI
       
       def initialize(opts={})
         raise ArgumentError 'No User/Pass' unless opts[:user] && opts[:password]
@@ -40,7 +40,7 @@ module QualityCenter
       # Returns the server response if the login is successful.
       # Raises LoginError if the credentials were not accepted.
       def login
-        response = self.class.get AUTHURI[:get]
+        response = self.class.get AUTH_URI[:get]
         response = self.class.post(
           AUTHURI[:post],
           body:    @login,

@@ -8,15 +8,16 @@ module QualityCenter
   module RemoteInterface
 
     class Rest
-      AUTHURI  = {
+      BASE_URI = 'qualitycenter.ic.ncs.com:8080'
+      AUTH_URI = {
         get:  '/qcbin/authentication-point/login.jsp',
         post: '/qcbin/authentication-point/j_spring_security_check'
       }
-      PREFIX  = '/qcbin/rest'
-      DEFECTS = '/domains/TEST/projects/AssessmentQualityGroup/defects'
-      DOMAIN  = 'TEST'
-      PROJECT = 'AssessmentQualityGroup'
-      SCOPE   = "/domains/#{DOMAIN}/projects/#{PROJECT}"
+      PREFIX   = '/qcbin/rest'
+      DEFECTS  = '/domains/TEST/projects/AssessmentQualityGroup/defects'
+      DOMAIN   = 'TEST'
+      PROJECT  = 'AssessmentQualityGroup'
+      SCOPE    = "/domains/#{DOMAIN}/projects/#{PROJECT}"
 
     end
 
