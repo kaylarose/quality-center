@@ -37,6 +37,19 @@ module QualityCenter
                                    key_process: :downcase )
     end
 
+    # Hash of the root object
+    def root
+      ret = {}
+      xml = Nokogiri::XML.parse(@connection.auth_get(''))
+      xml.css('ns2|workspace').each do |workspace|
+        ret[workspace.css('title').first.text] = 
+          Hash[
+            workspace.css('ns2|collection').map{|x| [x.text,x.attributes['href'].value] }
+          ]
+      end
+      ret
+    end
+
     private 
 
     # get the value of the Name attribute for a field
