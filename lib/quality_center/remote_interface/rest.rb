@@ -23,7 +23,8 @@ module QualityCenter
       include HTTParty
 
       base_uri BASE_URI
-      
+     
+      # User / Pass required, logger optional.  Initialize a blank cookie.
       def initialize(opts={})
         raise ArgumentError 'No User/Pass' unless opts[:user] && opts[:password]
 
@@ -77,16 +78,20 @@ module QualityCenter
         return opts[:raw] ? res.response.body : res.parsed_response
       end
 
-      # The list of QC users
+      # The list of QC users.
+      # TODO time-limited memoization (this changes rarely)
       def users(opts={})
         scoped_get('/customization/users',opts)
       end
 
+      # The list of defects
+      # TODO make fancier, searchable, etc
       def defects(opts={})
         scoped_get('/defects',opts)
       end
 
       # The field definitions for QC defects.
+      # TODO very long memoization (this never changes)
       def defect_fields(opts={})
         scoped_get('/customization/entities/defect/fields',opts)
       end
