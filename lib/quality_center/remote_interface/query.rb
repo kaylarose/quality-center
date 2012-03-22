@@ -6,8 +6,14 @@ module QualityCenter
 
     # The query segment of a QC REST call, including parameters to filter and sort results.
     # See the docs at qualitycenter:8080/qcbin/Help/doc_library/api_refs/REST/webframe.html
-    # Example:
-    # q = Query.new.filter(id:'<9',product:'SORM*').paginate(limit:20)
+    #
+    # Example
+    #
+    #   Query.new.filter(id:'<9',product:'SORM*').paginate(limit:20).order_by(:id).to_hash
+    #   # => { "query"       => "{id[<9];product[SORM*]}",
+    #          "page-size"   => 3,
+    #          "start-index" => 1,
+    #          "order-by"    => "{id[DESC]}" }
     class Query
 
       attr_accessor :query
@@ -30,9 +36,9 @@ module QualityCenter
       # Order by a field, descending by default.
       # TODO support multiple order clauses
       # http://qualitycenter:8080/qcbin/Help/doc_library/api_refs/REST/Content/General/order-by.html
-      def order_by(opts = {})
+      def order_by(field,opts = {})
         opts = assert_legal_order(opts)
-        add order_by: wrap( opts[:field], opts[:direction] )
+        add order_by: wrap( field, opts[:direction] )
         self
       end
 
@@ -81,7 +87,6 @@ module QualityCenter
         opts.symbolize_keys!
         opts.reverse_merge! DEFAULT[:order]
         opts[:direction].upcase!
-        raise ArgumentError.new(':field required')   unless opts.include? :field
         raise ArgumentError.new("Illegal Direction") unless DIRECTIONS.include? opts[:direction]
         opts
       end
