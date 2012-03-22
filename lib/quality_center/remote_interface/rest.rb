@@ -41,12 +41,12 @@ module QualityCenter
       # Returns the server response if the login is successful.
       # Raises LoginError if the credentials were not accepted.
       def login
-        response = self.class.get AUTH_URI[:get]
+        response = self.class.get(AUTH_URI[:get]).log(@logger)
         response = self.class.post(
-          AUTHURI[:post],
+          AUTH_URI[:post],
           body:    @login,
           headers: {'Cookie' => response.headers['Set-Cookie']}
-        )
+        ).log(@logger)
         raise LoginError, "Bad credentials" if response.request.uri.to_s =~ /error/
 
         @cookie = response.request.options[:headers]['Cookie']
@@ -112,8 +112,8 @@ module QualityCenter
 
       # Check that a HTTP response is OK.
       def assert_valid(res)
-        raise LoginError, res.response.code          if res.response.code == '401'
-        raise UnrecognizedResponse,res.response.code if res.response.code != '200'
+        raise LoginError, res.code          if res.response.code == 401
+        raise UnrecognizedResponse,res.code if res.response.code != 200
       end
 
       # Get somethig using the cookie
@@ -140,7 +140,7 @@ end
 module HTTParty
   class Response
     def log(logger)
-      logger.debug "#{response.code} #{response.message} #{request.uri}"
+      logger.debug "#{request.http_method.const_get :METHOD} #{request.uri} #{response.code} #{response.message}"
       self
     end
   end
