@@ -1,5 +1,6 @@
 require 'httparty'
 require 'logger'
+require 'active_support/core_ext/hash'
 require_relative 'exceptions'
 require_relative '../constants'
 
@@ -112,8 +113,8 @@ module QualityCenter
 
       # Check that a HTTP response is OK.
       def assert_valid(res)
-        raise LoginError, res.code          if res.response.code == 401
-        raise UnrecognizedResponse,res.code if res.response.code != 200
+        raise LoginError, res.code          if res.code == 401
+        raise UnrecognizedResponse,res.code if res.code != 200
       end
 
       # Get somethig using the cookie
