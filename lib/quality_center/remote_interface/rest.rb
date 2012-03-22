@@ -13,6 +13,10 @@ module QualityCenter
         @cookie = ''
       end
 
+      # Log in to the QC server using the credentials set at initialization.
+      #
+      # Returns the server response if the login is successful.
+      # Raises LoginError if the credentials were not accepted.
       def login
         response = self.class.get AUTHURI[:get]
         response = self.class.post(
@@ -41,7 +45,7 @@ module QualityCenter
       #   auth_get('/somethings', raw:true)
       #   # => "<xml><somethings></somethings></xml>"
       #
-      # Returns a hash or string representing the requested resource
+      # Returns a hash or string representing the requested resource.
       def auth_get(path,opts={})
         opts.reverse_merge!(prefix:PREFIX, raw:false)
         url = opts[:prefix] + path
@@ -51,6 +55,7 @@ module QualityCenter
         return opts[:raw] ? res.response.body : res.parsed_response
       end
 
+      # The list of QC users
       def users(opts={})
         scoped_get('/customization/users',opts)
       end
@@ -59,15 +64,14 @@ module QualityCenter
         scoped_get('/defects',opts)
       end
 
+      # The field definitions for QC defects.
       def defect_fields(opts={})
         scoped_get('/customization/entities/defect/fields',opts)
       end
 
-      # get a path scoped to a predefined domain and project
-      def scoped_get(path,opts={})
-        auth_get(SCOPE+path,opts)
-      end
-
+      # Is the current session authenticated?
+      #
+      # Returns a boolean indicating whether QC likes us.
       def authenticated?
         return false if @cookie.empty?
         return case self.class.get('/qcbin/rest/is-authenticated',
@@ -91,6 +95,10 @@ module QualityCenter
         self.class.get( url, headers: {'Cookie' => @cookie} )
       end
 
+      # Get a path scoped to a predefined domain and project
+      def scoped_get(path,opts={})
+        auth_get(SCOPE+path,opts)
+      end
 
     end
   end
