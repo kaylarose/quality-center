@@ -76,7 +76,6 @@ module QualityCenter
         assert_valid(res = stateful_get(url,opts) )
 
         # return raw xml if caller wants it,    otherwise a hash.
-        puts "",opts.inspect,""
         return opts[:raw] ? res.response.body : res.parsed_response
       end
 
@@ -89,7 +88,6 @@ module QualityCenter
       # The list of defects
       # TODO make fancier, searchable, etc
       def defects(opts={})
-        puts opts.inspect
         scoped_get('/defects',opts)
       end
 
