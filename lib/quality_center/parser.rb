@@ -16,9 +16,9 @@ module QualityCenter
     end
 
     # A list of defects.
-    # TODO support query params
-    def defects
-      @defects ||= Nokogiri::XML.parse( @connection.defects(raw:true) ).
+    def defects(opts={})
+      opts.merge!(raw:true)
+      @defects ||= Nokogiri::XML.parse( @connection.defects(opts) ).
                      css('Entity').
                      map{|defect| defect_to_hash(defect)}
     end
