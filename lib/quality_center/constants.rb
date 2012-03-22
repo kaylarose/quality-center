@@ -16,7 +16,7 @@ module QualityCenter
       DEFECTS = '/domains/TEST/projects/AssessmentQualityGroup/defects'
       DOMAIN  = 'TEST'
       PROJECT = 'AssessmentQualityGroup'
-      SCOPE   = "domains/#{DOMAIN}/projects/#{PROJECT}"
+      SCOPE   = "/domains/#{DOMAIN}/projects/#{PROJECT}"
 
     end
 
