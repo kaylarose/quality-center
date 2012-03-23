@@ -24,6 +24,10 @@ module QualityCenter
         @query = {}
       end
 
+      def page_size
+        @query['page-size']
+      end
+
       # Add a page limit.  QC defaults to 100, we default to 10.
       # http://qualitycenter:8080/qcbin/Help/doc_library/api_refs/REST/Content/General/Data_Paging.html
       def paginate(opts = {})
