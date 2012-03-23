@@ -132,7 +132,7 @@ module QualityCenter
     #   # => {a:1, b:2}
     # 
     # Returns a Hash representing a defect.
-    def defect_to_hash(xml)
+    def xml_defect_to_hash(xml)
       defect={}
       xml.css('Field').each do |field|
         unless (text=field.text).empty? or text == 'None'
@@ -141,6 +141,14 @@ module QualityCenter
       end
       defect
     end
+   
+    def defect_to_hash(input)
+      Hash[ input["Fields"]["Field"].
+            map{    |x| [nice_name[x["Name"]],x["Value"]] }.
+            reject{ |x,y| y.empty? or y == "None" }
+          ]
+    end
+
 
     # Generic function to turn a QC entity list into a simple hash.
     #
