@@ -38,4 +38,13 @@ class TestRest < Test::Unit::TestCase
     end
   end
 
+  def test_authentication_check
+    with_valid_credentials do
+      conn = new_rest(@@good_creds)
+      refute conn.authenticated?
+      conn.login
+      assert conn.authenticated?
+    end
+  end
+
 end

@@ -179,4 +179,36 @@ http_interactions:
       string: ''
     http_version: 
   recorded_at: Mon, 26 Mar 2012 21:13:16 GMT
+- request:
+    method: get
+    uri: http://qualitycenter.ic.ncs.com:8080/qcbin/rest/is-authenticated
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Cookie:
+      - JSESSIONID=ECABB7A686040528766D0DFD1FA6B7B4; Path=/; LWSSO_COOKIE_KEY=NomonCcwSyaTWUrFqjC1dmi37OLXPeO3-rOi0oFBSnp2lzTT2zc0CrQrCA_9QZnRgwjDVxw--2lwLBIH0tLCCNtScQux7tgq8I_AycrV3MBxM8j0Jdn1wcCkiRGZE78a8BnFuqNfc_heFM3caHjTb-trP7zmrfdxBgpKAXTIBsHJYjrS0KUG02K6oroGviuFadXlfVOEPPaLA5XEo4irmNq7G--n9eSYxDsQUAB7QkNMyr3spSjfKPTt7alSpn1V
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Set-Cookie:
+      - LWSSO_COOKIE_KEY=Vz75RfFKotsHfcPBZ1wQ0K9GskaQhoI7TN2pv5CopXF4WJOSEKjcvxy4DvR_q-sJkQy43VGPeMMOxG9VWgFO-Y6HvTWjRhx_agf8s3qGKlob5YQ0j5GhjeUJZOIrcFlJ-moCsWvK2Uwg3YNiHe9G5fXxBonlI3ZI6hEXj8Zb2nxvp8sotla8Hkgsy9pNChqVl-q-CeHWQ4YpBm-LWhXTJKiJRkLFTw8vst_HVumG78DYLgHBj-610tBJUHd_i3q2;
+        Path=/
+      Content-Type:
+      - application/xml
+      Content-Length:
+      - '124'
+      Date:
+      - Mon, 26 Mar 2012 21:55:52 GMT
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><AuthenticationInfo><Username>ubrasca</Username></AuthenticationInfo>
+    http_version: 
+  recorded_at: Mon, 26 Mar 2012 21:55:45 GMT
 recorded_with: VCR 2.0.0
