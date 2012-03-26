@@ -39,7 +39,7 @@ module QualityCenter
       # This uses the 'user-facing' login page, due to problems with the method at
       # qualitycenter:8080/qcbin/Help/doc_library/api_refs/REST/Content/General/Authenticate.html
       #
-      # Returns the server response if the login is successful.
+      # Returns self if the login is successful.
       # Raises LoginError if the credentials were not accepted.
       def login
         response = self.class.get(AUTH_URI[:get]).log(@logger)
@@ -52,6 +52,7 @@ module QualityCenter
 
         @cookie = response.request.options[:headers]['Cookie']
         response
+        self
       end
 
       # Retrieve the contents of a path, respecting authentication cookies.
