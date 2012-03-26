@@ -38,10 +38,7 @@ module QualityCenter
     #
     # Returns an Array of Hashes representing individual defects.
     def defects(opts={})
-      opts.merge!(raw:true)
-      @defects ||= Nokogiri::XML.parse( @conn.defects(opts) ).
-                     css('Entity').
-                     map{|defect| defect_to_hash(defect)}
+      DefectCollection.new(connection:@conn,query:opts[:query])
     end
 
     # A map from machine-readable field names to human-readable labels.
@@ -141,7 +138,8 @@ module QualityCenter
       end
       defect
     end
-   
+  
+    # The above, except using the hashes provided by HTTParty.
     def defect_to_hash(input)
       Hash[ input["Fields"]["Field"].
             map{    |x| [nice_name[x["Name"]],x["Value"]] }.
