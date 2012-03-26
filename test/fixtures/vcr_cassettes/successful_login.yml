@@ -17,13 +17,13 @@ http_interactions:
       X-Powered-By:
       - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
       Set-Cookie:
-      - JSESSIONID=ECABB7A686040528766D0DFD1FA6B7B4; Path=/qcbin
+      - JSESSIONID=66E574F45E5D0B08B52386E701A3A261; Path=/qcbin
       Content-Type:
       - text/html;charset=ISO-8859-1
       Content-Length:
       - '7127'
       Date:
-      - Mon, 26 Mar 2012 21:13:22 GMT
+      - Mon, 26 Mar 2012 22:46:33 GMT
     body:
       encoding: US-ASCII
       string: ! "\r\n\r\n\r\n<head>\r\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\"
@@ -119,7 +119,7 @@ http_interactions:
         \           </table>\r\n            </td>\r\n        </tr>\r\n    </table>\r\n
         \   <p></p>\r\n</body>\r\n"
     http_version: 
-  recorded_at: Mon, 26 Mar 2012 21:13:15 GMT
+  recorded_at: Mon, 26 Mar 2012 22:46:27 GMT
 - request:
     method: post
     uri: http://qualitycenter.ic.ncs.com:8080/qcbin/authentication-point/j_spring_security_check
@@ -128,7 +128,7 @@ http_interactions:
       string: j_username=valid_user&j_password=valid_password
     headers:
       Cookie:
-      - JSESSIONID=ECABB7A686040528766D0DFD1FA6B7B4; Path=/qcbin
+      - JSESSIONID=66E574F45E5D0B08B52386E701A3A261; Path=/qcbin
   response:
     status:
       code: 302
@@ -139,19 +139,19 @@ http_interactions:
       X-Powered-By:
       - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
       Set-Cookie:
-      - LWSSO_COOKIE_KEY=NomonCcwSyaTWUrFqjC1dmi37OLXPeO3-rOi0oFBSnp2lzTT2zc0CrQrCA_9QZnRgwjDVxw--2lwLBIH0tLCCNtScQux7tgq8I_AycrV3MBxM8j0Jdn1wcCkiRGZE78a8BnFuqNfc_heFM3caHjTb-trP7zmrfdxBgpKAXTIBsHJYjrS0KUG02K6oroGviuFadXlfVOEPPaLA5XEo4irmNq7G--n9eSYxDsQUAB7QkNMyr3spSjfKPTt7alSpn1V;
+      - LWSSO_COOKIE_KEY=O4k5btby7PmlkuPTbmAsqn86iL1K7h30GhodVFgbPMOQrC7MHFy3Jh5XKj9wWvjcb7QD8wOD6NegYccgtYrk-3H__zZIYo3U1n4fcdxJ9uf6hun3skTHXbNa4A63NbC-P-mtXbj0PXJrbP-CaOnRj1JP51kDnBnQRURneclPofgzkPfgjswOSOxWkj6knvqeC83yiSlR5QoFy7r9durAdzimjDBkel_xiJboMfQOSQGPJNlfd_6GKQnvIkdu6eOt;
         Path=/
       Location:
       - http://qualitycenter.ic.ncs.com:8080/qcbin/authentication-point/authenticate
       Content-Length:
       - '0'
       Date:
-      - Mon, 26 Mar 2012 21:13:22 GMT
+      - Mon, 26 Mar 2012 22:46:33 GMT
     body:
       encoding: US-ASCII
       string: ''
     http_version: 
-  recorded_at: Mon, 26 Mar 2012 21:13:15 GMT
+  recorded_at: Mon, 26 Mar 2012 22:46:27 GMT
 - request:
     method: get
     uri: http://qualitycenter.ic.ncs.com:8080/qcbin/authentication-point/authenticate
@@ -160,7 +160,7 @@ http_interactions:
       string: j_username=valid_user&j_password=valid_password
     headers:
       Cookie:
-      - JSESSIONID=ECABB7A686040528766D0DFD1FA6B7B4; Path=/; LWSSO_COOKIE_KEY=NomonCcwSyaTWUrFqjC1dmi37OLXPeO3-rOi0oFBSnp2lzTT2zc0CrQrCA_9QZnRgwjDVxw--2lwLBIH0tLCCNtScQux7tgq8I_AycrV3MBxM8j0Jdn1wcCkiRGZE78a8BnFuqNfc_heFM3caHjTb-trP7zmrfdxBgpKAXTIBsHJYjrS0KUG02K6oroGviuFadXlfVOEPPaLA5XEo4irmNq7G--n9eSYxDsQUAB7QkNMyr3spSjfKPTt7alSpn1V
+      - JSESSIONID=66E574F45E5D0B08B52386E701A3A261; Path=/; LWSSO_COOKIE_KEY=O4k5btby7PmlkuPTbmAsqn86iL1K7h30GhodVFgbPMOQrC7MHFy3Jh5XKj9wWvjcb7QD8wOD6NegYccgtYrk-3H__zZIYo3U1n4fcdxJ9uf6hun3skTHXbNa4A63NbC-P-mtXbj0PXJrbP-CaOnRj1JP51kDnBnQRURneclPofgzkPfgjswOSOxWkj6knvqeC83yiSlR5QoFy7r9durAdzimjDBkel_xiJboMfQOSQGPJNlfd_6GKQnvIkdu6eOt
   response:
     status:
       code: 200
@@ -173,21 +173,21 @@ http_interactions:
       Content-Length:
       - '0'
       Date:
-      - Mon, 26 Mar 2012 21:13:22 GMT
+      - Mon, 26 Mar 2012 22:46:33 GMT
     body:
       encoding: US-ASCII
       string: ''
     http_version: 
-  recorded_at: Mon, 26 Mar 2012 21:13:16 GMT
+  recorded_at: Mon, 26 Mar 2012 22:46:27 GMT
 - request:
     method: get
-    uri: http://qualitycenter.ic.ncs.com:8080/qcbin/rest/is-authenticated
+    uri: http://qualitycenter.ic.ncs.com:8080/qcbin/rest/domains/TEST/projects/AssessmentQualityGroup/defects?order-by=%7Bid%5BDESC%5D%7D&page-size=10&query=%7Bid%5B%3C20%5D%7D&start-index=1
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Cookie:
-      - JSESSIONID=ECABB7A686040528766D0DFD1FA6B7B4; Path=/; LWSSO_COOKIE_KEY=NomonCcwSyaTWUrFqjC1dmi37OLXPeO3-rOi0oFBSnp2lzTT2zc0CrQrCA_9QZnRgwjDVxw--2lwLBIH0tLCCNtScQux7tgq8I_AycrV3MBxM8j0Jdn1wcCkiRGZE78a8BnFuqNfc_heFM3caHjTb-trP7zmrfdxBgpKAXTIBsHJYjrS0KUG02K6oroGviuFadXlfVOEPPaLA5XEo4irmNq7G--n9eSYxDsQUAB7QkNMyr3spSjfKPTt7alSpn1V
+      - JSESSIONID=66E574F45E5D0B08B52386E701A3A261; Path=/; LWSSO_COOKIE_KEY=O4k5btby7PmlkuPTbmAsqn86iL1K7h30GhodVFgbPMOQrC7MHFy3Jh5XKj9wWvjcb7QD8wOD6NegYccgtYrk-3H__zZIYo3U1n4fcdxJ9uf6hun3skTHXbNa4A63NbC-P-mtXbj0PXJrbP-CaOnRj1JP51kDnBnQRURneclPofgzkPfgjswOSOxWkj6knvqeC83yiSlR5QoFy7r9durAdzimjDBkel_xiJboMfQOSQGPJNlfd_6GKQnvIkdu6eOt
   response:
     status:
       code: 200
@@ -198,19 +198,1084 @@ http_interactions:
       X-Powered-By:
       - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
       Set-Cookie:
-      - LWSSO_COOKIE_KEY=Vz75RfFKotsHfcPBZ1wQ0K9GskaQhoI7TN2pv5CopXF4WJOSEKjcvxy4DvR_q-sJkQy43VGPeMMOxG9VWgFO-Y6HvTWjRhx_agf8s3qGKlob5YQ0j5GhjeUJZOIrcFlJ-moCsWvK2Uwg3YNiHe9G5fXxBonlI3ZI6hEXj8Zb2nxvp8sotla8Hkgsy9pNChqVl-q-CeHWQ4YpBm-LWhXTJKiJRkLFTw8vst_HVumG78DYLgHBj-610tBJUHd_i3q2;
+      - QCSession=MTg5NDg2MDtDc1ZTRlBaZ0QxN0Y2MDBEK0dvQTRRKio7UkVTVCBjbGllbnQ7IDsg;
+        Path=/
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Mon, 26 Mar 2012 22:46:33 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Entities
+        TotalResults="18"><Entity Type="defect"><Fields><Field Name="has-change"><Value></Value></Field><Field
+        Name="planned-closing-ver"><Value></Value></Field><Field Name="reproducible"><Value>Y</Value></Field><Field
+        Name="user-20"><Value></Value></Field><Field Name="user-21"><Value></Value></Field><Field
+        Name="has-others-linkage"><Value>Y</Value></Field><Field Name="priority"><Value>None</Value></Field><Field
+        Name="description"><Value>&lt;html&gt;&lt;body&gt;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;Test
+        Set:                     &lt;/font&gt;&lt;/b&gt; Completed Tests search&lt;p&gt;&lt;b&gt;&lt;font
+        color=&quot;#000080&quot;&gt;Test:                         &lt;/font&gt;&lt;/b&gt;
+        [1]2.1 Title 1 TAS Direct service&lt;p&gt;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;Run:                          &lt;/font&gt;&lt;/b&gt;
+        Run_1-7_16-59-55&lt;p&gt;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;Step:                         &lt;/font&gt;&lt;/b&gt;
+        Step 1&lt;p&gt; &lt;p&gt;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;Description:                  &lt;/font&gt;&lt;/b&gt;&lt;p&gt;&lt;html&gt;&lt;body&gt;Check
+        the fields that are populated in the input parameters and click the search
+        button&lt;/body&gt;&lt;/html&gt;&lt;p&gt; &lt;p&gt;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;Parameters:                   &lt;/font&gt;&lt;/b&gt;&lt;p&gt;&lt;b&gt;&lt;u&gt;Input&lt;/u&gt;&lt;/b&gt;&lt;br&gt;  &lt;font
+        color=&quot;#008284&quot;&gt;&lt;b&gt;Test_Status&lt;/b&gt;&lt;/font&gt; =
+        completed&lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Test&lt;/b&gt;&lt;/font&gt;
+        = Spelling&lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/font&gt;
+        = Vantaku,Satya&lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;USID&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;School&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Grade&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Format&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;CodeAB&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Membership_data&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Special_Programs_Title1_SWP&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Special_Programs_Title1_TAS&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Title1_TAS_Direct_Service&lt;/b&gt;&lt;/font&gt;
+        = Y&lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Title1_Percentages&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Other_programs_gifted&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Other_Programs_504_Service_Plan&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Functionally_Delayed&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Other_Programs_Migrant&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Other_Programs_Home_School&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;ELL_Excluded&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;ELL&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;T1_T2&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Special_Education&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Modified_Format_Test_Type&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;ELL_Accommodations_Q&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;ELL_Acoomodations_R&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;ELL_Acoomodations_S&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;ELL_Acoomodations_T&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Special_Acoomodation_A&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Special_Acoomodation_B&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Special_Acoomodation_C&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Special_Acoomodation_D&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Special_Acoomodation_E&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Special_Acoomodation_F&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Special_Acoomodation_G&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Special_Acoomodation_H&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Special_Accomdations_I&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Special_Acoomodation_K&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;State_Use_Only_A1&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;State_Use_Only_A2&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;State_Use_Only_A3&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;State_Use_Only_A4&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;State_Use_Only_B1&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;State_Use_Only_B2&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;State_Use_Only_B3&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;State_Use_Only_B4&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;State_Use_Only_C1&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;State_Use_Only_C2&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;State_Use_Only_C3&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Option_Code1&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Option_Code2&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Option_Code3&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Option_Code4&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Option_Code5&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Option_Code6&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Option_Code7&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Option_Code8&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Option_Code9&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;&lt;p&gt; &lt;p&gt;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;Expected:                     &lt;/font&gt;&lt;/b&gt;&lt;p&gt;&lt;html&gt;&lt;body&gt;For
+        those input paramaters that are checked should search the correct Tests&lt;/body&gt;&lt;/html&gt;&lt;p&gt;&lt;/body&gt;&lt;/html&gt;</Value></Field><Field
+        Name="run-reference"/><Field Name="alert-data"><Value></Value></Field><Field
+        Name="dev-comments"><Value></Value></Field><Field Name="to-mail"><Value></Value></Field><Field
+        Name="cycle-id"/><Field Name="status"><Value>Closed</Value></Field><Field
+        Name="closing-date"><Value>2009-01-26</Value></Field><Field Name="user-31"><Value></Value></Field><Field
+        Name="user-32"><Value></Value></Field><Field Name="user-33"><Value></Value></Field><Field
+        Name="detected-in-rel"><Value></Value></Field><Field Name="bug-ver-stamp"><Value>6</Value></Field><Field
+        Name="user-34"><Value>None</Value></Field><Field Name="user-35"><Value></Value></Field><Field
+        Name="user-36"><Value></Value></Field><Field Name="estimated-fix-time"/><Field
+        Name="project"><Value></Value></Field><Field Name="target-rel"><Value></Value></Field><Field
+        Name="step-reference"/><Field Name="owner"><Value>satyv9</Value></Field><Field
+        Name="actual-fix-time"><Value>20</Value></Field><Field Name="request-type"><Value></Value></Field><Field
+        Name="user-05"><Value>DE5047</Value></Field><Field Name="user-04"><Value></Value></Field><Field
+        Name="user-03"><Value>None</Value></Field><Field Name="user-02"><Value></Value></Field><Field
+        Name="user-01"><Value></Value></Field><Field Name="test-reference"/><Field
+        Name="subject"><Value>4780</Value></Field><Field Name="request-id"/><Field
+        Name="request-server"><Value></Value></Field><Field Name="user-09"><Value></Value></Field><Field
+        Name="user-07"><Value></Value></Field><Field Name="user-06"><Value>None</Value></Field><Field
+        Name="id"><Value>19</Value></Field><Field Name="name"><Value>Student Tests
+        search screen - Title 1 TAS Direct services is not populated</Value></Field><Field
+        Name="has-linkage"><Value>N</Value></Field><Field Name="cycle-reference"><Value></Value></Field><Field
+        Name="creation-time"><Value>2009-01-07</Value></Field><Field Name="request-note"><Value></Value></Field><Field
+        Name="closing-version"><Value></Value></Field><Field Name="detection-version"><Value></Value></Field><Field
+        Name="user-14"><Value></Value></Field><Field Name="user-13"><Value></Value></Field><Field
+        Name="user-16"><Value></Value></Field><Field Name="user-15"><Value></Value></Field><Field
+        Name="user-10"><Value></Value></Field><Field Name="last-modified"><Value>2011-05-03
+        15:53:26</Value></Field><Field Name="user-12"><Value></Value></Field><Field
+        Name="user-11"><Value></Value></Field><Field Name="detected-in-rcyc"><Value></Value></Field><Field
+        Name="severity"><Value>2 - Major Problem</Value></Field><Field Name="attachment"><Value>Y</Value></Field><Field
+        Name="user-18"><Value></Value></Field><Field Name="user-17"><Value></Value></Field><Field
+        Name="extended-reference"><Value></Value></Field><Field Name="user-19"><Value></Value></Field><Field
+        Name="detected-by"><Value>satyv9</Value></Field><Field Name="target-rcyc"><Value></Value></Field></Fields></Entity><Entity
+        Type="defect"><Fields><Field Name="has-change"><Value></Value></Field><Field
+        Name="planned-closing-ver"><Value></Value></Field><Field Name="reproducible"><Value>Y</Value></Field><Field
+        Name="user-20"><Value></Value></Field><Field Name="user-21"><Value></Value></Field><Field
+        Name="has-others-linkage"><Value>Y</Value></Field><Field Name="priority"><Value>None</Value></Field><Field
+        Name="description"><Value>&lt;html&gt;&lt;body&gt;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;Test
+        Set:                     &lt;/font&gt;&lt;/b&gt; Completed Tests search&lt;p&gt;&lt;b&gt;&lt;font
+        color=&quot;#000080&quot;&gt;Test:                         &lt;/font&gt;&lt;/b&gt;
+        [1]5.2 State Use Only-B1&lt;p&gt;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;Run:                          &lt;/font&gt;&lt;/b&gt;
+        Run_1-6_15-24-9&lt;p&gt;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;Step:                         &lt;/font&gt;&lt;/b&gt;
+        Step 1&lt;p&gt; &lt;p&gt;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;Description:                  &lt;/font&gt;&lt;/b&gt;&lt;p&gt;&lt;html&gt;&lt;body&gt;Check
+        the fields that are populated in the input parameters and click the search
+        button&lt;/body&gt;&lt;/html&gt;&lt;p&gt; &lt;p&gt;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;Parameters:                   &lt;/font&gt;&lt;/b&gt;&lt;p&gt;&lt;b&gt;&lt;u&gt;Input&lt;/u&gt;&lt;/b&gt;&lt;br&gt;  &lt;font
+        color=&quot;#008284&quot;&gt;&lt;b&gt;Test_Status&lt;/b&gt;&lt;/font&gt; =
+        Assigned&lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Test&lt;/b&gt;&lt;/font&gt;
+        = Mathematics&lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;USID&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;School&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Grade&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Format&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;CodeAB&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Membership_data&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Special_Programs_Title1_SWP&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Special_Programs_Title1_TAS&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Title1_TAS_Direct_Service&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Title1_Percentages&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Other_programs_gifted&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Other_Programs_504_Service_Plan&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Functionally_Delayed&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Other_Programs_Migrant&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Other_Programs_Home_School&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;ELL_Excluded&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;ELL&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;T1_T2&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Special_Education&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Modified_Format_Test_Type&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;ELL_Accommodations_Q&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;ELL_Acoomodations_R&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;ELL_Acoomodations_S&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;ELL_Acoomodations_T&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Special_Acoomodation_A&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Special_Acoomodation_B&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Special_Acoomodation_C&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Special_Acoomodation_D&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Special_Acoomodation_E&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Special_Acoomodation_F&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Special_Acoomodation_G&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Special_Acoomodation_H&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Special_Accomdations_I&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Special_Acoomodation_K&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;State_Use_Only_A1&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;State_Use_Only_A2&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;State_Use_Only_A3&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;State_Use_Only_A4&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;State_Use_Only_B1&lt;/b&gt;&lt;/font&gt;
+        = B1&lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;State_Use_Only_B2&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;State_Use_Only_B3&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;State_Use_Only_B4&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;State_Use_Only_C1&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;State_Use_Only_C2&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;State_Use_Only_C3&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Option_Code1&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Option_Code2&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Option_Code3&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Option_Code4&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Option_Code5&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Option_Code6&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Option_Code7&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Option_Code8&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Option_Code9&lt;/b&gt;&lt;/font&gt;
+        = &lt;br&gt;&lt;p&gt; &lt;p&gt;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;Expected:                     &lt;/font&gt;&lt;/b&gt;&lt;p&gt;&lt;html&gt;&lt;body&gt;For
+        those input paramaters that are checked should search the correct Tests&lt;/body&gt;&lt;/html&gt;&lt;p&gt;&lt;/body&gt;&lt;/html&gt;</Value></Field><Field
+        Name="run-reference"/><Field Name="alert-data"><Value></Value></Field><Field
+        Name="dev-comments"><Value></Value></Field><Field Name="to-mail"><Value></Value></Field><Field
+        Name="cycle-id"/><Field Name="status"><Value>Closed</Value></Field><Field
+        Name="closing-date"><Value>2009-01-26</Value></Field><Field Name="user-31"><Value></Value></Field><Field
+        Name="user-32"><Value></Value></Field><Field Name="user-33"><Value></Value></Field><Field
+        Name="detected-in-rel"><Value></Value></Field><Field Name="bug-ver-stamp"><Value>7</Value></Field><Field
+        Name="user-34"><Value>None</Value></Field><Field Name="user-35"><Value></Value></Field><Field
+        Name="user-36"><Value></Value></Field><Field Name="estimated-fix-time"/><Field
+        Name="project"><Value></Value></Field><Field Name="target-rel"><Value></Value></Field><Field
+        Name="step-reference"/><Field Name="owner"><Value>addach</Value></Field><Field
+        Name="actual-fix-time"><Value>21</Value></Field><Field Name="request-type"><Value></Value></Field><Field
+        Name="user-05"><Value>DE4872</Value></Field><Field Name="user-04"><Value></Value></Field><Field
+        Name="user-03"><Value>None</Value></Field><Field Name="user-02"><Value></Value></Field><Field
+        Name="user-01"><Value></Value></Field><Field Name="test-reference"/><Field
+        Name="subject"><Value>4780</Value></Field><Field Name="request-id"/><Field
+        Name="request-server"><Value></Value></Field><Field Name="user-09"><Value></Value></Field><Field
+        Name="user-07"><Value></Value></Field><Field Name="user-06"><Value>None</Value></Field><Field
+        Name="id"><Value>18</Value></Field><Field Name="name"><Value>In the Student
+        Tests search screen, searching with the below information, student details
+        does not show up. This student is existing in the database.</Value></Field><Field
+        Name="has-linkage"><Value>N</Value></Field><Field Name="cycle-reference"><Value></Value></Field><Field
+        Name="creation-time"><Value>2009-01-06</Value></Field><Field Name="request-note"><Value></Value></Field><Field
+        Name="closing-version"><Value></Value></Field><Field Name="detection-version"><Value></Value></Field><Field
+        Name="user-14"><Value></Value></Field><Field Name="user-13"><Value></Value></Field><Field
+        Name="user-16"><Value></Value></Field><Field Name="user-15"><Value></Value></Field><Field
+        Name="user-10"><Value></Value></Field><Field Name="last-modified"><Value>2011-05-03
+        16:03:51</Value></Field><Field Name="user-12"><Value></Value></Field><Field
+        Name="user-11"><Value></Value></Field><Field Name="detected-in-rcyc"><Value></Value></Field><Field
+        Name="severity"><Value>3 - Minor Problem</Value></Field><Field Name="attachment"><Value>Y</Value></Field><Field
+        Name="user-18"><Value></Value></Field><Field Name="user-17"><Value></Value></Field><Field
+        Name="extended-reference"><Value></Value></Field><Field Name="user-19"><Value></Value></Field><Field
+        Name="detected-by"><Value>satyv9</Value></Field><Field Name="target-rcyc"><Value></Value></Field></Fields></Entity><Entity
+        Type="defect"><Fields><Field Name="has-change"><Value></Value></Field><Field
+        Name="planned-closing-ver"><Value></Value></Field><Field Name="reproducible"><Value>Y</Value></Field><Field
+        Name="user-20"><Value></Value></Field><Field Name="user-21"><Value></Value></Field><Field
+        Name="has-others-linkage"><Value>N</Value></Field><Field Name="priority"><Value>2
+        - High Attention</Value></Field><Field Name="description"><Value>&lt;html&gt;&lt;body&gt;&lt;p&gt;Subject:
+        Release 0.3 Submitter: vwirspa&lt;/p&gt;  &lt;p&gt;&quot;Error, something
+        bad happened :-( &quot; Intermittent error inconsistently repeats. &lt;br
+        /&gt;[Test Case 128, User Manage, step 12] Description: &lt;br /&gt;Enter
+        data in few fields and click on Cancel button. &lt;br /&gt;Expected Result:
+        &lt;br /&gt;Data entered by the user should not be saved into the database
+        and user will be taken back to Manage AMS Users page.&lt;br /&gt;- - - - &lt;br
+        /&gt;On hitting Cancel, instead of the form being cleared, an error was presented.
+        &quot;Error, something bad happened :-(&quot; This may also happen on Save.
+        This is Occassional and does not consistently reproduce. This should be investigated
+        more closely with access to logs and accurate performance inputs. &lt;br /&gt;per
+        User Manage, Test case 128, step 12&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</Value></Field><Field
+        Name="run-reference"/><Field Name="alert-data"><Value></Value></Field><Field
+        Name="dev-comments"><Value>&lt;html&gt;&lt;body&gt;&lt;style rallydeleteme=&quot;false&quot;
+        type=&quot;text/css&quot;&gt;.rally-rte-class-0909edad3{font-weight: bold;}.rally-rte-class-03fe574fe{font-size:
+        10pt; color: blue; font-family: Verdana;}&lt;/style&gt;  &lt;p&gt;This is
+        likely due to a timeout problem, and it happened to me several times. The
+        timeout values should be revisited and are a usability concern. &lt;br /&gt;&lt;br
+        /&gt;After this happens, it is possible to click on the Home link on the error
+        page and bring up the AMS Home page. The user can then navigate to Administrative
+        Management and continue working. This seems inconsistent. If the user was
+        timed out of AMS, the user shouldn''t be able to continue working without
+        logging in. Suggest lengthening timeout values and logging user out when they
+        are exceeded. At that point, AMS log in page should be displayed. Data not
+        saved is lost, but with long enough timeouts, this should be less of a concern....pb&lt;/p&gt;  &lt;p&gt;Concerning
+        timeout problem, see also defect QC 42 / Rally DE22397&lt;/p&gt;  &lt;p&gt;&lt;br
+        /&gt;&lt;/p&gt;  &lt;p&gt;&lt;span class=&quot;rally-rte-class-0909edad3&quot;&gt;[1/20/11
+        CH] This needs to be investigated further.&amp;nbsp; I do not think this is
+        a session timeout as suggested above but may be a call in the code timing
+        out.&lt;/span&gt;&lt;/p&gt;  &lt;font size=&quot;2&quot; color=&quot;blue&quot;
+        face=&quot;Verdana&quot;&gt;&lt;span class=&quot;rally-rte-class-03fe574fe&quot;&gt;email
+        from Venkat 09-June-11&lt;br /&gt;Hi  Jacque,&lt;/span&gt;&lt;/font&gt;&lt;br
+        /&gt; &lt;font size=&quot;2&quot; color=&quot;blue&quot; face=&quot;Verdana&quot;&gt;&lt;span
+        class=&quot;rally-rte-class-03fe574fe&quot;&gt;We also found this  issue in
+        our QA during UAT1. There was not any fix made for this issue in  particular.
+        I was testing this issue this morning but couldn?t reproduce it  anymore.
+        This could have been fixed as part of some other  fixes.&lt;/span&gt;&lt;/font&gt;&lt;br
+        /&gt; &lt;font size=&quot;2&quot; color=&quot;blue&quot; face=&quot;Verdana&quot;&gt;&lt;span
+        class=&quot;rally-rte-class-03fe574fe&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/font&gt;&lt;br
+        /&gt; &lt;font size=&quot;2&quot; color=&quot;blue&quot; face=&quot;Verdana&quot;&gt;&lt;span
+        class=&quot;rally-rte-class-03fe574fe&quot;&gt;We can mark this as  complete
+        as it can not be reproduced now.&lt;/span&gt;&lt;/font&gt;&lt;br /&gt; &lt;font
+        size=&quot;2&quot; color=&quot;blue&quot; face=&quot;Verdana&quot;&gt;&lt;span
+        class=&quot;rally-rte-class-03fe574fe&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/font&gt;&lt;br
+        /&gt; &lt;font size=&quot;2&quot; color=&quot;blue&quot; face=&quot;Verdana&quot;&gt;&lt;span
+        class=&quot;rally-rte-class-03fe574fe&quot;&gt;Thanks,&lt;/span&gt;&lt;/font&gt;&lt;br
+        /&gt; &lt;font size=&quot;2&quot; color=&quot;blue&quot; face=&quot;Verdana&quot;&gt;&lt;span
+        class=&quot;rally-rte-class-03fe574fe&quot;&gt;Venkat&lt;/span&gt;&lt;/font&gt;&lt;br
+        /&gt; &lt;font size=&quot;2&quot; color=&quot;blue&quot; face=&quot;Verdana&quot;&gt;&lt;span
+        class=&quot;rally-rte-class-03fe574fe&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/font&gt;&lt;/body&gt;&lt;/html&gt;</Value></Field><Field
+        Name="to-mail"><Value></Value></Field><Field Name="cycle-id"/><Field Name="status"><Value>New</Value></Field><Field
+        Name="closing-date"/><Field Name="user-31"><Value></Value></Field><Field Name="user-32"><Value></Value></Field><Field
+        Name="user-33"><Value></Value></Field><Field Name="detected-in-rel"><Value></Value></Field><Field
+        Name="bug-ver-stamp"><Value>16</Value></Field><Field Name="user-34"><Value>None</Value></Field><Field
+        Name="user-35"><Value></Value></Field><Field Name="user-36"><Value></Value></Field><Field
+        Name="estimated-fix-time"/><Field Name="project"><Value>AMS</Value></Field><Field
+        Name="target-rel"><Value></Value></Field><Field Name="step-reference"/><Field
+        Name="owner"><Value>thirn9</Value></Field><Field Name="actual-fix-time"><Value>49</Value></Field><Field
+        Name="request-type"><Value></Value></Field><Field Name="user-05"><Value>DE22381</Value></Field><Field
+        Name="user-04"><Value>Accepted</Value></Field><Field Name="user-03"><Value>None</Value></Field><Field
+        Name="user-02"><Value></Value></Field><Field Name="user-01"><Value></Value></Field><Field
+        Name="test-reference"/><Field Name="subject"/><Field Name="request-id"/><Field
+        Name="request-server"><Value></Value></Field><Field Name="user-09"><Value></Value></Field><Field
+        Name="user-07"><Value></Value></Field><Field Name="user-06"><Value>None</Value></Field><Field
+        Name="id"><Value>17</Value></Field><Field Name="name"><Value>0.3 UAT Defect:
+        Error on save or Cancel in User Manage</Value></Field><Field Name="has-linkage"><Value>N</Value></Field><Field
+        Name="cycle-reference"><Value></Value></Field><Field Name="creation-time"><Value>2009-01-06</Value></Field><Field
+        Name="request-note"><Value></Value></Field><Field Name="closing-version"><Value></Value></Field><Field
+        Name="detection-version"><Value></Value></Field><Field Name="user-14"><Value></Value></Field><Field
+        Name="user-13"><Value></Value></Field><Field Name="user-16"><Value></Value></Field><Field
+        Name="user-15"><Value></Value></Field><Field Name="user-10"><Value></Value></Field><Field
+        Name="last-modified"><Value>2011-07-14 14:25:45</Value></Field><Field Name="user-12"><Value></Value></Field><Field
+        Name="user-11"><Value></Value></Field><Field Name="detected-in-rcyc"><Value></Value></Field><Field
+        Name="severity"><Value>3 - Minor Problem</Value></Field><Field Name="attachment"><Value>Y</Value></Field><Field
+        Name="user-18"><Value></Value></Field><Field Name="user-17"><Value></Value></Field><Field
+        Name="extended-reference"><Value></Value></Field><Field Name="user-19"><Value></Value></Field><Field
+        Name="detected-by"><Value>thirn9</Value></Field><Field Name="target-rcyc"><Value></Value></Field></Fields></Entity><Entity
+        Type="defect"><Fields><Field Name="has-change"><Value></Value></Field><Field
+        Name="planned-closing-ver"><Value></Value></Field><Field Name="reproducible"><Value>Y</Value></Field><Field
+        Name="user-20"><Value></Value></Field><Field Name="user-21"><Value></Value></Field><Field
+        Name="has-others-linkage"><Value>N</Value></Field><Field Name="priority"><Value>4-Value
+        Add</Value></Field><Field Name="description"><Value>&lt;html&gt;&lt;body&gt;For
+        Virginia ,Application display all the fields as Editable where as for Reference
+        application display''s only few of the fields as editable, thus this inconsistency
+        is observed in the application.&lt;br&gt;Steps to Reproduce.&lt;br&gt;1. Login
+        as a valid user&lt;br&gt;2. Change Organization -&amp;gt;Select a District&lt;br&gt;3.
+        Click on Test Setup&lt;br&gt;4. Change Admin -&amp;gt; Select Spring&lt;br&gt;5.
+        Click on Test Setup-&amp;gt;&lt;font color=&quot;#000080&quot;&gt; &lt;/font&gt;Order
+        Additional Materials and Tracking&lt;br&gt;6. Click on Order Additional Materials
+        button&lt;br&gt;7. Observe&lt;br&gt;Attached document for your reference&lt;/body&gt;&lt;/html&gt;</Value></Field><Field
+        Name="run-reference"/><Field Name="alert-data"><Value></Value></Field><Field
+        Name="dev-comments"><Value>&lt;html&gt;&lt;body&gt;&lt;font color=&quot;#000080&quot;&gt;&lt;b&gt;Sangle,
+        Madhuri &amp;lt;sangm9&amp;gt;, 2/11/2009: &lt;/b&gt;&lt;/font&gt; &lt;br&gt;Sangle
+        01/19 Tested the same with user having user role as Admin (Program Team staff).This
+        is working fine&lt;/body&gt;&lt;/html&gt;</Value></Field><Field Name="to-mail"><Value></Value></Field><Field
+        Name="cycle-id"/><Field Name="status"><Value>Closed</Value></Field><Field
+        Name="closing-date"><Value>2009-02-11</Value></Field><Field Name="user-31"><Value></Value></Field><Field
+        Name="user-32"><Value></Value></Field><Field Name="user-33"><Value></Value></Field><Field
+        Name="detected-in-rel"><Value ReferenceValue="1.16.2">14</Value></Field><Field
+        Name="bug-ver-stamp"><Value>5</Value></Field><Field Name="user-34"><Value>None</Value></Field><Field
+        Name="user-35"><Value></Value></Field><Field Name="user-36"><Value></Value></Field><Field
+        Name="estimated-fix-time"/><Field Name="project"><Value>On-Demand Reports</Value></Field><Field
+        Name="target-rel"><Value></Value></Field><Field Name="step-reference"/><Field
+        Name="owner"><Value>sangm9</Value></Field><Field Name="actual-fix-time"><Value>37</Value></Field><Field
+        Name="request-type"><Value></Value></Field><Field Name="user-05"><Value>DE4994</Value></Field><Field
+        Name="user-04"><Value></Value></Field><Field Name="user-03"><Value>None</Value></Field><Field
+        Name="user-02"><Value></Value></Field><Field Name="user-01"><Value></Value></Field><Field
+        Name="test-reference"/><Field Name="subject"/><Field Name="request-id"/><Field
+        Name="request-server"><Value></Value></Field><Field Name="user-09"><Value></Value></Field><Field
+        Name="user-07"><Value></Value></Field><Field Name="user-06"><Value>None</Value></Field><Field
+        Name="id"><Value>16</Value></Field><Field Name="name"><Value>Reference: Usability:
+        Application does not display all the fields as editable, to that it is displayed
+        for Virginia</Value></Field><Field Name="has-linkage"><Value>N</Value></Field><Field
+        Name="cycle-reference"><Value></Value></Field><Field Name="creation-time"><Value>2009-01-06</Value></Field><Field
+        Name="request-note"><Value></Value></Field><Field Name="closing-version"><Value></Value></Field><Field
+        Name="detection-version"><Value></Value></Field><Field Name="user-14"><Value></Value></Field><Field
+        Name="user-13"><Value></Value></Field><Field Name="user-16"><Value></Value></Field><Field
+        Name="user-15"><Value></Value></Field><Field Name="user-10"><Value></Value></Field><Field
+        Name="last-modified"><Value>2011-05-03 16:05:14</Value></Field><Field Name="user-12"><Value></Value></Field><Field
+        Name="user-11"><Value></Value></Field><Field Name="detected-in-rcyc"><Value></Value></Field><Field
+        Name="severity"><Value>4 - Cosmetic</Value></Field><Field Name="attachment"><Value>Y</Value></Field><Field
+        Name="user-18"><Value></Value></Field><Field Name="user-17"><Value></Value></Field><Field
+        Name="extended-reference"><Value></Value></Field><Field Name="user-19"><Value></Value></Field><Field
+        Name="detected-by"><Value>sangm9</Value></Field><Field Name="target-rcyc"><Value></Value></Field></Fields></Entity><Entity
+        Type="defect"><Fields><Field Name="has-change"><Value></Value></Field><Field
+        Name="planned-closing-ver"><Value></Value></Field><Field Name="reproducible"><Value>Y</Value></Field><Field
+        Name="user-20"><Value></Value></Field><Field Name="user-21"><Value></Value></Field><Field
+        Name="has-others-linkage"><Value>N</Value></Field><Field Name="priority"><Value>2
+        - High Attention</Value></Field><Field Name="description"><Value>&lt;html&gt;&lt;body&gt;Functionality
+        dates are not availble in DEV VA - Summer 2009 writing &amp;amp;Non-Writing
+        on overview pages.&lt;/body&gt;&lt;/html&gt;</Value></Field><Field Name="run-reference"/><Field
+        Name="alert-data"><Value></Value></Field><Field Name="dev-comments"><Value></Value></Field><Field
+        Name="to-mail"><Value></Value></Field><Field Name="cycle-id"/><Field Name="status"><Value>Closed</Value></Field><Field
+        Name="closing-date"><Value>2009-02-05</Value></Field><Field Name="user-31"><Value></Value></Field><Field
+        Name="user-32"><Value></Value></Field><Field Name="user-33"><Value></Value></Field><Field
+        Name="detected-in-rel"><Value></Value></Field><Field Name="bug-ver-stamp"><Value>9</Value></Field><Field
+        Name="user-34"><Value>None</Value></Field><Field Name="user-35"><Value></Value></Field><Field
+        Name="user-36"><Value></Value></Field><Field Name="estimated-fix-time"/><Field
+        Name="project"><Value>SORM</Value></Field><Field Name="target-rel"><Value></Value></Field><Field
+        Name="step-reference"/><Field Name="owner"><Value>thirn9</Value></Field><Field
+        Name="actual-fix-time"><Value>50</Value></Field><Field Name="request-type"><Value></Value></Field><Field
+        Name="user-05"><Value>DE4714</Value></Field><Field Name="user-04"><Value>Accepted</Value></Field><Field
+        Name="user-03"><Value>None</Value></Field><Field Name="user-02"><Value></Value></Field><Field
+        Name="user-01"><Value></Value></Field><Field Name="test-reference"/><Field
+        Name="subject"/><Field Name="request-id"/><Field Name="request-server"><Value></Value></Field><Field
+        Name="user-09"><Value></Value></Field><Field Name="user-07"><Value></Value></Field><Field
+        Name="user-06"><Value>None</Value></Field><Field Name="id"><Value>15</Value></Field><Field
+        Name="name"><Value>Functionality dates are not availble in DEV VA - Summer
+        2009 writing &amp;Non-Writing</Value></Field><Field Name="has-linkage"><Value>N</Value></Field><Field
+        Name="cycle-reference"><Value></Value></Field><Field Name="creation-time"><Value>2008-12-18</Value></Field><Field
+        Name="request-note"><Value></Value></Field><Field Name="closing-version"><Value></Value></Field><Field
+        Name="detection-version"><Value></Value></Field><Field Name="user-14"><Value></Value></Field><Field
+        Name="user-13"><Value></Value></Field><Field Name="user-16"><Value></Value></Field><Field
+        Name="user-15"><Value></Value></Field><Field Name="user-10"><Value></Value></Field><Field
+        Name="last-modified"><Value>2011-05-03 16:05:14</Value></Field><Field Name="user-12"><Value></Value></Field><Field
+        Name="user-11"><Value></Value></Field><Field Name="detected-in-rcyc"><Value></Value></Field><Field
+        Name="severity"><Value>4 - Cosmetic</Value></Field><Field Name="attachment"><Value>Y</Value></Field><Field
+        Name="user-18"><Value></Value></Field><Field Name="user-17"><Value></Value></Field><Field
+        Name="extended-reference"><Value></Value></Field><Field Name="user-19"><Value></Value></Field><Field
+        Name="detected-by"><Value>thirn9</Value></Field><Field Name="target-rcyc"><Value></Value></Field></Fields></Entity><Entity
+        Type="defect"><Fields><Field Name="has-change"><Value></Value></Field><Field
+        Name="planned-closing-ver"><Value></Value></Field><Field Name="reproducible"><Value>Y</Value></Field><Field
+        Name="user-20"><Value></Value></Field><Field Name="user-21"><Value></Value></Field><Field
+        Name="has-others-linkage"><Value>N</Value></Field><Field Name="priority"><Value>1
+        - Resolve Immediately</Value></Field><Field Name="description"><Value>&lt;html&gt;&lt;body&gt;Steps
+        to Reproduce&lt;br&gt;1)       Login in Reference site With Valid username
+        and Password&lt;br&gt;2)       Change Organization (Select &lt;b&gt;Davenport
+        District&lt;/b&gt;  )&lt;br&gt;3)       Click on Test Setup&lt;br&gt;4)       Click
+        on Order Additional Materials and Tracking &lt;br&gt;5)       Observe&lt;br&gt;
+        &lt;br&gt;Application does not display Approve button on Orders Page&lt;br&gt;Attached
+        document for your reference&lt;/body&gt;&lt;/html&gt;</Value></Field><Field
+        Name="run-reference"/><Field Name="alert-data"><Value></Value></Field><Field
+        Name="dev-comments"><Value>&lt;html&gt;&lt;body&gt;&lt;font color=&quot;#000080&quot;&gt;&lt;b&gt;Sangle,
+        Madhuri &amp;lt;sangm9&amp;gt;, 2/2/2009: &lt;/b&gt;&lt;/font&gt; &lt;br&gt;In
+        Reference should it allow user to allow user to Approve Order&lt;br&gt;&lt;br&gt;As
+        per Discusstion Thread in Defect ID in Rally DE4705 by Tracy&lt;br&gt;There
+        is no Approve button because we do not want them to be sent to P&amp;amp;D
+        which is what happens upon Approval. This is working correctly. Please see
+        the roles matrix located at //pem_rd/Pearson_Access/PIM/Reference/Ref Site
+        User Roles Security Access 102307 v0.8.xls. Here is a the row from that document.&lt;br&gt;&lt;br&gt;Would
+        it be implemened in Reference&lt;br&gt;As this defect is Opened in Rally&lt;/body&gt;&lt;/html&gt;</Value></Field><Field
+        Name="to-mail"><Value></Value></Field><Field Name="cycle-id"/><Field Name="status"><Value>Rejected</Value></Field><Field
+        Name="closing-date"/><Field Name="user-31"><Value></Value></Field><Field Name="user-32"><Value></Value></Field><Field
+        Name="user-33"><Value></Value></Field><Field Name="detected-in-rel"><Value
+        ReferenceValue="1.16.2">14</Value></Field><Field Name="bug-ver-stamp"><Value>6</Value></Field><Field
+        Name="user-34"><Value>None</Value></Field><Field Name="user-35"><Value></Value></Field><Field
+        Name="user-36"><Value></Value></Field><Field Name="estimated-fix-time"/><Field
+        Name="project"><Value>On-Demand Reports</Value></Field><Field Name="target-rel"><Value></Value></Field><Field
+        Name="step-reference"/><Field Name="owner"><Value>martch</Value></Field><Field
+        Name="actual-fix-time"/><Field Name="request-type"><Value></Value></Field><Field
+        Name="user-05"><Value>DE4705</Value></Field><Field Name="user-04"><Value></Value></Field><Field
+        Name="user-03"><Value>None</Value></Field><Field Name="user-02"><Value></Value></Field><Field
+        Name="user-01"><Value></Value></Field><Field Name="test-reference"/><Field
+        Name="subject"><Value>2570</Value></Field><Field Name="request-id"/><Field
+        Name="request-server"><Value></Value></Field><Field Name="user-09"><Value></Value></Field><Field
+        Name="user-07"><Value></Value></Field><Field Name="user-06"><Value>None</Value></Field><Field
+        Name="id"><Value>14</Value></Field><Field Name="name"><Value>Reference : Application
+        does not display Approve button on Orders Page</Value></Field><Field Name="has-linkage"><Value>N</Value></Field><Field
+        Name="cycle-reference"><Value></Value></Field><Field Name="creation-time"><Value>2008-12-17</Value></Field><Field
+        Name="request-note"><Value></Value></Field><Field Name="closing-version"><Value></Value></Field><Field
+        Name="detection-version"><Value></Value></Field><Field Name="user-14"><Value></Value></Field><Field
+        Name="user-13"><Value></Value></Field><Field Name="user-16"><Value></Value></Field><Field
+        Name="user-15"><Value></Value></Field><Field Name="user-10"><Value></Value></Field><Field
+        Name="last-modified"><Value>2011-05-03 15:53:26</Value></Field><Field Name="user-12"><Value></Value></Field><Field
+        Name="user-11"><Value></Value></Field><Field Name="detected-in-rcyc"><Value></Value></Field><Field
+        Name="severity"><Value>2 - Major Problem</Value></Field><Field Name="attachment"><Value>Y</Value></Field><Field
+        Name="user-18"><Value></Value></Field><Field Name="user-17"><Value></Value></Field><Field
+        Name="extended-reference"><Value></Value></Field><Field Name="user-19"><Value></Value></Field><Field
+        Name="detected-by"><Value>sangm9</Value></Field><Field Name="target-rcyc"><Value></Value></Field></Fields></Entity><Entity
+        Type="defect"><Fields><Field Name="has-change"><Value></Value></Field><Field
+        Name="planned-closing-ver"><Value></Value></Field><Field Name="reproducible"><Value>Y</Value></Field><Field
+        Name="user-20"><Value></Value></Field><Field Name="user-21"><Value></Value></Field><Field
+        Name="has-others-linkage"><Value>N</Value></Field><Field Name="priority"><Value>2
+        - High Attention</Value></Field><Field Name="description"><Value>&lt;html&gt;&lt;body&gt;&lt;font
+        color=&quot;#010161&quot;&gt;&lt;b&gt;Steps to Reproduce&lt;/b&gt;&lt;/font&gt;&lt;br&gt;1)       Login
+        in the application as valid user &lt;br&gt;2)       Click on Support link&lt;br&gt;3)       Click
+        on Login/Logout link displayed in &amp;quot;&lt;b&gt;Getting Started&amp;quot;
+        section &lt;/b&gt;&lt;br&gt;4)       &lt;b&gt;Verify the Contents&lt;/b&gt;&lt;br&gt;
+        &lt;br&gt;&lt;b&gt;1) In &amp;quot;What if I forgot my user name and password?&amp;quot;
+        Section it displays &lt;/b&gt;Virginia&lt;b&gt; &lt;/b&gt;Department of Education&lt;b&gt;
+        where as it should had been for Reference &lt;/b&gt;Department of Education&lt;br&gt;If
+        you are a DDOT or an EIMS Project manager, contact the Virginia Department
+        of Education at (804) 225-2107 for assistance.&lt;br&gt;&lt;b&gt;2) In What
+        if I''m having problems logging into the system? Section it displays &lt;/b&gt;Virginia&lt;b&gt;
+        &lt;/b&gt;Department of Education&lt;b&gt; where as it should had been for
+        Reference &lt;/b&gt;Department of Education&lt;br&gt;Pearson is unable to
+        unlock your account. &lt;br&gt;Are you typing your Password or User ID in
+        wrong, or maybe you forgot them? Try again or click on the &amp;quot;Need
+        help signing in?&amp;quot; link on the Login screen. If you type in the wrong
+        password 3 times in a row, the system will lock you out. If you think that
+        you are locked out of the system or if you find that you''re still having
+        other problems logging into the system, please contact the person who originally
+        set up your account. This could be the School Test Coordinator (STC), the
+        Division Director of Testing (DDOT), or the Educational Information Management
+        System (EIMS) Project Manager.&lt;br&gt;If you are a DDOT or an EIMS Project
+        Manager, contact the Virginia Department of Education at (804) 225-2107 for
+        assistance.&lt;br&gt; &lt;br&gt;Attached document for your reference&lt;/body&gt;&lt;/html&gt;</Value></Field><Field
+        Name="run-reference"/><Field Name="alert-data"><Value></Value></Field><Field
+        Name="dev-comments"><Value>&lt;html&gt;&lt;body&gt;&lt;font color=&quot;#000080&quot;&gt;&lt;b&gt;Sangle,
+        Madhuri &amp;lt;sangm9&amp;gt;, 2/11/2009: &lt;/b&gt;&lt;/font&gt; &lt;br&gt;Tested
+        and it is working fine&lt;/body&gt;&lt;/html&gt;</Value></Field><Field Name="to-mail"><Value></Value></Field><Field
+        Name="cycle-id"/><Field Name="status"><Value>Closed</Value></Field><Field
+        Name="closing-date"><Value>2009-02-11</Value></Field><Field Name="user-31"><Value></Value></Field><Field
+        Name="user-32"><Value></Value></Field><Field Name="user-33"><Value></Value></Field><Field
+        Name="detected-in-rel"><Value ReferenceValue="1.16.2">14</Value></Field><Field
+        Name="bug-ver-stamp"><Value>7</Value></Field><Field Name="user-34"><Value>None</Value></Field><Field
+        Name="user-35"><Value></Value></Field><Field Name="user-36"><Value></Value></Field><Field
+        Name="estimated-fix-time"/><Field Name="project"><Value>Foundation Services</Value></Field><Field
+        Name="target-rel"><Value ReferenceValue="2.0">11</Value></Field><Field Name="step-reference"/><Field
+        Name="owner"><Value>sangm9</Value></Field><Field Name="actual-fix-time"><Value>57</Value></Field><Field
+        Name="request-type"><Value></Value></Field><Field Name="user-05"><Value>DE4699</Value></Field><Field
+        Name="user-04"><Value></Value></Field><Field Name="user-03"><Value>None</Value></Field><Field
+        Name="user-02"><Value></Value></Field><Field Name="user-01"><Value></Value></Field><Field
+        Name="test-reference"/><Field Name="subject"><Value>2570</Value></Field><Field
+        Name="request-id"/><Field Name="request-server"><Value></Value></Field><Field
+        Name="user-09"><Value></Value></Field><Field Name="user-07"><Value></Value></Field><Field
+        Name="user-06"><Value>None</Value></Field><Field Name="id"><Value>13</Value></Field><Field
+        Name="name"><Value>Reference : Content of the Login/Logout - FAQ Details Page
+        is displayed incorrectly</Value></Field><Field Name="has-linkage"><Value>N</Value></Field><Field
+        Name="cycle-reference"><Value></Value></Field><Field Name="creation-time"><Value>2008-12-17</Value></Field><Field
+        Name="request-note"><Value></Value></Field><Field Name="closing-version"><Value></Value></Field><Field
+        Name="detection-version"><Value></Value></Field><Field Name="user-14"><Value></Value></Field><Field
+        Name="user-13"><Value></Value></Field><Field Name="user-16"><Value></Value></Field><Field
+        Name="user-15"><Value></Value></Field><Field Name="user-10"><Value></Value></Field><Field
+        Name="last-modified"><Value>2011-05-03 16:05:14</Value></Field><Field Name="user-12"><Value></Value></Field><Field
+        Name="user-11"><Value></Value></Field><Field Name="detected-in-rcyc"><Value></Value></Field><Field
+        Name="severity"><Value>4 - Cosmetic</Value></Field><Field Name="attachment"><Value>Y</Value></Field><Field
+        Name="user-18"><Value></Value></Field><Field Name="user-17"><Value></Value></Field><Field
+        Name="extended-reference"><Value></Value></Field><Field Name="user-19"><Value></Value></Field><Field
+        Name="detected-by"><Value>sangm9</Value></Field><Field Name="target-rcyc"><Value></Value></Field></Fields></Entity><Entity
+        Type="defect"><Fields><Field Name="has-change"><Value></Value></Field><Field
+        Name="planned-closing-ver"><Value></Value></Field><Field Name="reproducible"><Value>Y</Value></Field><Field
+        Name="user-20"><Value></Value></Field><Field Name="user-21"><Value></Value></Field><Field
+        Name="has-others-linkage"><Value>Y</Value></Field><Field Name="priority"><Value>2
+        - High Attention</Value></Field><Field Name="description"><Value>&lt;html&gt;&lt;body&gt;Application
+        displays invalid link on FAQ Page and thus when user clicks on the link displayed
+        on Login/Logout &amp;quot;&lt;b&gt;FAQ Details&amp;quot; Page navigates to
+        Pemsolutions page for Virginia where as it should display Pemsolutions page
+        for Reference&lt;/b&gt; \&lt;br&gt;&lt;br&gt;Steps to Reproduce&lt;br&gt;1)
+        Login in the application as valid user  &lt;br&gt;2) Click on Support link
+        &lt;br&gt;3) Click on Login/Logout link displayed in &amp;quot;&lt;b&gt;Getting
+        Started&amp;quot; section &lt;/b&gt; &lt;br&gt;&lt;b&gt;4) &lt;/b&gt;Click
+        on &lt;font color=&quot;#0000FF&quot;&gt;&lt;u&gt;&amp;lt;http://www.pearsonaccess.com/cs/Satellite?c=Page&amp;amp;childpagename=Virginia%2FvaPALPLayout&amp;amp;cid=1175826755318&amp;amp;pagename=vaPALPWrapper&amp;gt;&lt;/u&gt;&lt;/font&gt;
+        link displayed under &lt;b&gt;What if I forgot my user name and password?
+        Section&lt;/b&gt; &lt;br&gt;5) Observe &lt;b&gt;Navigates to Pemsolutions
+        page for Virginia where as it should display Pemsolutions page for Reference&lt;/b&gt;
+        Attached document for your reference&lt;/body&gt;&lt;/html&gt;</Value></Field><Field
+        Name="run-reference"/><Field Name="alert-data"><Value></Value></Field><Field
+        Name="dev-comments"><Value></Value></Field><Field Name="to-mail"><Value></Value></Field><Field
+        Name="cycle-id"/><Field Name="status"><Value>Closed</Value></Field><Field
+        Name="closing-date"><Value>2009-02-02</Value></Field><Field Name="user-31"><Value></Value></Field><Field
+        Name="user-32"><Value></Value></Field><Field Name="user-33"><Value></Value></Field><Field
+        Name="detected-in-rel"><Value ReferenceValue="1.16.2">14</Value></Field><Field
+        Name="bug-ver-stamp"><Value>6</Value></Field><Field Name="user-34"><Value>None</Value></Field><Field
+        Name="user-35"><Value></Value></Field><Field Name="user-36"><Value></Value></Field><Field
+        Name="estimated-fix-time"/><Field Name="project"><Value>Pearson Access Releases</Value></Field><Field
+        Name="target-rel"><Value ReferenceValue="2.0">11</Value></Field><Field Name="step-reference"/><Field
+        Name="owner"><Value>sangm9</Value></Field><Field Name="actual-fix-time"><Value>49</Value></Field><Field
+        Name="request-type"><Value></Value></Field><Field Name="user-05"><Value>DE4669</Value></Field><Field
+        Name="user-04"><Value></Value></Field><Field Name="user-03"><Value>None</Value></Field><Field
+        Name="user-02"><Value></Value></Field><Field Name="user-01"><Value></Value></Field><Field
+        Name="test-reference"/><Field Name="subject"/><Field Name="request-id"/><Field
+        Name="request-server"><Value></Value></Field><Field Name="user-09"><Value></Value></Field><Field
+        Name="user-07"><Value></Value></Field><Field Name="user-06"><Value>None</Value></Field><Field
+        Name="id"><Value>12</Value></Field><Field Name="name"><Value>Reference : Application
+        displays invalid link on FAQ Page and thus when user clicks on the link navigates
+        to Pemsolutions page for Virginia</Value></Field><Field Name="has-linkage"><Value>N</Value></Field><Field
+        Name="cycle-reference"><Value></Value></Field><Field Name="creation-time"><Value>2008-12-16</Value></Field><Field
+        Name="request-note"><Value></Value></Field><Field Name="closing-version"><Value></Value></Field><Field
+        Name="detection-version"><Value></Value></Field><Field Name="user-14"><Value></Value></Field><Field
+        Name="user-13"><Value></Value></Field><Field Name="user-16"><Value></Value></Field><Field
+        Name="user-15"><Value></Value></Field><Field Name="user-10"><Value></Value></Field><Field
+        Name="last-modified"><Value>2011-05-03 16:05:14</Value></Field><Field Name="user-12"><Value></Value></Field><Field
+        Name="user-11"><Value></Value></Field><Field Name="detected-in-rcyc"><Value></Value></Field><Field
+        Name="severity"><Value>4 - Cosmetic</Value></Field><Field Name="attachment"><Value>Y</Value></Field><Field
+        Name="user-18"><Value></Value></Field><Field Name="user-17"><Value></Value></Field><Field
+        Name="extended-reference"><Value></Value></Field><Field Name="user-19"><Value></Value></Field><Field
+        Name="detected-by"><Value>sangm9</Value></Field><Field Name="target-rcyc"><Value
+        ReferenceValue="Product Acceptance">35</Value></Field></Fields></Entity><Entity
+        Type="defect"><Fields><Field Name="has-change"><Value></Value></Field><Field
+        Name="planned-closing-ver"><Value></Value></Field><Field Name="reproducible"><Value>Y</Value></Field><Field
+        Name="user-20"><Value></Value></Field><Field Name="user-21"><Value></Value></Field><Field
+        Name="has-others-linkage"><Value>N</Value></Field><Field Name="priority"><Value>3
+        - Normal</Value></Field><Field Name="description"><Value>&lt;html&gt;&lt;body&gt;Navigate
+        to Home &amp;gt; Test Setup, the functionality date for ''Enter Administration
+        Details'' (Writing &amp;amp; Non Writing Summer 2009) is wrong.&lt;br&gt;End
+        date displayed is past date, that''s in 2008 but the start date is 2009. &lt;br&gt;&lt;b&gt;04/01/2009
+        - 04/24/2008&lt;/b&gt;&lt;/body&gt;&lt;/html&gt;</Value></Field><Field Name="run-reference"/><Field
+        Name="alert-data"><Value></Value></Field><Field Name="dev-comments"><Value></Value></Field><Field
+        Name="to-mail"><Value></Value></Field><Field Name="cycle-id"/><Field Name="status"><Value>Closed</Value></Field><Field
+        Name="closing-date"><Value>2009-02-05</Value></Field><Field Name="user-31"><Value></Value></Field><Field
+        Name="user-32"><Value></Value></Field><Field Name="user-33"><Value></Value></Field><Field
+        Name="detected-in-rel"><Value></Value></Field><Field Name="bug-ver-stamp"><Value>13</Value></Field><Field
+        Name="user-34"><Value>None</Value></Field><Field Name="user-35"><Value></Value></Field><Field
+        Name="user-36"><Value></Value></Field><Field Name="estimated-fix-time"/><Field
+        Name="project"><Value>SORM</Value></Field><Field Name="target-rel"><Value></Value></Field><Field
+        Name="step-reference"/><Field Name="owner"><Value>thirn9</Value></Field><Field
+        Name="actual-fix-time"><Value>52</Value></Field><Field Name="request-type"><Value></Value></Field><Field
+        Name="user-05"><Value>DE4615</Value></Field><Field Name="user-04"><Value>Accepted</Value></Field><Field
+        Name="user-03"><Value>None</Value></Field><Field Name="user-02"><Value></Value></Field><Field
+        Name="user-01"><Value></Value></Field><Field Name="test-reference"/><Field
+        Name="subject"/><Field Name="request-id"/><Field Name="request-server"><Value></Value></Field><Field
+        Name="user-09"><Value></Value></Field><Field Name="user-07"><Value></Value></Field><Field
+        Name="user-06"><Value>None</Value></Field><Field Name="id"><Value>11</Value></Field><Field
+        Name="name"><Value>Invalid Functionality date for Enter Administration Details
+        in VA</Value></Field><Field Name="has-linkage"><Value>N</Value></Field><Field
+        Name="cycle-reference"><Value></Value></Field><Field Name="creation-time"><Value>2008-12-16</Value></Field><Field
+        Name="request-note"><Value></Value></Field><Field Name="closing-version"><Value></Value></Field><Field
+        Name="detection-version"><Value></Value></Field><Field Name="user-14"><Value></Value></Field><Field
+        Name="user-13"><Value></Value></Field><Field Name="user-16"><Value></Value></Field><Field
+        Name="user-15"><Value></Value></Field><Field Name="user-10"><Value></Value></Field><Field
+        Name="last-modified"><Value>2011-05-03 16:05:14</Value></Field><Field Name="user-12"><Value></Value></Field><Field
+        Name="user-11"><Value></Value></Field><Field Name="detected-in-rcyc"><Value></Value></Field><Field
+        Name="severity"><Value>4 - Cosmetic</Value></Field><Field Name="attachment"><Value>Y</Value></Field><Field
+        Name="user-18"><Value></Value></Field><Field Name="user-17"><Value></Value></Field><Field
+        Name="extended-reference"><Value></Value></Field><Field Name="user-19"><Value></Value></Field><Field
+        Name="detected-by"><Value>thirn9</Value></Field><Field Name="target-rcyc"><Value></Value></Field></Fields></Entity><Entity
+        Type="defect"><Fields><Field Name="has-change"><Value></Value></Field><Field
+        Name="planned-closing-ver"><Value></Value></Field><Field Name="reproducible"><Value>Y</Value></Field><Field
+        Name="user-20"><Value></Value></Field><Field Name="user-21"><Value></Value></Field><Field
+        Name="has-others-linkage"><Value>Y</Value></Field><Field Name="priority"><Value>None</Value></Field><Field
+        Name="description"><Value>&lt;html&gt;&lt;body&gt;&lt;font color=&quot;#000080&quot;&gt;&lt;b&gt;Run:                          &lt;/b&gt;&lt;/font&gt;
+        [19639] Run_12-16_2-51-31&lt;br&gt;&lt;br&gt;The breadcrumb (Home &amp;gt;
+        Administrative Management &amp;gt; View Organization &amp;gt; Organization
+        Details &amp;gt; Administration Details &amp;gt; Classes &amp;gt; Group Details)
+        dit not match the expected value (Home &amp;gt; Administrative Management
+        &amp;gt; View Organization &amp;gt; Organization Details &amp;gt; Administration
+        Details &amp;gt; Classes &amp;gt; Class Details).&lt;/body&gt;&lt;/html&gt;</Value></Field><Field
+        Name="run-reference"/><Field Name="alert-data"><Value></Value></Field><Field
+        Name="dev-comments"><Value></Value></Field><Field Name="to-mail"><Value></Value></Field><Field
+        Name="cycle-id"/><Field Name="status"><Value>Closed</Value></Field><Field
+        Name="closing-date"><Value>2010-03-08</Value></Field><Field Name="user-31"><Value></Value></Field><Field
+        Name="user-32"><Value></Value></Field><Field Name="user-33"><Value></Value></Field><Field
+        Name="detected-in-rel"><Value ReferenceValue="Base_System">10</Value></Field><Field
+        Name="bug-ver-stamp"><Value>5</Value></Field><Field Name="user-34"><Value>None</Value></Field><Field
+        Name="user-35"><Value></Value></Field><Field Name="user-36"><Value></Value></Field><Field
+        Name="estimated-fix-time"/><Field Name="project"><Value>Foundation Services</Value></Field><Field
+        Name="target-rel"><Value></Value></Field><Field Name="step-reference"/><Field
+        Name="owner"><Value>londd9</Value></Field><Field Name="actual-fix-time"><Value>448</Value></Field><Field
+        Name="request-type"><Value></Value></Field><Field Name="user-05"><Value>DE4610</Value></Field><Field
+        Name="user-04"><Value></Value></Field><Field Name="user-03"><Value>None</Value></Field><Field
+        Name="user-02"><Value></Value></Field><Field Name="user-01"><Value></Value></Field><Field
+        Name="test-reference"/><Field Name="subject"><Value>2692</Value></Field><Field
+        Name="request-id"/><Field Name="request-server"><Value></Value></Field><Field
+        Name="user-09"><Value></Value></Field><Field Name="user-07"><Value></Value></Field><Field
+        Name="user-06"><Value>None</Value></Field><Field Name="id"><Value>10</Value></Field><Field
+        Name="name"><Value>Reference Site: Admin Details-Edit Class Details Bread
+        Crumb error</Value></Field><Field Name="has-linkage"><Value>N</Value></Field><Field
+        Name="cycle-reference"><Value></Value></Field><Field Name="creation-time"><Value>2008-12-16</Value></Field><Field
+        Name="request-note"><Value></Value></Field><Field Name="closing-version"><Value></Value></Field><Field
+        Name="detection-version"><Value></Value></Field><Field Name="user-14"><Value></Value></Field><Field
+        Name="user-13"><Value></Value></Field><Field Name="user-16"><Value></Value></Field><Field
+        Name="user-15"><Value></Value></Field><Field Name="user-10"><Value></Value></Field><Field
+        Name="last-modified"><Value>2011-05-03 16:05:15</Value></Field><Field Name="user-12"><Value></Value></Field><Field
+        Name="user-11"><Value></Value></Field><Field Name="detected-in-rcyc"><Value
+        ReferenceValue="Base System Regression">30</Value></Field><Field Name="severity"><Value>4
+        - Cosmetic</Value></Field><Field Name="attachment"><Value></Value></Field><Field
+        Name="user-18"><Value></Value></Field><Field Name="user-17"><Value></Value></Field><Field
+        Name="extended-reference"><Value></Value></Field><Field Name="user-19"><Value></Value></Field><Field
+        Name="detected-by"><Value>martch</Value></Field><Field Name="target-rcyc"><Value></Value></Field></Fields></Entity></Entities>'
+    http_version: 
+  recorded_at: Mon, 26 Mar 2012 22:46:27 GMT
+- request:
+    method: get
+    uri: http://qualitycenter.ic.ncs.com:8080/qcbin/rest/domains/TEST/projects/AssessmentQualityGroup/defects?order-by=%7Bid%5BDESC%5D%7D&page-size=10&query=%7Bid%5B%3C20%5D%7D&start-index=11
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Cookie:
+      - JSESSIONID=66E574F45E5D0B08B52386E701A3A261; Path=/; LWSSO_COOKIE_KEY=O4k5btby7PmlkuPTbmAsqn86iL1K7h30GhodVFgbPMOQrC7MHFy3Jh5XKj9wWvjcb7QD8wOD6NegYccgtYrk-3H__zZIYo3U1n4fcdxJ9uf6hun3skTHXbNa4A63NbC-P-mtXbj0PXJrbP-CaOnRj1JP51kDnBnQRURneclPofgzkPfgjswOSOxWkj6knvqeC83yiSlR5QoFy7r9durAdzimjDBkel_xiJboMfQOSQGPJNlfd_6GKQnvIkdu6eOt
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Set-Cookie:
+      - LWSSO_COOKIE_KEY=IjvDVHRr8Xm7YTqsstXYZGN-roj-SAT8eI6vanUh3i4OcA8CxmNnnv_lFbITcIczU-MqruW1xaDYBCArRD6jZn4tK5gqTVVMbhl9qYu_WisdTmYTzBCanQwWcuLbnmbfz2hVx4PDgEZJM6xBP4VcZ1DpNlIbR8_F2RMFnXYJbTsGO7tyZXJiJ_SdyfrKQAN5Z7VN0t7E-nV58-z23ZqQAkOq4SiZGgQaWZe0Cl-OXroM_lAJ1KwyuQhK4q5VZwZz;
+        Path=/
+      - QCSession=MTg5NDg4Njt3RDRsSndHa2FzQTdJOHlzTXh5Ym53Kio7UkVTVCBjbGllbnQ7IDsg;
+        Path=/
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Mon, 26 Mar 2012 22:56:48 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Entities
+        TotalResults="18"><Entity Type="defect"><Fields><Field Name="has-change"><Value></Value></Field><Field
+        Name="planned-closing-ver"><Value></Value></Field><Field Name="reproducible"><Value>Y</Value></Field><Field
+        Name="user-20"><Value></Value></Field><Field Name="user-21"><Value></Value></Field><Field
+        Name="has-others-linkage"><Value>N</Value></Field><Field Name="priority"><Value>3
+        - Normal</Value></Field><Field Name="description"><Value>&lt;html&gt;&lt;body&gt;I
+        was trying to load SDU for VA, it''s giving me an error &amp;quot;Attempt
+        to load a student for which the STI doesn''t exist&amp;quot;, as I have no
+        rights to create a student online and there is no STI available.&lt;br&gt;Please
+        see the attached ''SDU file'' and the ''Error message'' screen shot.&lt;/body&gt;&lt;/html&gt;</Value></Field><Field
+        Name="run-reference"/><Field Name="alert-data"><Value></Value></Field><Field
+        Name="dev-comments"><Value></Value></Field><Field Name="to-mail"><Value></Value></Field><Field
+        Name="cycle-id"/><Field Name="status"><Value>Closed</Value></Field><Field
+        Name="closing-date"><Value>2008-12-18</Value></Field><Field Name="user-31"><Value></Value></Field><Field
+        Name="user-32"><Value></Value></Field><Field Name="user-33"><Value></Value></Field><Field
+        Name="detected-in-rel"><Value></Value></Field><Field Name="bug-ver-stamp"><Value>9</Value></Field><Field
+        Name="user-34"><Value>None</Value></Field><Field Name="user-35"><Value></Value></Field><Field
+        Name="user-36"><Value></Value></Field><Field Name="estimated-fix-time"/><Field
+        Name="project"><Value>SORM</Value></Field><Field Name="target-rel"><Value></Value></Field><Field
+        Name="step-reference"/><Field Name="owner"><Value>thirn9</Value></Field><Field
+        Name="actual-fix-time"><Value>4</Value></Field><Field Name="request-type"><Value></Value></Field><Field
+        Name="user-05"><Value>DE4582</Value></Field><Field Name="user-04"><Value>Accepted</Value></Field><Field
+        Name="user-03"><Value>None</Value></Field><Field Name="user-02"><Value></Value></Field><Field
+        Name="user-01"><Value></Value></Field><Field Name="test-reference"/><Field
+        Name="subject"/><Field Name="request-id"/><Field Name="request-server"><Value></Value></Field><Field
+        Name="user-09"><Value></Value></Field><Field Name="user-07"><Value></Value></Field><Field
+        Name="user-06"><Value>None</Value></Field><Field Name="id"><Value>9</Value></Field><Field
+        Name="name"><Value>Error message for STI in VA Dev</Value></Field><Field Name="has-linkage"><Value>N</Value></Field><Field
+        Name="cycle-reference"><Value></Value></Field><Field Name="creation-time"><Value>2008-12-15</Value></Field><Field
+        Name="request-note"><Value></Value></Field><Field Name="closing-version"><Value></Value></Field><Field
+        Name="detection-version"><Value></Value></Field><Field Name="user-14"><Value></Value></Field><Field
+        Name="user-13"><Value></Value></Field><Field Name="user-16"><Value></Value></Field><Field
+        Name="user-15"><Value></Value></Field><Field Name="user-10"><Value></Value></Field><Field
+        Name="last-modified"><Value>2011-05-03 16:03:51</Value></Field><Field Name="user-12"><Value></Value></Field><Field
+        Name="user-11"><Value></Value></Field><Field Name="detected-in-rcyc"><Value></Value></Field><Field
+        Name="severity"><Value>3 - Minor Problem</Value></Field><Field Name="attachment"><Value>Y</Value></Field><Field
+        Name="user-18"><Value></Value></Field><Field Name="user-17"><Value></Value></Field><Field
+        Name="extended-reference"><Value></Value></Field><Field Name="user-19"><Value></Value></Field><Field
+        Name="detected-by"><Value>thirn9</Value></Field><Field Name="target-rcyc"><Value></Value></Field></Fields></Entity><Entity
+        Type="defect"><Fields><Field Name="has-change"><Value></Value></Field><Field
+        Name="planned-closing-ver"><Value></Value></Field><Field Name="reproducible"><Value>Y</Value></Field><Field
+        Name="user-20"><Value></Value></Field><Field Name="user-21"><Value></Value></Field><Field
+        Name="has-others-linkage"><Value>N</Value></Field><Field Name="priority"><Value>3
+        - Normal</Value></Field><Field Name="description"><Value>&lt;html&gt;&lt;body&gt;when
+        trying to delete a student at student level, an error message is displayed
+        &amp;quot;&lt;b&gt;Request this function with a valid file format&amp;quot;&lt;/b&gt;&lt;br&gt;I
+        tried to delete a Student, Registration and test assignment together, it''s
+        giving an error &amp;quot;&lt;b&gt;unable to delete Student. &lt;/b&gt;&lt;br&gt;Please
+        find the attached screen shots and SDU files.&lt;/body&gt;&lt;/html&gt;</Value></Field><Field
+        Name="run-reference"/><Field Name="alert-data"><Value></Value></Field><Field
+        Name="dev-comments"><Value></Value></Field><Field Name="to-mail"><Value></Value></Field><Field
+        Name="cycle-id"/><Field Name="status"><Value>Closed</Value></Field><Field
+        Name="closing-date"><Value>2008-12-18</Value></Field><Field Name="user-31"><Value></Value></Field><Field
+        Name="user-32"><Value></Value></Field><Field Name="user-33"><Value></Value></Field><Field
+        Name="detected-in-rel"><Value></Value></Field><Field Name="bug-ver-stamp"><Value>10</Value></Field><Field
+        Name="user-34"><Value>None</Value></Field><Field Name="user-35"><Value></Value></Field><Field
+        Name="user-36"><Value></Value></Field><Field Name="estimated-fix-time"/><Field
+        Name="project"><Value>SORM</Value></Field><Field Name="target-rel"><Value></Value></Field><Field
+        Name="step-reference"/><Field Name="owner"><Value>thirn9</Value></Field><Field
+        Name="actual-fix-time"><Value>4</Value></Field><Field Name="request-type"><Value></Value></Field><Field
+        Name="user-05"><Value>DE4586</Value></Field><Field Name="user-04"><Value>Accepted</Value></Field><Field
+        Name="user-03"><Value>None</Value></Field><Field Name="user-02"><Value></Value></Field><Field
+        Name="user-01"><Value></Value></Field><Field Name="test-reference"/><Field
+        Name="subject"/><Field Name="request-id"/><Field Name="request-server"><Value></Value></Field><Field
+        Name="user-09"><Value></Value></Field><Field Name="user-07"><Value></Value></Field><Field
+        Name="user-06"><Value>None</Value></Field><Field Name="id"><Value>8</Value></Field><Field
+        Name="name"><Value>Core - Unable to delete a student at student level (DEV)</Value></Field><Field
+        Name="has-linkage"><Value>N</Value></Field><Field Name="cycle-reference"><Value></Value></Field><Field
+        Name="creation-time"><Value>2008-12-15</Value></Field><Field Name="request-note"><Value></Value></Field><Field
+        Name="closing-version"><Value></Value></Field><Field Name="detection-version"><Value></Value></Field><Field
+        Name="user-14"><Value></Value></Field><Field Name="user-13"><Value></Value></Field><Field
+        Name="user-16"><Value></Value></Field><Field Name="user-15"><Value></Value></Field><Field
+        Name="user-10"><Value></Value></Field><Field Name="last-modified"><Value>2011-05-03
+        16:03:52</Value></Field><Field Name="user-12"><Value></Value></Field><Field
+        Name="user-11"><Value></Value></Field><Field Name="detected-in-rcyc"><Value></Value></Field><Field
+        Name="severity"><Value>3 - Minor Problem</Value></Field><Field Name="attachment"><Value>Y</Value></Field><Field
+        Name="user-18"><Value></Value></Field><Field Name="user-17"><Value></Value></Field><Field
+        Name="extended-reference"><Value></Value></Field><Field Name="user-19"><Value></Value></Field><Field
+        Name="detected-by"><Value>thirn9</Value></Field><Field Name="target-rcyc"><Value></Value></Field></Fields></Entity><Entity
+        Type="defect"><Fields><Field Name="has-change"><Value></Value></Field><Field
+        Name="planned-closing-ver"><Value></Value></Field><Field Name="reproducible"><Value>Y</Value></Field><Field
+        Name="user-20"><Value></Value></Field><Field Name="user-21"><Value></Value></Field><Field
+        Name="has-others-linkage"><Value>Y</Value></Field><Field Name="priority"><Value>None</Value></Field><Field
+        Name="description"><Value>&lt;html&gt;&lt;body&gt;&lt;font color=&quot;#000080&quot;&gt;&lt;b&gt;Test
+        Set:                     &lt;/b&gt;&lt;/font&gt; Race Ethnicity to Test level&lt;br&gt;&lt;font
+        color=&quot;#000080&quot;&gt;&lt;b&gt;Test:                         &lt;/b&gt;&lt;/font&gt;
+        [1]8. Failed Validations Alerted Attempt - Update Race Ethnicity - Verify
+        database&lt;br&gt;&lt;font color=&quot;#000080&quot;&gt;&lt;b&gt;Run:                          &lt;/b&gt;&lt;/font&gt;
+        Run_12-9_9-39-36&lt;br&gt;&lt;font color=&quot;#000080&quot;&gt;&lt;b&gt;Step:                         &lt;/b&gt;&lt;/font&gt;
+        Step 1&lt;br&gt; &lt;br&gt;&lt;font color=&quot;#000080&quot;&gt;&lt;b&gt;Description:                  &lt;/b&gt;&lt;/font&gt;&lt;br&gt;VA&lt;br&gt;
+        &lt;br&gt;Mts2.pearsonaccess.com&lt;br&gt;&lt;b&gt;Document used: &lt;/b&gt;&lt;font
+        color=&quot;#0000FF&quot;&gt;//sorm/development/docs/requirements/S5589 -
+        Move VA Race_Ethnicity to Test Level.doc&lt;/font&gt;&lt;br&gt;&lt;b&gt;Student
+        Used: &lt;/b&gt;&lt;br&gt;In administration&lt;b&gt; &lt;/b&gt;Fall 2008 Writing&lt;br&gt;&lt;br&gt;&lt;b&gt;Alastnam,  Afirstnam  T         &lt;/b&gt;&lt;br&gt;&lt;br&gt;Gender:
+        &lt;b&gt;M       &lt;/b&gt;Grade: &lt;b&gt;K        &lt;/b&gt;Date of Birth:
+        &lt;b&gt;09/14/2000       &lt;/b&gt;&lt;br&gt;&lt;br&gt;STI: &lt;b&gt;1013607277         &lt;/b&gt;&lt;br&gt;&lt;b&gt;Administrations:&lt;/b&gt;  &lt;br&gt;Fall
+        2008 Non Writing, Fall 2008 Writing, Summer 2008 Non Writing, Summer 2008
+        Writing&lt;br&gt;&lt;b&gt;&lt;u&gt;Steps to Reproduce:&lt;/u&gt;&lt;/b&gt;&lt;br&gt;&lt;b&gt;
+        &lt;/b&gt;&lt;br&gt;1.      Login and Navigate to Test Management &amp;gt;
+        Student Registration&lt;br&gt;2.      Search for the student and go to &amp;quot;Assigned
+        Tests&amp;quot; tab&lt;br&gt;3.      Select the test assignment that has the
+        CLIP_UIN= &lt;font color=&quot;#0000FF&quot;&gt;SRIRACEETHNICITY0021&lt;/font&gt;&lt;br&gt;4.      Verify
+        the database for the values available in STUD_TEST_ASSIGNMENTS (&lt;b&gt;Race
+        ethnicity= 05&lt;/b&gt;) , STUD_TEST_ATTEMPTS (&lt;b&gt;No record for the
+        attempt in this table&lt;/b&gt;) , FAILED_STUD_TEST_ATTEMPTS (&lt;b&gt;Race
+        Ethnicity =05&lt;/b&gt;).  &lt;br&gt;5.      Edit and update the Race Ethnicity
+        to another value (&lt;b&gt;Race Ethnicity=03&lt;/b&gt;) and remove the accommodation&lt;br&gt;6.      Click
+        Save&lt;br&gt;  &lt;br&gt;&lt;b&gt;&lt;u&gt;Expected:&lt;/u&gt;&lt;/b&gt;&lt;br&gt;&lt;b&gt;
+        &lt;/b&gt;&lt;br&gt;Based on the document, &lt;br&gt;&amp;quot;Online updates
+        will to modify STUD_TEST_ASSIGNMENTS.RACE_ETHNICITY, STUD_TEST_ATTEMPTS.RACE_ETHNICITY
+        and FAILED_STUD_TEST_ATTEMPTS.RACE_ETHNICITY&amp;quot;&lt;br&gt;&lt;br&gt;Verifying
+        the Database for the updated value&lt;br&gt;&lt;br&gt;STUD_TEST_ASSIGNMENTS
+        (&lt;b&gt;Race ethnicity= 03&lt;/b&gt;) ,&lt;br&gt;STUD_TEST_ATTEMPTS (&lt;b&gt;Race
+        Ethnicity =03&lt;/b&gt;) , &lt;br&gt;FAILED_STUD_TEST_ATTEMPTS (&lt;b&gt;No
+        record for the attempt in this table&lt;/b&gt;).  &lt;br&gt;&lt;br&gt;&lt;b&gt;&lt;u&gt;Actual:&lt;/u&gt;&lt;/b&gt;&lt;br&gt;&lt;b&gt;
+        &lt;/b&gt;&lt;br&gt;&lt;b&gt;After Verifying the Database , I find the following&lt;/b&gt;&lt;br&gt;&lt;font
+        color=&quot;#FF0000&quot;&gt;&lt;b&gt;STUD_TEST_ASSIGNMENTS (Race ethnicity=
+        05)&lt;/b&gt;&lt;/font&gt;&lt;font color=&quot;#FF0000&quot;&gt; ,&lt;/font&gt;&lt;br&gt;STUD_TEST_ATTEMPTS
+        (&lt;b&gt;Race Ethnicity =03&lt;/b&gt;) , &lt;br&gt;FAILED_STUD_TEST_ATTEMPTS
+        (&lt;b&gt;No record for the attempt in this table&lt;/b&gt;).&lt;/body&gt;&lt;/html&gt;</Value></Field><Field
+        Name="run-reference"/><Field Name="alert-data"><Value></Value></Field><Field
+        Name="dev-comments"><Value></Value></Field><Field Name="to-mail"><Value></Value></Field><Field
+        Name="cycle-id"/><Field Name="status"><Value>Closed</Value></Field><Field
+        Name="closing-date"><Value>2008-12-10</Value></Field><Field Name="user-31"><Value></Value></Field><Field
+        Name="user-32"><Value></Value></Field><Field Name="user-33"><Value></Value></Field><Field
+        Name="detected-in-rel"><Value ReferenceValue="1.16.2">14</Value></Field><Field
+        Name="bug-ver-stamp"><Value>4</Value></Field><Field Name="user-34"><Value>None</Value></Field><Field
+        Name="user-35"><Value></Value></Field><Field Name="user-36"><Value></Value></Field><Field
+        Name="estimated-fix-time"/><Field Name="project"><Value></Value></Field><Field
+        Name="target-rel"><Value></Value></Field><Field Name="step-reference"/><Field
+        Name="owner"><Value>raoxsr</Value></Field><Field Name="actual-fix-time"><Value>2</Value></Field><Field
+        Name="request-type"><Value></Value></Field><Field Name="user-05"><Value>DE4402</Value></Field><Field
+        Name="user-04"><Value></Value></Field><Field Name="user-03"><Value>None</Value></Field><Field
+        Name="user-02"><Value></Value></Field><Field Name="user-01"><Value></Value></Field><Field
+        Name="test-reference"/><Field Name="subject"><Value>2923</Value></Field><Field
+        Name="request-id"/><Field Name="request-server"><Value></Value></Field><Field
+        Name="user-09"><Value></Value></Field><Field Name="user-07"><Value></Value></Field><Field
+        Name="user-06"><Value>None</Value></Field><Field Name="id"><Value>7</Value></Field><Field
+        Name="name"><Value>Failed Attempts: Online updates of Race Ethnicity does
+        not update STUD_TEST_ASSIGNMENTS table (DE4402)</Value></Field><Field Name="has-linkage"><Value>N</Value></Field><Field
+        Name="cycle-reference"><Value></Value></Field><Field Name="creation-time"><Value>2008-12-09</Value></Field><Field
+        Name="request-note"><Value></Value></Field><Field Name="closing-version"><Value></Value></Field><Field
+        Name="detection-version"><Value></Value></Field><Field Name="user-14"><Value></Value></Field><Field
+        Name="user-13"><Value></Value></Field><Field Name="user-16"><Value></Value></Field><Field
+        Name="user-15"><Value></Value></Field><Field Name="user-10"><Value></Value></Field><Field
+        Name="last-modified"><Value>2011-05-03 15:53:26</Value></Field><Field Name="user-12"><Value></Value></Field><Field
+        Name="user-11"><Value></Value></Field><Field Name="detected-in-rcyc"><Value></Value></Field><Field
+        Name="severity"><Value>2 - Major Problem</Value></Field><Field Name="attachment"><Value></Value></Field><Field
+        Name="user-18"><Value></Value></Field><Field Name="user-17"><Value></Value></Field><Field
+        Name="extended-reference"><Value></Value></Field><Field Name="user-19"><Value></Value></Field><Field
+        Name="detected-by"><Value>raoxsr</Value></Field><Field Name="target-rcyc"><Value></Value></Field></Fields></Entity><Entity
+        Type="defect"><Fields><Field Name="has-change"><Value></Value></Field><Field
+        Name="planned-closing-ver"><Value></Value></Field><Field Name="reproducible"><Value>Y</Value></Field><Field
+        Name="user-20"><Value></Value></Field><Field Name="user-21"><Value></Value></Field><Field
+        Name="has-others-linkage"><Value>Y</Value></Field><Field Name="priority"><Value>None</Value></Field><Field
+        Name="description"><Value>&lt;html&gt;&lt;body&gt;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;Test
+        Set:                     &lt;/font&gt;&lt;/b&gt; Race Ethnicity to Test level&lt;p&gt;&lt;b&gt;&lt;font
+        color=&quot;#000080&quot;&gt;Test:                         &lt;/font&gt;&lt;/b&gt;
+        [1]Successful Attempt - Update Race Ethnicity - Verify database&lt;p&gt;&lt;b&gt;&lt;font
+        color=&quot;#000080&quot;&gt;Run:                          &lt;/font&gt;&lt;/b&gt;
+        Run_12-8_13-30-12&lt;p&gt;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;Step:                         &lt;/font&gt;&lt;/b&gt;
+        Step 1&lt;p&gt; &lt;p&gt;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;Description:                  &lt;/font&gt;&lt;/b&gt;&lt;p&gt;&lt;html&gt;&lt;body&gt;Execute
+        the SQL query  &amp;lt;StudTestAssignments_RaceEthnicity_SQL.sql&amp;gt;  found
+        in the location&amp;lt;\qualitycenterDataFilesMTS_SDUVA_SDURace Ethnicity
+        to Test levelStudTestAssignments_RaceEthnicity_SQL.sql&amp;gt;  &lt;br&gt;&lt;br&gt;and
+        &lt;br&gt;&lt;br&gt;verify the results with the input &amp;lt;02&amp;gt;&lt;/body&gt;&lt;/html&gt;&lt;p&gt;
+        &lt;p&gt;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;Parameters:                   &lt;/font&gt;&lt;/b&gt;&lt;p&gt;&lt;b&gt;&lt;u&gt;Input&lt;/u&gt;&lt;/b&gt;&lt;br&gt;  &lt;font
+        color=&quot;#008284&quot;&gt;&lt;b&gt;SQL_Query_Name&lt;/b&gt;&lt;/font&gt;
+        = StudTestAssignments_RaceEthnicity_SQL.sql&lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;SQL_Query_Location&lt;/b&gt;&lt;/font&gt;
+        = \\qualitycenter\DataFiles\MTS_SDU\VA_SDU\Race Ethnicity to Test level\StudTestAssignments_RaceEthnicity_SQL.sql&lt;br&gt;  &lt;font
+        color=&quot;#008284&quot;&gt;&lt;b&gt;Schema&lt;/b&gt;&lt;/font&gt; = SORM_C_VIRGINIA&lt;br&gt;  &lt;font
+        color=&quot;#008284&quot;&gt;&lt;b&gt;Table&lt;/b&gt;&lt;/font&gt; = STUD_TEST_ASSIGNMENTS&lt;br&gt;  &lt;font
+        color=&quot;#008284&quot;&gt;&lt;b&gt;Column&lt;/b&gt;&lt;/font&gt; = RACE_ETHNICITY&lt;br&gt;  &lt;font
+        color=&quot;#008284&quot;&gt;&lt;b&gt;Value_Expected&lt;/b&gt;&lt;/font&gt;
+        = 02&lt;br&gt;&lt;p&gt; &lt;p&gt;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;Expected:                     &lt;/font&gt;&lt;/b&gt;&lt;p&gt;&lt;html&gt;&lt;body&gt;The
+        values in the database match with the input value&lt;/body&gt;&lt;/html&gt;&lt;p&gt;
+        &lt;p&gt;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;Actual:                       &lt;/font&gt;&lt;/b&gt;&lt;p&gt;&lt;html&gt;&lt;body&gt;After
+        the Race Ethnicity is updated online for assignments with successful attempts,
+        the value is not updated in the STUD_TEST_ASSIGNMENTS table&lt;/body&gt;&lt;/html&gt;&lt;p&gt;&lt;/body&gt;&lt;/html&gt;</Value></Field><Field
+        Name="run-reference"/><Field Name="alert-data"><Value></Value></Field><Field
+        Name="dev-comments"><Value></Value></Field><Field Name="to-mail"><Value></Value></Field><Field
+        Name="cycle-id"/><Field Name="status"><Value>Closed</Value></Field><Field
+        Name="closing-date"><Value>2008-12-12</Value></Field><Field Name="user-31"><Value></Value></Field><Field
+        Name="user-32"><Value></Value></Field><Field Name="user-33"><Value></Value></Field><Field
+        Name="detected-in-rel"><Value ReferenceValue="1.16.2">14</Value></Field><Field
+        Name="bug-ver-stamp"><Value>5</Value></Field><Field Name="user-34"><Value>None</Value></Field><Field
+        Name="user-35"><Value></Value></Field><Field Name="user-36"><Value></Value></Field><Field
+        Name="estimated-fix-time"/><Field Name="project"><Value></Value></Field><Field
+        Name="target-rel"><Value></Value></Field><Field Name="step-reference"/><Field
+        Name="owner"><Value>raoxsr</Value></Field><Field Name="actual-fix-time"><Value>5</Value></Field><Field
+        Name="request-type"><Value></Value></Field><Field Name="user-05"><Value>DE4362</Value></Field><Field
+        Name="user-04"><Value></Value></Field><Field Name="user-03"><Value>None</Value></Field><Field
+        Name="user-02"><Value></Value></Field><Field Name="user-01"><Value></Value></Field><Field
+        Name="test-reference"/><Field Name="subject"><Value>2923</Value></Field><Field
+        Name="request-id"/><Field Name="request-server"><Value></Value></Field><Field
+        Name="user-09"><Value></Value></Field><Field Name="user-07"><Value></Value></Field><Field
+        Name="user-06"><Value>None</Value></Field><Field Name="id"><Value>6</Value></Field><Field
+        Name="name"><Value>Race Ethnicity is not updated in the STUD_TEST_ASSIGNMENTS
+        table for successful attempts (DE4362)</Value></Field><Field Name="has-linkage"><Value>N</Value></Field><Field
+        Name="cycle-reference"><Value></Value></Field><Field Name="creation-time"><Value>2008-12-08</Value></Field><Field
+        Name="request-note"><Value></Value></Field><Field Name="closing-version"><Value></Value></Field><Field
+        Name="detection-version"><Value></Value></Field><Field Name="user-14"><Value></Value></Field><Field
+        Name="user-13"><Value></Value></Field><Field Name="user-16"><Value></Value></Field><Field
+        Name="user-15"><Value></Value></Field><Field Name="user-10"><Value></Value></Field><Field
+        Name="last-modified"><Value>2011-05-03 15:53:26</Value></Field><Field Name="user-12"><Value></Value></Field><Field
+        Name="user-11"><Value></Value></Field><Field Name="detected-in-rcyc"><Value></Value></Field><Field
+        Name="severity"><Value>2 - Major Problem</Value></Field><Field Name="attachment"><Value></Value></Field><Field
+        Name="user-18"><Value></Value></Field><Field Name="user-17"><Value></Value></Field><Field
+        Name="extended-reference"><Value></Value></Field><Field Name="user-19"><Value></Value></Field><Field
+        Name="detected-by"><Value>raoxsr</Value></Field><Field Name="target-rcyc"><Value></Value></Field></Fields></Entity><Entity
+        Type="defect"><Fields><Field Name="has-change"><Value></Value></Field><Field
+        Name="planned-closing-ver"><Value></Value></Field><Field Name="reproducible"><Value>Y</Value></Field><Field
+        Name="user-20"><Value></Value></Field><Field Name="user-21"><Value></Value></Field><Field
+        Name="has-others-linkage"><Value>Y</Value></Field><Field Name="priority"><Value>2
+        - High Attention</Value></Field><Field Name="description"><Value>&lt;html&gt;&lt;body&gt;&lt;font
+        color=&quot;#000080&quot;&gt;&lt;b&gt;Test Set:                     &lt;/b&gt;&lt;/font&gt;
+        SDU&lt;br&gt;&lt;br&gt;&lt;br&gt;Steps to Reproduce &lt;br&gt;1) Login Application
+        with Valid username and password &lt;br&gt;2) Click on Student Data file submission
+        link &lt;br&gt;3) Click on Sent Date filter &lt;br&gt;4) Enter Valid Values
+        in Text field &lt;br&gt;5) Click on Go button &lt;br&gt;6) Observe &lt;br&gt;Go
+        link does not work&lt;/body&gt;&lt;/html&gt;</Value></Field><Field Name="run-reference"/><Field
+        Name="alert-data"><Value></Value></Field><Field Name="dev-comments"><Value></Value></Field><Field
+        Name="to-mail"><Value></Value></Field><Field Name="cycle-id"/><Field Name="status"><Value>Closed</Value></Field><Field
+        Name="closing-date"><Value>2009-02-11</Value></Field><Field Name="user-31"><Value></Value></Field><Field
+        Name="user-32"><Value></Value></Field><Field Name="user-33"><Value></Value></Field><Field
+        Name="detected-in-rel"><Value ReferenceValue="1.16.1">13</Value></Field><Field
+        Name="bug-ver-stamp"><Value>5</Value></Field><Field Name="user-34"><Value>None</Value></Field><Field
+        Name="user-35"><Value></Value></Field><Field Name="user-36"><Value></Value></Field><Field
+        Name="estimated-fix-time"/><Field Name="project"><Value>Foundation Services</Value></Field><Field
+        Name="target-rel"><Value ReferenceValue="2.1">15</Value></Field><Field Name="step-reference"/><Field
+        Name="owner"><Value>sangm9</Value></Field><Field Name="actual-fix-time"><Value>72</Value></Field><Field
+        Name="request-type"><Value></Value></Field><Field Name="user-05"><Value>DE4162</Value></Field><Field
+        Name="user-04"><Value></Value></Field><Field Name="user-03"><Value>None</Value></Field><Field
+        Name="user-02"><Value></Value></Field><Field Name="user-01"><Value></Value></Field><Field
+        Name="test-reference"/><Field Name="subject"><Value>2678</Value></Field><Field
+        Name="request-id"/><Field Name="request-server"><Value></Value></Field><Field
+        Name="user-09"><Value></Value></Field><Field Name="user-07"><Value></Value></Field><Field
+        Name="user-06"><Value>None</Value></Field><Field Name="id"><Value>5</Value></Field><Field
+        Name="name"><Value>Reference: Application does not Filter data, when user
+        click on go link of Sent Date filter of Student data File Submission Page</Value></Field><Field
+        Name="has-linkage"><Value>N</Value></Field><Field Name="cycle-reference"><Value></Value></Field><Field
+        Name="creation-time"><Value>2008-12-02</Value></Field><Field Name="request-note"><Value></Value></Field><Field
+        Name="closing-version"><Value></Value></Field><Field Name="detection-version"><Value></Value></Field><Field
+        Name="user-14"><Value></Value></Field><Field Name="user-13"><Value></Value></Field><Field
+        Name="user-16"><Value></Value></Field><Field Name="user-15"><Value></Value></Field><Field
+        Name="user-10"><Value></Value></Field><Field Name="last-modified"><Value>2011-05-03
+        16:03:52</Value></Field><Field Name="user-12"><Value></Value></Field><Field
+        Name="user-11"><Value></Value></Field><Field Name="detected-in-rcyc"><Value></Value></Field><Field
+        Name="severity"><Value>3 - Minor Problem</Value></Field><Field Name="attachment"><Value></Value></Field><Field
+        Name="user-18"><Value></Value></Field><Field Name="user-17"><Value></Value></Field><Field
+        Name="extended-reference"><Value></Value></Field><Field Name="user-19"><Value></Value></Field><Field
+        Name="detected-by"><Value>sangm9</Value></Field><Field Name="target-rcyc"><Value></Value></Field></Fields></Entity><Entity
+        Type="defect"><Fields><Field Name="has-change"><Value></Value></Field><Field
+        Name="planned-closing-ver"><Value></Value></Field><Field Name="reproducible"><Value>Y</Value></Field><Field
+        Name="user-20"><Value></Value></Field><Field Name="user-21"><Value></Value></Field><Field
+        Name="has-others-linkage"><Value>Y</Value></Field><Field Name="priority"><Value>2
+        - High Attention</Value></Field><Field Name="description"><Value>&lt;html&gt;&lt;body&gt;&lt;b&gt;&lt;font
+        color=&quot;#000080&quot;&gt;Test Set:                     &lt;/font&gt;&lt;/b&gt;
+        SDU&lt;p&gt;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;Test:                         &lt;/font&gt;&lt;/b&gt;
+        [1]11. Verify that Filter with valid data&lt;p&gt;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;Run:                          &lt;/font&gt;&lt;/b&gt;
+        Run_12-2_9-10-54&lt;p&gt;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;Step:                         &lt;/font&gt;&lt;/b&gt;
+        Step 2&lt;p&gt; &lt;p&gt;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;Description:                  &lt;/font&gt;&lt;/b&gt;&lt;p&gt;&lt;b&gt;&lt;font
+        color=&quot;#000080&quot;&gt;&lt;html&gt;&lt;body&gt;Enter values  &amp;lt;12/01/2008
+        06:&lt;/font&gt;&lt;/b&gt;13 PM&amp;gt; in search Text field if Search text
+        box is available and Click on Go button&lt;br&gt;or &lt;br&gt;Click on the  &amp;lt;12/01/2008
+        06:13 PM&amp;gt;  from the Displayed Dropdown box for &amp;lt;Sent Date&amp;gt;&lt;/body&gt;&lt;/html&gt;&lt;p&gt;
+        &lt;p&gt;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;Parameters:                   &lt;/font&gt;&lt;/b&gt;&lt;p&gt;&lt;b&gt;&lt;font
+        color=&quot;#000080&quot;&gt;&lt;b&gt;&lt;u&gt;Input&lt;/u&gt;&lt;/b&gt;&lt;br&gt;  &lt;font
+        color=&quot;#008284&quot;&gt;&lt;b&gt;Search&lt;/b&gt;&lt;/font&gt; = 12/01/2008
+        06:&lt;/font&gt;&lt;/b&gt;13 PM&lt;br&gt;  &lt;font color=&quot;#008284&quot;&gt;&lt;b&gt;Filter&lt;/b&gt;&lt;/font&gt;
+        = Sent Date&lt;br&gt;&lt;p&gt; &lt;p&gt;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;Expected:                     &lt;/font&gt;&lt;/b&gt;&lt;p&gt;&lt;html&gt;&lt;body&gt;Application
+        should display records depending on search criteria&lt;/body&gt;&lt;/html&gt;&lt;p&gt;&lt;/body&gt;&lt;/html&gt;</Value></Field><Field
+        Name="run-reference"/><Field Name="alert-data"><Value></Value></Field><Field
+        Name="dev-comments"><Value>&lt;html&gt;&lt;body&gt;&lt;font color=&quot;#000080&quot;&gt;&lt;b&gt;_______________________________________&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;font
+        color=&quot;#000080&quot;&gt;&lt;b&gt;Sangle, Madhuri &amp;lt;sangm9&amp;gt;,
+        1/13/2009: &lt;/b&gt;&lt;/font&gt; &lt;br&gt;Application is working fine and
+        thus closing the defect&lt;/body&gt;&lt;/html&gt;</Value></Field><Field Name="to-mail"><Value></Value></Field><Field
+        Name="cycle-id"/><Field Name="status"><Value>Closed</Value></Field><Field
+        Name="closing-date"><Value>2009-01-12</Value></Field><Field Name="user-31"><Value></Value></Field><Field
+        Name="user-32"><Value></Value></Field><Field Name="user-33"><Value></Value></Field><Field
+        Name="detected-in-rel"><Value ReferenceValue="1.16.1">13</Value></Field><Field
+        Name="bug-ver-stamp"><Value>7</Value></Field><Field Name="user-34"><Value>None</Value></Field><Field
+        Name="user-35"><Value></Value></Field><Field Name="user-36"><Value></Value></Field><Field
+        Name="estimated-fix-time"/><Field Name="project"><Value>SORM</Value></Field><Field
+        Name="target-rel"><Value></Value></Field><Field Name="step-reference"/><Field
+        Name="owner"><Value>sangm9</Value></Field><Field Name="actual-fix-time"><Value>42</Value></Field><Field
+        Name="request-type"><Value></Value></Field><Field Name="user-05"><Value>DE4108</Value></Field><Field
+        Name="user-04"><Value></Value></Field><Field Name="user-03"><Value>None</Value></Field><Field
+        Name="user-02"><Value></Value></Field><Field Name="user-01"><Value></Value></Field><Field
+        Name="test-reference"/><Field Name="subject"><Value>2678</Value></Field><Field
+        Name="request-id"/><Field Name="request-server"><Value></Value></Field><Field
+        Name="user-09"><Value></Value></Field><Field Name="user-07"><Value></Value></Field><Field
+        Name="user-06"><Value>None</Value></Field><Field Name="id"><Value>4</Value></Field><Field
+        Name="name"><Value>Reference: Application does not filter data on Student
+        Data File Submission page by Send date field</Value></Field><Field Name="has-linkage"><Value>N</Value></Field><Field
+        Name="cycle-reference"><Value></Value></Field><Field Name="creation-time"><Value>2008-12-02</Value></Field><Field
+        Name="request-note"><Value></Value></Field><Field Name="closing-version"><Value></Value></Field><Field
+        Name="detection-version"><Value></Value></Field><Field Name="user-14"><Value></Value></Field><Field
+        Name="user-13"><Value></Value></Field><Field Name="user-16"><Value></Value></Field><Field
+        Name="user-15"><Value></Value></Field><Field Name="user-10"><Value></Value></Field><Field
+        Name="last-modified"><Value>2011-05-03 15:53:26</Value></Field><Field Name="user-12"><Value></Value></Field><Field
+        Name="user-11"><Value></Value></Field><Field Name="detected-in-rcyc"><Value></Value></Field><Field
+        Name="severity"><Value>2 - Major Problem</Value></Field><Field Name="attachment"><Value></Value></Field><Field
+        Name="user-18"><Value></Value></Field><Field Name="user-17"><Value></Value></Field><Field
+        Name="extended-reference"><Value></Value></Field><Field Name="user-19"><Value></Value></Field><Field
+        Name="detected-by"><Value>sangm9</Value></Field><Field Name="target-rcyc"><Value></Value></Field></Fields></Entity><Entity
+        Type="defect"><Fields><Field Name="has-change"><Value></Value></Field><Field
+        Name="planned-closing-ver"><Value></Value></Field><Field Name="reproducible"><Value>Y</Value></Field><Field
+        Name="user-20"><Value></Value></Field><Field Name="user-21"><Value></Value></Field><Field
+        Name="has-others-linkage"><Value>Y</Value></Field><Field Name="priority"><Value>None</Value></Field><Field
+        Name="description"><Value>&lt;html&gt;&lt;body&gt;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;Test
+        Set:                     &lt;/font&gt;&lt;/b&gt; Program Team Staff (Admin)&lt;p&gt;&lt;b&gt;&lt;font
+        color=&quot;#000080&quot;&gt;Test:                         &lt;/font&gt;&lt;/b&gt;
+        [1]ENTITLEMENT - Participation Count Totals&lt;p&gt;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;Run:                          &lt;/font&gt;&lt;/b&gt;
+        Run_9-15_18-22-41&lt;p&gt;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;Step:                         &lt;/font&gt;&lt;/b&gt;
+        Verify the Participation Count Totals Table Header&lt;p&gt; &lt;p&gt;&lt;b&gt;&lt;font
+        color=&quot;#000080&quot;&gt;Description:                  &lt;/font&gt;&lt;/b&gt;&lt;p&gt;&lt;html&gt;&lt;body&gt;Verify
+        the Participation Count Totals Table Header&lt;/body&gt;&lt;/html&gt;&lt;p&gt;
+        &lt;p&gt;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;Parameters:                   &lt;/font&gt;&lt;/b&gt;&lt;p&gt;&lt;b&gt;&lt;u&gt;Input&lt;/u&gt;&lt;/b&gt;&lt;br&gt;  &lt;font
+        color=&quot;#008284&quot;&gt;&lt;b&gt;Account&lt;/b&gt;&lt;/font&gt; = &lt;br&gt;&lt;p&gt;
+        &lt;p&gt;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;Expected:                     &lt;/font&gt;&lt;/b&gt;&lt;p&gt;&lt;b&gt;&lt;font
+        color=&quot;#000080&quot;&gt;&lt;html&gt;&lt;body&gt;The Table Header contains
+        the following values:&lt;/font&gt;&lt;/b&gt; Test Name, Grade, Test, Form
+        Type, i.e. Paper Regular, Paper Large Print and Paper Braille.&lt;/body&gt;&lt;/html&gt;&lt;p&gt;&lt;/body&gt;&lt;/html&gt;</Value></Field><Field
+        Name="run-reference"/><Field Name="alert-data"><Value></Value></Field><Field
+        Name="dev-comments"><Value></Value></Field><Field Name="to-mail"><Value></Value></Field><Field
+        Name="cycle-id"/><Field Name="status"><Value>Closed</Value></Field><Field
+        Name="closing-date"><Value>2009-01-15</Value></Field><Field Name="user-31"><Value></Value></Field><Field
+        Name="user-32"><Value></Value></Field><Field Name="user-33"><Value></Value></Field><Field
+        Name="detected-in-rel"><Value ReferenceValue="1.14.1">8</Value></Field><Field
+        Name="bug-ver-stamp"><Value>4</Value></Field><Field Name="user-34"><Value>None</Value></Field><Field
+        Name="user-35"><Value></Value></Field><Field Name="user-36"><Value></Value></Field><Field
+        Name="estimated-fix-time"/><Field Name="project"><Value></Value></Field><Field
+        Name="target-rel"><Value></Value></Field><Field Name="step-reference"/><Field
+        Name="owner"><Value>egolal</Value></Field><Field Name="actual-fix-time"><Value>123</Value></Field><Field
+        Name="request-type"><Value></Value></Field><Field Name="user-05"><Value>DE2362</Value></Field><Field
+        Name="user-04"><Value></Value></Field><Field Name="user-03"><Value>None</Value></Field><Field
+        Name="user-02"><Value></Value></Field><Field Name="user-01"><Value></Value></Field><Field
+        Name="test-reference"/><Field Name="subject"><Value>2355</Value></Field><Field
+        Name="request-id"/><Field Name="request-server"><Value></Value></Field><Field
+        Name="user-09"><Value></Value></Field><Field Name="user-07"><Value></Value></Field><Field
+        Name="user-06"><Value>None</Value></Field><Field Name="id"><Value>2</Value></Field><Field
+        Name="name"><Value>TN Content: ''Participation Count Totals'' Link on Administrative
+        Management Page Navigates Incorrectly - Rally Defect DE2362</Value></Field><Field
+        Name="has-linkage"><Value>N</Value></Field><Field Name="cycle-reference"><Value></Value></Field><Field
+        Name="creation-time"><Value>2008-09-15</Value></Field><Field Name="request-note"><Value></Value></Field><Field
+        Name="closing-version"><Value></Value></Field><Field Name="detection-version"><Value></Value></Field><Field
+        Name="user-14"><Value></Value></Field><Field Name="user-13"><Value></Value></Field><Field
+        Name="user-16"><Value></Value></Field><Field Name="user-15"><Value></Value></Field><Field
+        Name="user-10"><Value></Value></Field><Field Name="last-modified"><Value>2011-05-03
+        16:03:52</Value></Field><Field Name="user-12"><Value></Value></Field><Field
+        Name="user-11"><Value></Value></Field><Field Name="detected-in-rcyc"><Value></Value></Field><Field
+        Name="severity"><Value>3 - Minor Problem</Value></Field><Field Name="attachment"><Value></Value></Field><Field
+        Name="user-18"><Value></Value></Field><Field Name="user-17"><Value></Value></Field><Field
+        Name="extended-reference"><Value></Value></Field><Field Name="user-19"><Value></Value></Field><Field
+        Name="detected-by"><Value>EgolAl</Value></Field><Field Name="target-rcyc"><Value></Value></Field></Fields></Entity><Entity
+        Type="defect"><Fields><Field Name="has-change"><Value></Value></Field><Field
+        Name="planned-closing-ver"><Value></Value></Field><Field Name="reproducible"><Value>Y</Value></Field><Field
+        Name="user-20"><Value></Value></Field><Field Name="user-21"><Value></Value></Field><Field
+        Name="has-others-linkage"><Value>Y</Value></Field><Field Name="priority"><Value>3
+        - Normal</Value></Field><Field Name="description"><Value></Value></Field><Field
+        Name="run-reference"/><Field Name="alert-data"><Value></Value></Field><Field
+        Name="dev-comments"><Value></Value></Field><Field Name="to-mail"><Value></Value></Field><Field
+        Name="cycle-id"/><Field Name="status"><Value>Closed</Value></Field><Field
+        Name="closing-date"><Value>2009-01-15</Value></Field><Field Name="user-31"><Value></Value></Field><Field
+        Name="user-32"><Value></Value></Field><Field Name="user-33"><Value></Value></Field><Field
+        Name="detected-in-rel"><Value ReferenceValue="1.11">4</Value></Field><Field
+        Name="bug-ver-stamp"><Value>13</Value></Field><Field Name="user-34"><Value>None</Value></Field><Field
+        Name="user-35"><Value></Value></Field><Field Name="user-36"><Value></Value></Field><Field
+        Name="estimated-fix-time"/><Field Name="project"><Value></Value></Field><Field
+        Name="target-rel"><Value></Value></Field><Field Name="step-reference"/><Field
+        Name="owner"><Value>egolal</Value></Field><Field Name="actual-fix-time"/><Field
+        Name="request-type"><Value></Value></Field><Field Name="user-05"><Value>DE977</Value></Field><Field
+        Name="user-04"><Value></Value></Field><Field Name="user-03"><Value>None</Value></Field><Field
+        Name="user-02"><Value></Value></Field><Field Name="user-01"><Value></Value></Field><Field
+        Name="test-reference"/><Field Name="subject"/><Field Name="request-id"/><Field
+        Name="request-server"><Value></Value></Field><Field Name="user-09"><Value></Value></Field><Field
+        Name="user-07"><Value></Value></Field><Field Name="user-06"><Value>None</Value></Field><Field
+        Name="id"><Value>1</Value></Field><Field Name="name"><Value>wrong date</Value></Field><Field
+        Name="has-linkage"><Value>N</Value></Field><Field Name="cycle-reference"><Value></Value></Field><Field
+        Name="creation-time"><Value>2008-04-16</Value></Field><Field Name="request-note"><Value></Value></Field><Field
+        Name="closing-version"><Value></Value></Field><Field Name="detection-version"><Value></Value></Field><Field
+        Name="user-14"><Value></Value></Field><Field Name="user-13"><Value></Value></Field><Field
+        Name="user-16"><Value></Value></Field><Field Name="user-15"><Value></Value></Field><Field
+        Name="user-10"><Value></Value></Field><Field Name="last-modified"><Value>2011-08-25
+        04:36:35</Value></Field><Field Name="user-12"><Value></Value></Field><Field
+        Name="user-11"><Value></Value></Field><Field Name="detected-in-rcyc"><Value></Value></Field><Field
+        Name="severity"><Value>3 - Minor Problem</Value></Field><Field Name="attachment"><Value>N</Value></Field><Field
+        Name="user-18"><Value></Value></Field><Field Name="user-17"><Value></Value></Field><Field
+        Name="extended-reference"><Value></Value></Field><Field Name="user-19"><Value></Value></Field><Field
+        Name="detected-by"><Value>egolal</Value></Field><Field Name="target-rcyc"><Value></Value></Field></Fields></Entity></Entities>'
+    http_version: 
+  recorded_at: Mon, 26 Mar 2012 22:56:42 GMT
+- request:
+    method: get
+    uri: http://qualitycenter.ic.ncs.com:8080/qcbin/rest/is-authenticated
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Cookie:
+      - JSESSIONID=66E574F45E5D0B08B52386E701A3A261; Path=/; LWSSO_COOKIE_KEY=O4k5btby7PmlkuPTbmAsqn86iL1K7h30GhodVFgbPMOQrC7MHFy3Jh5XKj9wWvjcb7QD8wOD6NegYccgtYrk-3H__zZIYo3U1n4fcdxJ9uf6hun3skTHXbNa4A63NbC-P-mtXbj0PXJrbP-CaOnRj1JP51kDnBnQRURneclPofgzkPfgjswOSOxWkj6knvqeC83yiSlR5QoFy7r9durAdzimjDBkel_xiJboMfQOSQGPJNlfd_6GKQnvIkdu6eOt
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Set-Cookie:
+      - LWSSO_COOKIE_KEY=57N_I9TaT5T-LWrLLOQ7MNjBGzFsmx6cp7FOTWXCZ-ApHdUDgbNs-_rrH3qgghq4AlKazLUJcgul5bdz2gC2PhhJgbms-3_KfDgP9N-4tLNBQDc5MrSef3AowieVYGrqyEHzQC3TPgctbW4pUoZKIFhPIQUvpHMcqg0hlUuCJ76nriAoFSLYKg7k6oUaT6pBOaQGhF4HDbhkqyqFjw-dGk6NcDWXKfwljV2wphP8F_vp3zi_pMU6tBQ4Cz5okwoB;
         Path=/
       Content-Type:
       - application/xml
       Content-Length:
       - '124'
       Date:
-      - Mon, 26 Mar 2012 21:55:52 GMT
+      - Mon, 26 Mar 2012 23:18:47 GMT
     body:
       encoding: US-ASCII
       string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><AuthenticationInfo><Username>valid_user</Username></AuthenticationInfo>
     http_version: 
-  recorded_at: Mon, 26 Mar 2012 21:55:45 GMT
+  recorded_at: Mon, 26 Mar 2012 23:18:41 GMT
 - request:
     method: get
     uri: http://qualitycenter.ic.ncs.com:8080/qcbin/rest/blah
@@ -219,7 +1284,7 @@ http_interactions:
       string: ''
     headers:
       Cookie:
-      - JSESSIONID=ECABB7A686040528766D0DFD1FA6B7B4; Path=/; LWSSO_COOKIE_KEY=NomonCcwSyaTWUrFqjC1dmi37OLXPeO3-rOi0oFBSnp2lzTT2zc0CrQrCA_9QZnRgwjDVxw--2lwLBIH0tLCCNtScQux7tgq8I_AycrV3MBxM8j0Jdn1wcCkiRGZE78a8BnFuqNfc_heFM3caHjTb-trP7zmrfdxBgpKAXTIBsHJYjrS0KUG02K6oroGviuFadXlfVOEPPaLA5XEo4irmNq7G--n9eSYxDsQUAB7QkNMyr3spSjfKPTt7alSpn1V
+      - JSESSIONID=66E574F45E5D0B08B52386E701A3A261; Path=/; LWSSO_COOKIE_KEY=O4k5btby7PmlkuPTbmAsqn86iL1K7h30GhodVFgbPMOQrC7MHFy3Jh5XKj9wWvjcb7QD8wOD6NegYccgtYrk-3H__zZIYo3U1n4fcdxJ9uf6hun3skTHXbNa4A63NbC-P-mtXbj0PXJrbP-CaOnRj1JP51kDnBnQRURneclPofgzkPfgjswOSOxWkj6knvqeC83yiSlR5QoFy7r9durAdzimjDBkel_xiJboMfQOSQGPJNlfd_6GKQnvIkdu6eOt
   response:
     status:
       code: 404
@@ -230,16 +1295,16 @@ http_interactions:
       X-Powered-By:
       - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
       Set-Cookie:
-      - LWSSO_COOKIE_KEY=zdnr_rDz_zEF5XUgJaeKF6kD__p_yOt0iG0m65HGuh4PR8E-gfIv-JEl1sKeHJk1jV7HIEJ4TEU1UtEY6hPzMWG6S9tN8p_KMe49wcgCIzgmsw5yvJgK0f9Z4vAk9CzJNifjJsFdD0c3mI5CHOCaVu-JaSw4X7WtfhVNLH2pa89GDzDIofH5T3hk5XjoNKy65nAqMlF5xndwfa_lDvjiiL1lbPiDECk8QMIiObb_op6yaVQ1_JgqrCkxyNxZRoQj;
+      - LWSSO_COOKIE_KEY=IHNWNw1062qIkcN_MU_RF9jjFrN1ooG5qDg-wp5wJngInyeSvnRZGII-JPwUNMXXTpR5jOSd84Y84pUBQKWKLUEkcnjSJDkTk-fEK3ZTtDJE_8O9AGFXrFjyRc3JcGUZxShVhClLbQ2wKIH92dGRrbRnvlyct_GDNuig_bcnP94UaTjTmFNgPvJwmuJeQ7vVOCD8dMtcp2QJ58s_R5uq5QN1sb27iwcsvXervHh0yyJiC741MJZlkbQTefq6-4HS;
         Path=/
-      - QCSession=MTg5NDc2NztoekVmNWM5QmpnRHEycFhuOEJqU1ZRKio7UkVTVCBjbGllbnQ7IDsg;
+      - QCSession=MTg5NDkzNTtqS0FkOFJJVVkrdmFCWmxMd280UWN3Kio7UkVTVCBjbGllbnQ7IDsg;
         Path=/
       Content-Type:
       - application/xml
       Content-Length:
       - '7622'
       Date:
-      - Mon, 26 Mar 2012 22:10:44 GMT
+      - Mon, 26 Mar 2012 23:18:47 GMT
     body:
       encoding: US-ASCII
       string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><QCRestException><Id>qccore.general-error</Id><Title>Not
@@ -314,5 +1379,5 @@ http_interactions:
         org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)&#xD;\n\tat
         java.lang.Thread.run(Thread.java:619)&#xD;\n</StackTrace></QCRestException>"
     http_version: 
-  recorded_at: Mon, 26 Mar 2012 22:10:37 GMT
+  recorded_at: Mon, 26 Mar 2012 23:18:41 GMT
 recorded_with: VCR 2.0.0
