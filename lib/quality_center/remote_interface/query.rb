@@ -36,8 +36,8 @@ module QualityCenter
       # http://qualitycenter:8080/qcbin/Help/doc_library/api_refs/REST/Content/General/Data_Paging.html
       def paginate(opts = {})
         opts.reverse_merge! DEFAULT[:paging]
-        add( page_size:   opts[:page_size],
-             start_index: opts[:start_index] )
+        add( page_size:   opts['page-size'],
+             start_index: opts['start-index'] )
       end
 
       # Order by a field, descending by default.
@@ -45,7 +45,7 @@ module QualityCenter
       # http://qualitycenter:8080/qcbin/Help/doc_library/api_refs/REST/Content/General/order-by.html
       def order_by(field,opts = {})
         opts = assert_legal_order(opts)
-        add order_by: wrap( field, opts[:direction] )
+        add order_by: wrap( field, opts['direction'] )
       end
 
       # Limit returned entries by their values.
@@ -53,10 +53,10 @@ module QualityCenter
       # http://qualitycenter:8080/qcbin/Help/doc_library/api_refs/REST/Content/General/Filtering.html
       def filter(opts = {})
         assert_legal_filter(opts)
-        add(:query => bracket(opts.
+        add('query' => bracket(opts.
                                 map{ |field,value| clause(field,value) }.
                                 join(';')
-                             )
+                              )
            )
       end
 
@@ -102,8 +102,8 @@ module QualityCenter
       def assert_legal_order(opts)
         opts.symbolize_keys!
         opts.reverse_merge! DEFAULT[:order]
-        opts[:direction].upcase!
-        raise ArgumentError.new("Illegal Direction") unless DIRECTIONS.include? opts[:direction]
+        opts['direction'].upcase!
+        raise ArgumentError.new("Illegal Direction") unless DIRECTIONS.include? opts['direction']
         opts
       end
 
