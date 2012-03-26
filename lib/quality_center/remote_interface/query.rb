@@ -100,7 +100,6 @@ module QualityCenter
 
       # Ensure the order opts make sense
       def assert_legal_order(opts)
-        opts.symbolize_keys!
         opts.reverse_merge! DEFAULT[:order]
         opts['direction'].upcase!
         raise ArgumentError.new("Illegal Direction") unless DIRECTIONS.include? opts['direction']

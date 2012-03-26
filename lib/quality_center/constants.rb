@@ -24,7 +24,7 @@ module QualityCenter
     class Query
       DIRECTIONS = %w[ASC DESC]
       DEFAULT = {
-        paging: { 'page_size' => 10,   'start_index' => 1 },
+        paging: { 'page-size' => 10,   'start-index' => 1 },
         order:  { 'field'     => 'id', 'direction'   =>'DESC' }
       }
     end
