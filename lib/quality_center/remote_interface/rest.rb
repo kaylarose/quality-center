@@ -41,7 +41,7 @@ module QualityCenter
       #
       # Returns self if the login is successful.
       # Raises LoginError if the credentials were not accepted.
-      def login
+      def login(return_response=false)
         response = self.class.get(AUTH_URI[:get]).log(@logger)
         response = self.class.post(
           AUTH_URI[:post],
@@ -51,8 +51,7 @@ module QualityCenter
         raise LoginError, "Bad credentials" if response.request.uri.to_s =~ /error/
 
         @cookie = response.request.options[:headers]['Cookie']
-        response
-        self
+        return_response ? response : self
       end
 
       # Retrieve the contents of a path, respecting authentication cookies.
