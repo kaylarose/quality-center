@@ -1,6 +1,7 @@
 require 'nokogiri'
 require 'active_support/core_ext/hash'
 require_relative 'constants'
+require_relative 'defect/collection'
 
 # A class to make QC's responses a little more usable.  
 # The primary method is #defects, which returns an array of defect hashes.
@@ -38,7 +39,7 @@ module QualityCenter
     #
     # Returns an Array of Hashes representing individual defects.
     def defects(opts={})
-      DefectCollection.new(connection:@conn,query:opts[:query])
+      Defect::Collection.new(connection:@conn,query:opts[:query])
     end
 
     # A map from machine-readable field names to human-readable labels.
@@ -212,7 +213,6 @@ module QualityCenter
     #
     # Returns an array of entities if called on the expected kind of hash.
     def collection(in_hash,entity_name)
-      puts in_hash.inspect
       in_hash[entity_name+'s'][entity_name]
     end
 
