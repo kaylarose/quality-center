@@ -32,4 +32,10 @@ class TestRest < Test::Unit::TestCase
     end
   end
 
+  def test_login_required
+    with_invalid_credentials do
+      assert_raises(Rest::NotAuthenticated){ new_rest(@@bad_creds).defects }
+    end
+  end
+
 end
