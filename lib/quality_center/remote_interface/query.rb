@@ -28,12 +28,16 @@ module QualityCenter
         @query['page-size']
       end
 
+      def start_index
+        @query['start-index']
+      end
+
       # Add a page limit.  QC defaults to 100, we default to 10.
       # http://qualitycenter:8080/qcbin/Help/doc_library/api_refs/REST/Content/General/Data_Paging.html
       def paginate(opts = {})
         opts.reverse_merge! DEFAULT[:paging]
-        add( page_size:   opts[:limit],
-             start_index: opts[:offset] + 1 )
+        add( page_size:   opts[:page_size],
+             start_index: opts[:start_index] )
       end
 
       # Order by a field, descending by default.
