@@ -1,0 +1,182 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://qualitycenter.ic.ncs.com:8080/qcbin/authentication-point/login.jsp
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Set-Cookie:
+      - JSESSIONID=ECABB7A686040528766D0DFD1FA6B7B4; Path=/qcbin
+      Content-Type:
+      - text/html;charset=ISO-8859-1
+      Content-Length:
+      - '7127'
+      Date:
+      - Mon, 26 Mar 2012 21:13:22 GMT
+    body:
+      encoding: US-ASCII
+      string: ! "\r\n\r\n\r\n<head>\r\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\"
+        />\r\n<link rel=\"shortcut icon\" href=\"../images/favicon.ico\">\r\n\r\n<TITLE>HP
+        Application Lifecycle Management 11.0</TITLE>\r\n\r\n<style type=\"text/css\"
+        media=\"all\">\r\nbody { background-color: #eee; overflow: hidden; }\r\np
+        { }\r\ntd { }\r\na:hover { }\r\na:link { }\r\na:visited { }\r\na:active {
+        }\r\ntable.full_HV { width: 100%; height: 98%; }\r\ntable.full_H { width:
+        100%; }\r\ntd.list { font-size: 13px; font-family: Verdana, Arial, Helvetica,
+        sans-serif; text-align: left; vertical-align: top }\r\ntd.login_top_left {
+        background-color: #036; background-image: url(../images/LoginBlueBackground.png);
+        background-repeat: repeat-y; background-position: right 0; vertical-align:
+        top; width: 60%; height: 48%; padding: 25px 10px 37px 20px; border-bottom:
+        7px solid #fff; }\r\ntd.login_top_right { background-color: #000000; background-image:
+        url(../images/ALM/LoginImage.png); background-repeat: no-repeat; vertical-align:
+        top; width: 40%; height: 48%; border-bottom: 7px solid #fff; border-left:
+        7px solid #fff; }\r\ntd.login_mid_right { background-color: #eee; background-image:
+        url(../images/LoginGrayBackground.png); background-repeat: repeat-x; text-align:
+        left; vertical-align: top; width: 40%; height: 47%; padding-top: 32px; padding-bottom:
+        30px; }\r\ntd.login_mid_center { background-color: #eee; background-image:
+        url(../images/LoginGrayBackground.png); background-repeat: repeat-x; text-align:right
+        ; padding-top: 32px; padding-bottom: 30px; width: 20%; height: 47%; vertical-align:
+        top; }\r\ntd.login_mid_left { background-color: #eee; background-image: url(../images/LoginGrayBackground.png);
+        background-repeat: repeat-x; text-align: left; padding-top: 32px; padding-bottom:
+        30px; width: 40%; height: 47%; vertical-align: top; }\r\ntd.login_bot_right
+        { font-size: xx-small; font-family: Arial, Verdana, Helvetica, sans-serif;
+        background-color: #eee; text-align: left; width: 40%; height: 5%; vertical-align:
+        bottom; }\r\ntd.login_logo { text-align: left; vertical-align: top; }\r\ntd.login_appname
+        { text-align: center; vertical-align: bottom; }\r\nul.list  { font-size: 13px;
+        font-family: Verdana, Arial, Helvetica, sans-serif; line-height: 20px; text-align:
+        left; list-style-image: url(\"../images/bull.gif\"); margin-left: 20px; padding-right:
+        5px; vertical-align: top }\r\nli  { text-align: left; margin-top: 10px; padding-left:
+        10px; vertical-align: top }\r\ninput.login_name { color: black; font-size:
+        x-small; font-family: Arial, Verdana, Helvetica, sans-serif; width: 180px;
+        height: 21px; padding-right: 5px; padding-left: 5px; border: solid 1px #999;
+        }\r\ninput.login_password { color: black; font-size: x-small; font-family:
+        Arial, Verdana, Helvetica, sans-serif; padding-right: 5px; padding-left: 5px;
+        width: 180px; height: 21px; border: solid 1px #999; }\r\ntd.login_fields {
+        text-align: left; vertical-align: top; height: 34px; padding-bottom: 13px;
+        }\r\ntd.login_fields_lable { font-size: x-small; font-family: Arial, Verdana,
+        Helvetica, sans-serif; text-align: right; padding-bottom: 13px; vertical-align:
+        bottom; height: 34px; padding-right: 10px; }\r\ntd.login_button_field { text-align:
+        left; vertical-align: top; padding-top: 20px; padding-bottom: 20px; }\r\nbutton
+        \      { color: #485464; font-size: 11px; font-family: Arial, Verdana, Helvetica,
+        sans-serif; font-weight: bold; background-color: #c8cbd0; background-image:
+        url(../images/bu_bg.png); background-repeat: repeat-x; cursor: pointer; height:
+        23px; vertical-align: middle; border-style: solid; border-width: 1px; border-color:
+        #eee #333 #333 #eee  }\r\nbutton.login { padding-right: 12px; padding-left:
+        12px; border-color: #fff #333 #333 #fff; border-style: solid; border-width:
+        1px; }\r\ntd.remember_text { font-size: 10px; font-family: Arial, Verdana,
+        Helvetica, sans-serif; text-align: left; vertical-align: top; padding-top:
+        10px; }\r\ntd.remember_cb { font-size: 10px; font-family: Arial, Verdana,
+        Helvetica, sans-serif; text-align: left; padding-top: 6px; vertical-align:
+        top; padding-right: 5px; }\r\n</style>\r\n</head>\r\n \r\n<body leftmargin=\"0\"
+        marginheight=\"0\" marginwidth=\"0\" topmargin=\"0\" onload=\"document.loginform.j_username.focus();\">\r\n
+        \   <table class=\"full_HV\" width=\"180\" border=\"0\" cellspacing=\"0\"
+        cellpadding=\"0\">\r\n        <tr>\r\n            <td class=\"login_top_left\"
+        colspan=\"2\">\r\n                <table class=\"full_HV\" border=\"0\" cellspacing=\"0\"
+        cellpadding=\"0\">\r\n                    <tr>\r\n                        <td
+        class=\"login_logo\"><img src=\"../images/login_logo.gif\" alt=\"\" border=\"0\"
+        /></td>\r\n                        <td></td>\r\n                    </tr>\r\n
+        \                   <tr>\r\n                        <td></td>\r\n\t\t\t\t\t\t<td
+        class=\"login_appname\"><img src=\"../images/ALM/LoginProductDisplayName.gif\"
+        alt=\"\" /></td>\r\n                    </tr>\r\n                </table>\r\n
+        \           </td>\r\n            <td class=\"login_top_right\"><img src=\"../images/dot_trans.gif\"
+        alt=\"\" height=\"20\" width=\"20\" border=\"0\" /></td>\r\n        </tr>\r\n
+        \       <tr>\r\n            <td class=\"login_mid_left\"><img src=\"../images/dot_trans.gif\"
+        alt=\"\" height=\"20\" width=\"20\" border=\"0\" />\r\n            </td>\r\n
+        \           <td class=\"login_mid_center\"><img src=\"../images/dot_trans.gif\"
+        alt=\"\" height=\"20\" width=\"20\" border=\"0\" />\r\n            </td>\r\n
+        \           <td class=\"login_mid_right\">\r\n            <table class=\"width_full\"
+        border=\"0\" cellspacing=\"0\" cellpadding=\"0\">\r\n                <tr>\r\n
+        \                   <td align=\"center\"><br>\r\n                        <br>\r\n
+        \                       <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\">\r\n
+        \                           <tr>\r\n                                <td>                       \r\n\t\t\t\t\t\t\t\t\t<form
+        name='loginform' action=\"j_spring_security_check\" method=\"POST\">\r\n\t\t\t\t\t\t\t\t\t
+        \   <table>\r\n\t\t\t\t\t\t\t\t\t        <tr>\r\n\t\t\t\t\t\t\t\t\t           <td
+        align=\"right\" nowrap>Login Name:</td>\r\n\t\t\t\t\t\t\t\t\t\t       <td
+        style=\"padding-left: 7px;\"></td> \r\n\t\t\t\t\t\t\t\t\t\t       <td align=\"left\"><input
+        type=\"text\" name=\"j_username\" id=\"j_username\" size='22'/></td> \r\n\t\t\t\t\t\t\t\t\t
+        \       </tr>\r\n                                            <tr>\r\n                                               <td
+        align=\"right\" nowrap>Password:</td>\r\n                                               <td
+        style=\"padding-left: 7px;\"></td> \r\n                                               <td
+        align=\"left\"><input type=\"password\" name=\"j_password\" id=\"j_password\"
+        size='22'/></td> \r\n                                            </tr>\r\n
+        \                                           <tr>\r\n                                               <td>&nbsp;</td>
+        \r\n                                               <td style=\"padding-left:
+        7px;\"></td> \r\n                                               <td align=\"left\"><input
+        type=\"submit\" value=\"Authenticate\"/></td> \r\n                                            </tr>\r\n\t\t\t\t\t\t\t\t\t
+        \   </table>\r\n                                        \r\n\t\r\n</form>
+        \                               </td>\r\n                            </tr>\r\n
+        \                       </table>\r\n                    </td>\r\n                </tr>\r\n
+        \           </table>\r\n            </td>\r\n        </tr>\r\n    </table>\r\n
+        \   <p></p>\r\n</body>\r\n"
+    http_version: 
+  recorded_at: Mon, 26 Mar 2012 21:13:15 GMT
+- request:
+    method: post
+    uri: http://qualitycenter.ic.ncs.com:8080/qcbin/authentication-point/j_spring_security_check
+    body:
+      encoding: US-ASCII
+      string: j_username=valid_user&j_password=valid_password
+    headers:
+      Cookie:
+      - JSESSIONID=ECABB7A686040528766D0DFD1FA6B7B4; Path=/qcbin
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Set-Cookie:
+      - LWSSO_COOKIE_KEY=NomonCcwSyaTWUrFqjC1dmi37OLXPeO3-rOi0oFBSnp2lzTT2zc0CrQrCA_9QZnRgwjDVxw--2lwLBIH0tLCCNtScQux7tgq8I_AycrV3MBxM8j0Jdn1wcCkiRGZE78a8BnFuqNfc_heFM3caHjTb-trP7zmrfdxBgpKAXTIBsHJYjrS0KUG02K6oroGviuFadXlfVOEPPaLA5XEo4irmNq7G--n9eSYxDsQUAB7QkNMyr3spSjfKPTt7alSpn1V;
+        Path=/
+      Location:
+      - http://qualitycenter.ic.ncs.com:8080/qcbin/authentication-point/authenticate
+      Content-Length:
+      - '0'
+      Date:
+      - Mon, 26 Mar 2012 21:13:22 GMT
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: 
+  recorded_at: Mon, 26 Mar 2012 21:13:15 GMT
+- request:
+    method: get
+    uri: http://qualitycenter.ic.ncs.com:8080/qcbin/authentication-point/authenticate
+    body:
+      encoding: US-ASCII
+      string: j_username=valid_user&j_password=valid_password
+    headers:
+      Cookie:
+      - JSESSIONID=ECABB7A686040528766D0DFD1FA6B7B4; Path=/; LWSSO_COOKIE_KEY=NomonCcwSyaTWUrFqjC1dmi37OLXPeO3-rOi0oFBSnp2lzTT2zc0CrQrCA_9QZnRgwjDVxw--2lwLBIH0tLCCNtScQux7tgq8I_AycrV3MBxM8j0Jdn1wcCkiRGZE78a8BnFuqNfc_heFM3caHjTb-trP7zmrfdxBgpKAXTIBsHJYjrS0KUG02K6oroGviuFadXlfVOEPPaLA5XEo4irmNq7G--n9eSYxDsQUAB7QkNMyr3spSjfKPTt7alSpn1V
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Content-Length:
+      - '0'
+      Date:
+      - Mon, 26 Mar 2012 21:13:22 GMT
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: 
+  recorded_at: Mon, 26 Mar 2012 21:13:16 GMT
+recorded_with: VCR 2.0.0
