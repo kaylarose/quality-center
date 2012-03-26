@@ -64,6 +64,12 @@ module QualityCenter
         @query.empty?
       end
 
+      # needed for thorough copies
+      def dup
+        Marshal::load(Marshal.dump(self))
+      end
+
+
       private
 
       # Add a parameter to the query accumulator.
