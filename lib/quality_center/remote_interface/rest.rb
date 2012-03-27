@@ -2,6 +2,7 @@ require 'httparty'
 require 'logger'
 require 'active_support/core_ext/hash'
 require_relative 'exceptions'
+require_relative 'generic_entity_parser'
 require_relative '../constants'
 
 module QualityCenter
@@ -22,6 +23,7 @@ module QualityCenter
     class Rest
 
       include HTTParty
+      include GenericEntityParser
 
       base_uri BASE_URI
      
@@ -94,7 +96,7 @@ module QualityCenter
       # The field definitions for QC defects.
       # TODO very long memoization (this never changes)
       def defect_fields(opts={})
-        scoped_get('/customization/entities/defect/fields',opts)
+        entity_fields(opts.reverse_merge entity:'defect')
       end
 
       # Is the current session authenticated?
@@ -102,11 +104,17 @@ module QualityCenter
       # Returns a boolean indicating whether QC likes us.
       def authenticated?
         return false if @cookie.empty?
-        return case self.class.get('/qcbin/rest/is-authenticated',
+        case self.class.get('/qcbin/rest/is-authenticated',
                                    headers: {'Cookie' => @cookie}).response.code
-          when '200' then true
-          else false
+        when '200' then true
+        else false
         end
+      end
+
+      # If someone asks for an entity we know about, handle it with the generic parser.
+      def method_missing(meth, *args, &block)
+        super unless ENTITIES.include?(meth.to_s)
+        generic_entity_fetch(meth,args.first)
       end
 
       private
@@ -132,6 +140,7 @@ module QualityCenter
       def scoped_get(path,opts={})
         auth_get(SCOPE+path,opts)
       end
+
 
     end
   end
