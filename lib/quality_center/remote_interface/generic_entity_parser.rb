@@ -60,12 +60,12 @@ module QualityCenter
         # viz. an empty string or a string that equals "None"
         is_empty = Proc.new{ |x,y| y.empty? or y == "None" }
 
-        Hash[ root.map{ |entity|
-                        [
-                          entity[opts[:key_field]].  send(opts[:key_process]),
-                          entity[opts[:value_field]].send(opts[:val_process])
-                        ]
-                      }.reject(&is_empty) 
+        Hash[ root.map do |entity| 
+                [
+                  entity[opts[:key_field]].  send(opts[:key_process]),
+                  entity[opts[:value_field]].send(opts[:val_process])
+                ]
+              end.reject(&is_empty) 
             ]
       end
 
