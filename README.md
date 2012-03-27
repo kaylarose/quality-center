@@ -90,6 +90,8 @@ Basic usage
               {...}
              ]
 
-
-
-
+Testing
+-------
+Just run ``rake test``.  HTTP requests are mocked with 
+[VCR](https://www.relishapp.com/myronmarston/vcr/docs), so you don't need a
+password to run the tests, except when adding new ones.
