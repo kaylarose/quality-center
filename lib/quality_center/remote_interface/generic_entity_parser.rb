@@ -24,9 +24,13 @@ module QualityCenter
       def generic_entity_fetch(entity_type,opts={})
         res = scoped_get("/#{entity_type}",opts)
 
-        entities = res['Entities']['Entity'].map do |x|
-          response_to_hash(x,opts.merge(value_field:"Value",entity_type:entity_type)) 
-        end
+        entities = begin
+                     res['Entities']['Entity'].map do |x|
+                       response_to_hash(x,opts.merge(value_field:"Value",entity_type:entity_type)) 
+                     end
+                   rescue NoMethodError
+                     []
+                   end
 
         { count:    res["Entities"]["TotalResults"].to_i,
           query:    opts[:query],
@@ -60,6 +64,8 @@ module QualityCenter
                             key_process: :to_s,
                             val_process: :to_s
 
+        # TODO fix Bug here caused by HTTParty treating single-element arrays
+        # differently.  This only happens when using (page_size:1).
         root = response[opts[:field_name].pluralize][opts[:field_name]]
 
         # The definition of "emptiness" for a field.
