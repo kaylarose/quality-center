@@ -105,6 +105,11 @@ module QualityCenter
         generic_entity_fetch(meth,opts)
       end
 
+      # Get a path scoped to a predefined domain and project
+      def scoped_get(path,opts={})
+        auth_get(SCOPE+path,opts)
+      end
+
       private
 
       # Check that a HTTP response is OK.
@@ -123,12 +128,6 @@ module QualityCenter
 
         self.class.get(url, get_opts).log(@logger)
       end
-
-      # Get a path scoped to a predefined domain and project
-      def scoped_get(path,opts={})
-        auth_get(SCOPE+path,opts)
-      end
-
 
     end
   end
