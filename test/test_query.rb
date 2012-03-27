@@ -28,4 +28,8 @@ class TestQuery < Test::Unit::TestCase
     assert_raises(ArgumentError) { Query.new.order_by(:field,'direction'=>'BLAH') }
   end
 
+  def test_start_index
+    assert_equal(1, Query::new.paginate(page_size:2).start_index)
+  end
+
 end

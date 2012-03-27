@@ -29,6 +29,28 @@ class TestDefects < Test::Unit::TestCase
     end
   end
 
+  # Check that the inspect method works.
+  def test_inspect_item
+    with_an_item do
+      assert_match /<Defect::Item/, @item.inspect
+    end
+  end
+
+  # Check that the page_start_for method works.
+  def test_page_start_for
+    with_a_collection do
+      assert_equal(1,  @coll.page_start_for(1))
+      assert_equal(11, @coll.page_start_for(2))
+    end
+  end
+
+  # Check that the index access override method works.
+  def test_index_access
+    with_a_collection do
+      assert_equal(@coll.first, @coll[0])
+    end
+  end
+
   # Verify that pages are lazy-loaded on demand.
   def test_lazy_fetch
     with_a_collection do
