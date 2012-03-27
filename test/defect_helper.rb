@@ -6,7 +6,7 @@ module DefectHelper
 
   def with_a_collection
     while_logged_in do
-      @query=QualityCenter::RemoteInterface::Query.new.filter(id:'<20').paginate(page_size:7).order_by(:id)
+      @query=QualityCenter::RemoteInterface::Query.new.filter(id:'<20').paginate(page_size:10).order_by(:id)
       @coll=QualityCenter::Defect::Collection.new(connection:@conn,query:@query)
       yield
     end

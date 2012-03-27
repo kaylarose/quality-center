@@ -35,6 +35,7 @@ module QualityCenter
       # Add a page limit.  QC defaults to 100, we default to 10.
       # http://qualitycenter:8080/qcbin/Help/doc_library/api_refs/REST/Content/General/Data_Paging.html
       def paginate(opts = {})
+        opts.dashify_keys!
         opts.reverse_merge! DEFAULT[:paging]
         add( page_size:   opts['page-size'],
              start_index: opts['start-index'] )
@@ -44,7 +45,9 @@ module QualityCenter
       # TODO support multiple order clauses
       # http://qualitycenter:8080/qcbin/Help/doc_library/api_refs/REST/Content/General/order-by.html
       def order_by(field,opts = {})
+        opts.dashify_keys!
         opts = assert_legal_order(opts)
+        field = field.to_s.gsub('_','-')
         add order_by: wrap( field, opts['direction'] )
       end
 
@@ -120,6 +123,7 @@ end
 class Hash
 
   def dashify_keys!
+    self.stringify_keys!
     self.replace Hash[ self.keys.map{|x| x.gsub('_','-')}.zip(self.values) ]
   end
 
