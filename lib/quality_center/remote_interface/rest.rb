@@ -101,7 +101,8 @@ module QualityCenter
       # If someone asks for an entity we know about, handle it with the generic parser.
       def method_missing(meth, *args, &block)
         super unless ENTITIES.include?(meth.to_s)
-        generic_entity_fetch(meth,args.first)
+        opts = args.first || {}
+        generic_entity_fetch(meth,opts)
       end
 
       private
