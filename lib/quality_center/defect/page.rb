@@ -16,7 +16,7 @@ module QualityCenter
 
       # Where the defects actually live inside the expected input.
       def root_of(input_hash)
-        input_hash["Entities"]["Entity"]
+        input_hash["Entities"]["Entity"] rescue []
       end
 
     end
