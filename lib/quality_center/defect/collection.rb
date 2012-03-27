@@ -92,7 +92,7 @@ module QualityCenter
       #
       # Returns self.
       def setup_pages
-        response = @conn.defects( query: query_for_page(1) )
+        response = @conn.scoped_get('/defects', query: query_for_page(1) )
         @total_results = response["Entities"]["TotalResults"].to_i
         @first_page = Page.new(response)
 
