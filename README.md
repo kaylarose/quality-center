@@ -33,7 +33,7 @@ Basic usage
         defect_collection.size
         # => 5
     
-- Retrieve other entities (full list documented in quality\_center/constants.rb)
+- Retrieve other entities (full list documented in [quality\_center/constants.rb](https://github.com/Pearson-AI/quality-center/blob/master/lib/quality_center/constants.rb#L21))
 
         conn.tasks(query:query, nice_keys:true)
         # => {:count =>50,
@@ -92,6 +92,7 @@ Basic usage
 
 Testing
 -------
-Just run ``rake test``.  HTTP requests are mocked with 
+Just run ``rake test.`` HTTP requests are mocked with 
 [VCR](https://www.relishapp.com/myronmarston/vcr/docs), so you don't need a
-password to run the tests, except when adding new ones.
+password or even a working QC instance to run existing tests (although you do
+to add new ones).
