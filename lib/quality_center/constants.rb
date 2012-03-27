@@ -18,7 +18,10 @@ module QualityCenter
       DOMAIN   = 'TEST'
       PROJECT  = 'AssessmentQualityGroup'
       SCOPE    = "/domains/#{DOMAIN}/projects/#{PROJECT}"
-
+      ENTITIES = %w[ defects favorites releases resources requirements tests 
+                     tasks task-logs release-cycles results test-sets 
+                     test-set-folders test-instances analysis-items 
+                     dashboard-pages dashboard-folders test-configs ]
     end
 
     class Query
