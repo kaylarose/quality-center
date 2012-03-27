@@ -82,21 +82,8 @@ module QualityCenter
       end
 
       # The list of QC users.
-      # TODO time-limited memoization (this changes rarely)
       def users(opts={})
-        scoped_get('/customization/users',opts)
-      end
-
-      # The list of defects
-      # TODO make fancier, searchable, etc
-      def defects(opts={})
-        scoped_get('/defects',opts)
-      end
-
-      # The field definitions for QC defects.
-      # TODO very long memoization (this never changes)
-      def defect_fields(opts={})
-        entity_fields(opts.reverse_merge entity:'defect')
+        @users ||= scoped_get('/customization/users',opts)
       end
 
       # Is the current session authenticated?
