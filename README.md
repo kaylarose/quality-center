@@ -6,22 +6,21 @@ See the [API docs](http://qualitycenter:8080/qcbin/Help/doc_library/api_refs/RES
 Basic usage
 -----------
 
-   - Create a Connection:
+- Create a Connection:
 
         require 'quality_center'
         include QualityCenter::RemoteInterface
         conn = Rest.new(user:'user', password:'secret')
      
-
-   - Construct Queries:
+- Construct Queries:
 
         query = Query.new.filter(id:'<20',severity:'2*').
                           paginate(page_size:7).
                           order_by(:last_modified, direction: 'DESC')
 
+- Retrieve Defects:
+        
 
-   - Retrieve Defects:
-            
         defect_collection = QualityCenter::Defect::Collection.new(connection: conn, 
                                                                   query:      query)
         defect_collection.flatten!.first
@@ -33,8 +32,8 @@ Basic usage
                "detected-by"   => "somebody" }
         defect_collection.size
         # => 5
-
-    - Retrieve other entities (full list documented in quality\_center/constants.rb)
+    
+- Retrieve other entities (full list documented in quality\_center/constants.rb)
 
         conn.tasks(query:query, nice_keys:true)
         # => {:count =>50,
@@ -55,7 +54,7 @@ Basic usage
                  {...}
                ]
 
-    - Display friendly field labels.
+- Display friendly field labels.
 
         conn.tasks(query:query, nice_keys:true)
         # => {:count => 50,
@@ -76,7 +75,7 @@ Basic usage
                  {...}
                ]
 
-    - Retrieve Users.
+- Retrieve Users.
 
         conn.users["Users"]["User"]
         # => [{"email"    => "User1@example.com",
