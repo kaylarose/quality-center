@@ -44,7 +44,7 @@ class TestDefects < Test::Unit::TestCase
   # Make sure the collection can flatten into a list of Defect::Items
   def test_flatten
     with_a_collection do
-      assert_equal 18, @coll.flatten!.size
+      assert_equal 10, @coll.flatten!.size
       assert_instance_of QualityCenter::Defect::Item, @coll.last
     end
   end
