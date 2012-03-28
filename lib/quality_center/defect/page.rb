@@ -1,4 +1,4 @@
-require_relative 'item'
+require 'quality_center/defect/item'
 
 module QualityCenter
   module Defect

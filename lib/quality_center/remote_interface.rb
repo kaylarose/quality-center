@@ -1,3 +1,3 @@
-require_relative 'remote_interface/rest'
-require_relative 'remote_interface/query'
-require_relative 'constants'
+require 'quality_center/remote_interface/rest'
+require 'quality_center/remote_interface/query'
+require 'quality_center/constants'

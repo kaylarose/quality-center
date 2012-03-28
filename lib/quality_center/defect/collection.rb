@@ -1,6 +1,6 @@
 require 'facets/lazy'
 require 'andand'
-require_relative 'page'
+require 'quality_center/defect/page'
 
 module QualityCenter
   module Defect

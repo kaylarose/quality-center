@@ -1,7 +1,7 @@
 require 'nokogiri'
 require 'active_support/core_ext/hash'
-require_relative 'constants'
-require_relative 'defect/collection'
+require 'quality_center/constants'
+require 'quality_center/defect/collection'
 
 # A class to make QC's responses a little more usable.  
 # The primary method is #defects, which returns an array of defect hashes.
@@ -20,7 +20,7 @@ module QualityCenter
     #   Parser.new(mock: true)
     def initialize(opts={})
       @conn = if opts[:mock]
-        require_relative 'remote_interface/mocks'
+        require 'quality_center/remote_interface/mocks'
         RemoteInterface::Mocks::Rest.new
       else
         opts[:connection]

@@ -1,5 +1,6 @@
 require 'yaml'
-require_relative '../constants'
+require 'quality_center/constants'
+
 module QualityCenter
   module RemoteInterface
     module Mocks

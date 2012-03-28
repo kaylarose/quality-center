@@ -1,5 +1,5 @@
 require 'active_support/inflections'
-require_relative '../constants'
+require 'quality_center/constants'
 
 module QualityCenter
   module RemoteInterface

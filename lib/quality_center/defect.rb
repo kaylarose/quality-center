@@ -1,3 +1,3 @@
-require_relative 'defect/collection'
-require_relative 'defect/page'
-require_relative 'defect/item'
+require 'quality_center/defect/collection'
+require 'quality_center/defect/page'
+require 'quality_center/defect/item'

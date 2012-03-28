@@ -1,7 +1,21 @@
 quality-center
 ==============
 
+Provides export-oriented access to HP Application Lifecycle Management (Quality Center). 
 See the [API docs](http://qualitycenter:8080/qcbin/Help/doc_library/api_refs/REST/webframe.html).
+
+
+Installation
+------------
+
+Add this line to your application's Gemfile:
+
+    gem 'quality_center', :git => 'git://github.com/Pearson-AI/quality-center.git'
+
+And then execute:
+
+    $ bundle
+
 
 Basic usage
 -----------
