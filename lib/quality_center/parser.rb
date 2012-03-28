@@ -5,7 +5,7 @@ require 'quality_center/defect/collection'
 
 # A class to make QC's responses a little more usable.  
 # The primary method is #defects, which returns an array of defect hashes.
-# TODO split Defect into another class.
+# NOTE this is deprecated, it's functionality is being merged into Defect and Rest
 module QualityCenter
   class Parser
 
